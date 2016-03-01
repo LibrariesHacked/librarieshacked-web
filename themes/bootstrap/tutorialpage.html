@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumbtutorials.html' %}
+        {% include 'pageheader.html' %}
+        {{ content }}
+        {% include 'disqus.html' %}
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+    <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="{{ theme_url }}/js/lang-sql.js"></script>
+</body>
+</html>

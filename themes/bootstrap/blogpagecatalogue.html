@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <style type="text/css">
+        .catlink a:link {
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumbarticles.html' %}
+        {% include 'pageheaderwithtags.html' %}
+        {{ content }}
+        <!--<div id="divCatalogues">
+            <h2>your library</h2>
+            <p>Select from the following list of library catalogues:</p>
+            <div class="row"></div>
+        </div>
+        <p>
+            <button class="btn btn-warning btn-flat" id="btnNavigation">show catalogues</button>
+        </p>
+        <div id="divSearch" class="well">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend id="lgdCatalogueName"></legend>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="txtSearch">search term</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="txtSearch" type="text" placeholder="search for...">
+                            <span class="help-block">search by keywords, e.g. author, title.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="selMedia">media type</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="selMedia"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="selLanguage">language</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="selLanguage"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button class="btn btn-success btn-flat" onclick="search(); return false;">search</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>-->
+
+        <!--<div id="divResults" class="container">
+            <h4>search results</h4>
+            <div class="progress progress-striped active" id="divSearchProgress">
+                <div class="progress-bar" style="width: 20%;" id="prgSearchResults"></div>
+            </div>
+            <p id="pResults"></p>
+            <div class="row"></div>
+        </div>-->
+
+        <!--<div id="divItemDetails">
+            <div class="progress progress-striped active" id="divItemProgress">
+                <div class="progress-bar" style="width: 45%;" id="prgItemDetails"></div>
+            </div>
+
+            <div id="divDescription">
+            </div>
+
+            <div id="divHoldings">
+                <div class="row"></div>
+            </div>
+        </div>-->
+        {% include 'disqus.html' %}
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+    <!--<script src="{{ theme_url }}/js/blogpagecatalogues.js"></script>-->
+</body>
+</html>

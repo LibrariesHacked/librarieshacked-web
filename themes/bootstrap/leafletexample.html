@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
+    <link rel="stylesheet" href="{{ theme_url }}/css/MarkerCluster.css" />
+    <link rel="stylesheet" href="{{ theme_url }}/css/MarkerCluster.Default.css" />
+    <style>
+        #map {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumbexamples.html' %}
+        {% include 'pageheader.html' %}
+        {{ content }}
+        <div id="map"></div>
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
+    <script src="{{ theme_url }}/js/librarylocations.js"></script>
+    <script src="{{ theme_url }}/js/leaflet.markercluster.js"></script>
+    <script>
+        var tiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/librarieshacked.jefmk67b/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+        });
+
+        var latlng = L.latLng(53.5, -2.6);
+        var map = L.map('map', { center: latlng, zoom: 6, layers: [tiles] });
+
+        var markers = L.markerClusterGroup();
+
+        for (var i = 0; i < libraries.length; i++) {
+            if (libraries[i].y && libraries[i].l && libraries[i].t) {
+                var a = libraries[i];
+                var title = a.t;
+                var marker = L.marker(new L.LatLng(a.y, a.l), { title: title });
+                marker.bindPopup(title);
+                markers.addLayer(marker);
+            }
+        }
+
+        map.addLayer(markers);
+    </script>
+</body>
+</html>

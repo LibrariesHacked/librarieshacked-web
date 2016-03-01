@@ -1,0 +1,119 @@
+/* Custom page CSS
+-------------------------------------------------- */
+body {
+    padding-top: 60px;
+}
+
+.size-64 i {
+    font-size: 64px;
+}
+
+.size-32 i {
+    font-size: 32px;
+}
+
+.tutorialpage-sidebar {
+    text-align: center;
+}
+
+#divResults {
+    display: none;
+}
+
+.message-form-hidden {
+    display: none;
+}
+
+.message-thanks-hidden {
+    display: none;
+}
+
+.social {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: 700 !important;
+}
+
+/*.navbar.navbar .dropdown-menu li > a {
+    font-size: 14px !important;
+    padding: 3px 20px !important;
+}*/
+
+pre.prettyprint {
+    border: none !important;
+    margin: 20px !important;
+}
+
+.prettyprint ol.linenums > li {
+    list-style-type: decimal;
+}
+
+.table-nonfluid {
+    width: auto !important;
+}
+
+h2.subs {
+    /*text-transform: uppercase !important;
+    font-weight: 700 !important;
+    text-align:center !important;*/
+}
+
+.background-white {
+    background-color: white !important;
+}
+
+/*
+ * These CSS rules affect the tooltips within maps with the custom-popup
+ * class. See the full CSS for all customizable options:
+ * https://github.com/mapbox/mapbox.js/blob/001754177f3985c0e6b4a26e3c869b0c66162c99/theme/style.css#L321-L366
+ */
+.custom-popup .leaflet-popup-content-wrapper {
+    background: #2c3e50;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 0px;
+}
+
+    .custom-popup .leaflet-popup-content-wrapper a {
+        color: rgba(255,255,255,0.5);
+    }
+
+.custom-popup .leaflet-popup-tip-container {
+    width: 30px;
+    height: 15px;
+}
+
+.custom-popup .leaflet-popup-close-button {
+    display: none;
+}
+
+.custom-popup .leaflet-popup-tip {
+    /*border-left: 15px solid transparent;
+    border-right: 15px solid transparent;*/
+    border-top: 15px solid #2c3e50;
+    background: #2c3e50;
+}
+
+.custom-popup .leaflet-layers {
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    cursor: pointer;
+}
+
+    .custom-popup .leaflet-layers a {
+        font-size: 2em !important;
+        margin-left: 1px;
+        color: #444;
+        cursor: pointer !important;
+    }
+
+    .custom-popup .leaflet-layers.active a {
+        color: #2074B6;
+    }
+
+.leaflet-layers.active.following a {
+    color: #FC8428;
+}

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <style type="text/css">
+        .axis path, .axis line { fill: none; stroke: #b6b6b6; shape-rendering: crispEdges; }
+        g.journal.active { cursor: pointer; }
+        text.label { font-size: 12px; font-weight: bold; cursor: pointer; }
+        text.value { font-size: 12px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumb.html' %}
+        {% include 'pageheader.html' %}
+        {{ content }}
+
+        <div class="progress" id="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%"></div>
+        </div>
+        <div id="chart"></div>
+        <div id="infoModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title"></h4></div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                </div>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+    <script src="{{ theme_url }}/js/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/locale/en-gb.js"></script>
+    <script src="{{ theme_url }}/js/example_publiclibrariesnews2015.js"></script>
+</body>
+</html>

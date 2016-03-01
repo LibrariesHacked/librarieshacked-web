@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumb.html' %}
+        {% include 'pageheader.html' %}
+        <div class="container">{{ content }}</div>
+        <h2 class="text-success">bibliographic data</h2>
+        <p>services providing bibliographic data.</p>
+        <div id="biblioapis">
+            <div class="row">
+                {% set biblioapis = 0 %}
+                {% for page in pages %}
+                {% if page.type == 'BibliographicApi' %}
+                {% set biblioapis = biblioapis + 1 %}
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                        <div class="panel-body">
+                            <small class="text-muted">description</small>
+                            <p>
+                                {{ page.description }}
+                            </p>
+                            {% if page.format != '' %}
+                            <small class="text-muted">export formats</small>
+                            <p>
+                                {% for outputformat in page.format|split(',') %}
+                                <span class="label label-info">{{ outputformat }}</span>
+                                {% endfor %}
+                            </p>
+                            {% endif %}
+                            {% if page.apiexampleurl != '' %}
+                            <small class="text-muted">example usage</small>
+                            <p>
+                                <a href="{{ page.apiexampleurl }}" title="link to {{ page.apiexampletext }}" target="_blank" class="btn btn-flat btn-sm btn-primary">{{ page.apiexampletext }}</a>
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="panel-footer">
+                            {% if page.apiurl != '' %}
+                            <a href="{{ page.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-flat btn-primary"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                            {% endif %}
+                            {% if page.apitwitter != '' %}
+                            <a href="https://twitter.com/{{ page.apitwitter }}" class="btn btn-flat btn-info" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+                            {% endif %}
+                            {% if page.apidisplaypage %}
+                            <a href="{{ page.apidisplaypage }}" class="btn btn-flat btn-success" title="more info on {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;{{ page.title }}</a>
+                            {% endif %}
+                            {% if page.apikey != '' %}
+                            <button class="btn btn-flat btn-warning" type="button" data-toggle="popover" data-content="{{ page.apikey }}" data-placement="top" data-container="body"><i class="fa fa-lock text-danger"></i></button>
+                            {% else %}
+                            <button class="btn btn-flat btn-primary" type="button" data-toggle="popover" data-content="no registration required" data-placement="top" data-container="body"><i class="fa fa-unlock text-success"></i></button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% if (biblioapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+                {% if (biblioapis % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+                {% if (biblioapis % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <h2 class="text-danger">other collections</h2>
+        <p>APIs exposing data about other collections.</p>
+        <div id="collectionapis">
+            <div class="row">
+                {% set collectionapis = 0 %}
+                {% for page in pages %}
+                {% if page.type == 'CollectionApi' %}
+                {% set collectionapis = collectionapis + 1 %}
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                        <div class="panel-body">
+                            <small class="text-muted">description</small>
+                            <p>
+                                {{ page.description }}
+                            </p>
+                            {% if page.format != '' %}
+                            <small class="text-muted">output formats</small>
+                            <p>
+                                {% for outputformat in page.format|split(',') %}
+                                <span class="label label-info">{{ outputformat }}</span>
+                                {% endfor %}
+                            </p>
+                            {% endif %}
+                            {% if page.apiexampleurl != '' %}
+                            <small class="text-muted">example usage</small>
+                            <p>
+                                <a href="{{ page.apiexampleurl }}" title="link to {{ page.apiexampletext }}" target="_blank" class="btn btn-flat btn-sm btn-primary">{{ page.apiexampletext }}</a>
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="panel-footer">
+                            {% if page.apiurl != '' %}
+                            <a href="{{ page.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-flat btn-primary"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                            {% endif %}
+                            {% if page.apitwitter != '' %}
+                            <a href="https://twitter.com/{{ page.apitwitter }}" class="btn btn-flat btn-info" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+                            {% endif %}
+                            {% if page.apidisplaypage %}
+                            <a href="{{ page.apidisplaypage }}" class="btn btn-flat btn-success" title="more info on {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;{{ page.title }}</a>
+                            {% endif %}
+                            {% if page.apikey != '' %}
+                            <button class="btn btn-flat btn-warning" type="button" data-toggle="popover" data-content="{{ page.apikey }}" data-placement="top" data-container="body"><i class="fa fa-lock text-danger"></i></button>
+                            {% else %}
+                            <button class="btn btn-flat btn-primary" type="button" data-toggle="popover" data-content="no registration required" data-placement="top" data-container="body"><i class="fa fa-unlock text-success"></i></button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% if (collectionapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+                {% if (collectionapis % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+                {% if (collectionapis % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <h2 class="text-primary">library data</h2>
+        <p>APIs dealing with data about libraries, rather than the collections they hold.</p>
+        <div id="libraryapis">
+            <div class="row">
+                {% set libraryapi = 0 %}
+                {% for page in pages %}
+                {% if page.type == 'LibraryApi' %}
+                {% set libraryapi = libraryapi + 1 %}
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                        <div class="panel-body">
+                            <small class="text-muted">description</small>
+                            <p>
+                                {{ page.description }}
+                            </p>
+                            {% if page.format != '' %}
+                            <small class="text-muted">output formats</small>
+                            <p>
+                                {% for outputformat in page.format|split(',') %}
+                                <span class="label label-info">{{ outputformat }}</span>&nbsp;
+                                {% endfor %}
+                            </p>
+                            {% endif %}
+                            {% if page.apiexampleurl != '' %}
+                            <small class="text-muted">example usage</small>
+                            <p>
+                                <a href="{{ page.apiexampleurl }}" title="link to {{ page.apiexampletext }}" target="_blank" class="btn btn-flat btn-sm btn-primary">{{ page.apiexampletext }}</a>
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="panel-footer">
+                            {% if page.apiurl != '' %}
+                            <a href="{{ page.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-flat btn-primary"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                            {% endif %}
+                            {% if page.apitwitter != '' %}
+                            <a href="https://twitter.com/{{ page.apitwitter }}" class="btn btn-flat btn-info" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+                            {% endif %}
+                            {% if page.apidisplaypage %}
+                            <a href="{{ page.apidisplaypage }}" class="btn btn-flat btn-success" title="more info on {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;{{ page.title }}</a>
+                            {% endif %}
+                            {% if page.apikey != '' %}
+                            <button class="btn btn-flat btn-warning" type="button" data-toggle="popover" data-content="{{ page.apikey }}" data-placement="top" data-container="body"><i class="fa fa-lock text-danger"></i></button>
+                            {% else %}
+                            <button class="btn btn-flat btn-primary" type="button" data-toggle="popover" data-content="no registration required" data-placement="top" data-container="body"><i class="fa fa-unlock text-success"></i></button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% if (libraryapi % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+                {% if (libraryapi % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+                {% if (libraryapi % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <h2 class="text-info">national</h2>
+        <p>services that provide national specific bibliographic collections.</p>
+        <div id="nationalapis">
+            <div class="row">
+                {% set nationalapi = 0 %}
+                {% for page in pages %}
+                {% if page.type == 'NationalApi' %}
+                {% set nationalapi = nationalapi + 1 %}
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                        <div class="panel-body">
+                            <small class="text-muted">description</small>
+                            <p>
+                                {{ page.description }}
+                            </p>
+                            {% if page.format != '' %}
+                            <small class="text-muted">output formats</small>
+                            <p>
+                                {% for outputformat in page.format|split(',') %}
+                                <span class="label label-info">{{ outputformat }}</span>&nbsp;
+                                {% endfor %}
+                            </p>
+                            {% endif %}
+                            {% if page.apiexampleurl != '' %}
+                            <small class="text-muted">example usage</small>
+                            <p>
+                                <a href="{{ page.apiexampleurl }}" title="link to {{ page.apiexampletext }}" target="_blank" class="btn btn-flat btn-sm btn-primary">{{ page.apiexampletext }}</a>
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="panel-footer">
+                            {% if page.apiurl != '' %}
+                            <a href="{{ page.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-flat btn-primary"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                            {% endif %}
+                            {% if page.apitwitter != '' %}
+                            <a href="https://twitter.com/{{ page.apitwitter }}" class="btn btn-flat btn-info" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+                            {% endif %}
+                            {% if page.apidisplaypage %}
+                            <a href="{{ page.apidisplaypage }}" class="btn btn-flat btn-success" title="more info on {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;{{ page.title }}</a>
+                            {% endif %}
+                            {% if page.apikey != '' %}
+                            <button class="btn btn-flat btn-warning" type="button" data-toggle="popover" data-content="{{ page.apikey }}" data-placement="top" data-container="body"><i class="fa fa-lock text-danger"></i></button>
+                            {% else %}
+                            <button class="btn btn-flat btn-primary" type="button" data-toggle="popover" data-content="no registration required" data-placement="top" data-container="body"><i class="fa fa-unlock text-success"></i></button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% if (nationalapi % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+                {% if (nationalapi % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+                {% if (nationalapi % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <h2 class="text-warning">addresses and mapping</h2>
+        <p>not library related but useful in many projects, address data can be hard to find that isn't restricted.</p>
+        <div id="addressapis">
+            <div class="row">
+                {% set addressapis = 0 %}
+                {% for page in pages %}
+                {% if page.type == 'AddressApi' %}
+                {% set addressapis = addressapis + 1 %}
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                        <div class="panel-body">
+                            <small class="text-muted">description</small>
+                            <p>
+                                {{ page.description }}
+                            </p>
+                            {% if page.format != '' %}
+                            <small class="text-muted">output formats</small>
+                            <p>
+                                {% for outputformat in page.format|split(',') %}
+                                <span class="label label-info">{{ outputformat }}</span>&nbsp;
+                                {% endfor %}
+                            </p>
+                            {% endif %}
+                            {% if page.apiexampleurl != '' %}
+                            <small class="text-muted">example usage</small>
+                            <p>
+                                <a href="{{ page.apiexampleurl }}" title="link to {{ page.apiexampletext }}" target="_blank" class="btn btn-flat btn-sm btn-primary">{{ page.apiexampletext }}</a>
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="panel-footer">
+                            {% if page.apiurl != '' %}
+                            <a href="{{ page.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-flat btn-primary"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                            {% endif %}
+                            {% if page.apitwitter != '' %}
+                            <a href="https://twitter.com/{{ page.apitwitter }}" class="btn btn-flat btn-info" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+                            {% endif %}
+                            {% if page.apidisplaypage %}
+                            <a href="{{ page.apidisplaypage }}" class="btn btn-flat btn-success" title="more info on {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;{{ page.title }}</a>
+                            {% endif %}
+                            {% if page.apikey != '' %}
+                            <button class="btn btn-flat btn-warning" type="button" data-toggle="popover" data-content="{{ page.apikey }}" data-placement="top" data-container="body"><i class="fa fa-lock text-danger"></i></button>
+                            {% else %}
+                            <button class="btn btn-flat btn-primary" type="button" data-toggle="popover" data-content="no registration required" data-placement="top" data-container="body"><i class="fa fa-unlock text-success"></i></button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% if (addressapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+                {% if (addressapis % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+                {% if (addressapis % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+</body>
+</html>

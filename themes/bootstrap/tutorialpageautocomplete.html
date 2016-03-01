@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumbtutorials.html' %}
+        {% include 'pageheader.html' %}
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <label class="control-label">search for book</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input class="form-control" type="text" id="txtBookSearch">
+                        <span class="input-group-btn">
+                        </span>
+                    </div>
+                    <br />
+                    <div id="divBookDetails" style="display: none;">
+                        <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+                            <li class="active"><a href="#divBook" data-toggle="tab">Book</a></li>
+                            <li><a href="#profile" data-toggle="tab">Description</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                    Book actions <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#dropdown1" class="disabled" id="aWorldCat" target="_blank">find on worldcat</a></li>
+                                    <li><a href="#dropdown2" class="disabled" id="aOpenLibrary" target="_blank">view on open library</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade active in" id="divBook">
+                            </div>
+                            <div class="tab-pane fade" id="profile">
+                                <p id="pDescription"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        {{ content }}
+        {% include 'disqus.html' %}
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+    <script src="{{ theme_url }}/js/tutorial_autocomplete.js"></script>
+</body>
+</html>

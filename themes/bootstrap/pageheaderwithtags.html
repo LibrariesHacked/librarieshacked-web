@@ -1,0 +1,9 @@
+<div class="page-header">
+    <h1>{{ meta.title }}</h1>
+    <p class="lead">{{ meta.description }}</p>
+    <div class="tags">
+        {% for tag in meta.tags|split(',') %}
+        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumb.html' %}
+        {% include 'pageheader.html' %}
+        {{ content }}
+        <div class="row">
+            {% set tutorials = 0 %}
+            {% for page in pages %}
+            {% if page.type == 'Tutorial' %}
+            {% set tutorials = tutorials + 1 %}
+            {% if tutorials < 5 %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="panel panel-{{ random(['success', 'danger', 'warning', 'primary']) }}">
+                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                    <div class="panel-body">
+                        <p class="lead"><i class="fa fa-calendar-o"></i>&nbsp;{{ page.date_formatted }}</p>
+                        <small>summary</small>
+                        <p>{{ page.description }}</p>
+                        <small>technologies/skils</small>
+                        <p>
+                            {% for skill in page.tutorialskillsrequired|split(',') %}
+                            <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ skill }}</span>
+                            {% endfor %}
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="{{ page.url }}" class="btn btn-success btn-flat" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% if (tutorials % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+            {% if (tutorials % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+            {% if (tutorials % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <h2>tutorials archive</h2>
+        <div class="row" id="postsarchive">
+            {% set tutorials = 0 %}
+            {% set tutorialarchives = 0 %}
+            {% for page in pages %}
+            {% if page.type == 'Tutorial' %}
+            {% set tutorials = tutorials + 1 %}
+            {% if tutorials > 4 %}
+            {% set tutorialarchives = tutorialarchives + 1 %}
+            <div class="col-lg-2 col-md-3 col-sm-6">
+                <p class="lead">{{ page.title }}</p>
+                <p>
+                    {% for skill in page.tutorialskillsrequired|split(',') %}
+                    <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ skill }}</span>
+                    {% endfor %}
+                </p>
+                <a href="{{ page.url }}" class="btn btn-sm btn-success btn-flat" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
+            </div>
+            {% if (tutorialarchives % 6) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+            {% if (tutorialarchives % 4) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+            {% if (tutorialarchives % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+</body>
+</html>

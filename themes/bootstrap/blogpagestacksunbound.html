@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumbarticles.html' %}
+        {% include 'pageheaderwithtags.html' %}
+        {{ content }}
+        <h3>Search Chinese Biographical Database Project</h3>
+        <div class="form-horizontal">
+            <input type="text" id="txtName" class="form-control"><br />
+            <button id="btnSearch" class="btn btn-success" onclick="Search()">Search</button><br /><br />
+            <label id="txtAuthorId"></label>
+        </div>
+        <a href="#" id="aAuthor" target="_blank" style="display:none">Author Link to China Biographical Database Project</a>
+        <h3>Kinship records</h3>
+        <table class="table" id="tblKinship">
+            <thead>
+                <tr>
+                    <td>KinPersonId</td>
+                    <td>KinPersonName</td>
+                    <td>KinCode</td>
+                    <td>KinRel</td>
+                    <td>KinRelName</td>
+                    <td>Source</td>
+                    <td>Pages</td>
+                    <td>Notes</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3>Texts</h3>
+        <table class="table" id="example">
+            <thead>
+                <tr>
+                    <td>Notes</td>
+                    <td>Pages</td>
+                    <td>Role</td>
+                    <td>Source</td>
+                    <td>TextId</td>
+                    <td>TextName</td>
+                    <td>Year</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        {% include 'disqus.html' %}
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+    <script src="{{ theme_url }}/js/cataloguescript.js"></script>
+</body>
+</html>

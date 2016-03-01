@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'pageheader.html' %}
+        <form title="search form">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input class="form-control" title="search this site" type="text" id="txtSiteSearch">
+                </div>
+            </div>
+        </form>
+        <br />
+        <div id="divResults">
+            <h2 class="text-warning">search results</h2>
+            <div class="row"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="subs text-success">latest articles and tutorials</h2>
+        <div class="row">
+            {% set tutorial = 0 %}{% for page in pages %}{% if (page.type == 'Tutorial' or page.type == 'Article') and tutorial < 3 %}
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <p class="lead">{{ page.title }}</p>
+                <p>{{ page.description }}</p>
+                {% if page.tags != '' %}{% for tag in page.tags|split(',') %}<span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> {% endfor %}{% endif %}
+                {% if page.tutorialskillsrequired != '' %}{% for tag in page.tutorialskillsrequired|split(',') %}<span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> {% endfor %}{% endif %}
+                <p><a class="btn btn-flat btn-sm btn-success" href="{{ page.url }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a></p>
+            </div>
+            {% set tutorial = tutorial + 1 %}{% endif %}{% endfor %}
+        </div>
+    </div>
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <h2 class="text-danger">data services</h2>
+                <p>systems providing library data web services to integrate into your hacks and projects.</p>
+                <p><a class="btn  btn-lg btn-default" href="/apis"><i class="fa fa-cubes"></i> data</a></p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <h2 class="text-info">hack events</h2>
+                <p>a listing of past and future events to get involved in and get inspiration from.</p>
+                <p><a class="btn btn-lg btn-primary" href="/events"><i class="fa fa-calendar-o"></i> events</a></p>
+            </div>
+            <div class="clearfix visible-md visible-sm"></div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <h2 class="text-primary">downloads</h2>
+                <p>links to download reports and stats in various static formats (pdf, excel, access).</p>
+                <p><a class="btn btn-lg btn-danger" href="/otherdata"><i class="fa fa-file-excel-o"></i> downloads</a></p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <h2 class="text-success">tutorials</h2>
+                <p>examples of using the available APIs and various other code based hacks.</p>
+                <p><a class="btn btn-lg btn-info" href="/tutorials"><i class="fa fa-graduation-cap"></i> tutorials</a></p>
+            </div>
+            <div class="clearfix visible-md visible-sm"></div>
+            <div class="clearfix visible-lg"></div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <h2 class="text-warning">resources</h2>
+                <p>external resources for hosting hacks, including encouraging diversity, helping beginners, and providing food!</p>
+                <p><a class="btn btn-lg btn-warning" href="/resources"><i class="fa fa-external-link"></i> resources</a></p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <h2 class="text-info">articles</h2>
+                <p>general posts about library technology and open library data.</p>
+                <p><a class="btn btn-lg btn-default" href="/articles"><i class="fa fa-newspaper-o"></i> articles</a></p>
+            </div>
+            <div class="clearfix visible-md visible-sm"></div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <h2 class="text-danger">tools</h2>
+                <p>tools for use in data analysis/crunching, data portals, and visualisations.</p>
+                <p><a class="btn btn-lg btn-success" href="/tools"><i class="fa fa-bar-chart"></i> tools</a></p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <h2 class="text-primary">contribute</h2>
+                <p>any content, links, or code that you may like to share?</p>
+                <p><a class="btn btn-lg btn-primary" href="/contribute"><i class="fa fa-pencil-square-o"></i> submit</a></p>
+            </div>
+        </div>
+        <br />
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!--<div class="row">
+    <div class="tutorialpage-sidebar col-lg-2 col-md-2 col-sm-3 col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p class="size-32"><i class="fa fa-cog"></i></p>
+                {% for needed in meta.tutorialneeded|split(',') %}
+                {{ needed }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="tutorialpage-sidebar col-lg-2 col-md-2 col-sm-3 col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p class="size-32"><i class="fa fa-check-square-o"></i></p>
+                {% if meta.tutorialskillsrequired != '' %}
+                {% for skill in meta.tutorialskillsrequired|split(',') %}
+                <span class="label label-info">{{ skill }}</span>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="tutorialpage-sidebar col-lg-2 col-md-2 col-sm-3 col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p class="size-32"><i class="fa fa-clock-o"></i></p>
+                {{ meta.tutorialtime }}
+            </div>
+        </div>
+    </div>
+    <div class="tutorialpage-sidebar col-lg-2 col-md-2 col-sm-3 col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                {% if meta.tutorialcomplexity == 'high' %}
+                <p class="size-32"><i class="fa fa-exclamation-triangle text-danger"></i></p>
+                high
+                {% endif %}
+                {% if meta.tutorialcomplexity == 'medium'  %}
+                <p class="size-32"><i class="fa fa-exclamation-triangle text-warning"></i></p>
+                medium
+                {% endif %}
+                {% if meta.tutorialcomplexity == 'low'  %}
+                <p class="size-32"><i class="fa fa-exclamation-triangle text-success"></i></p>
+                low
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="tutorialpage-sidebar col-lg-2 col-md-2 col-sm-3 col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p class="size-32"><i class="fa fa-github"></i></p>
+                <div class="btn-group">
+                    <button class="btn btn-success btn-sm" type="button">github</button>
+                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/LibrariesHacked/librarieshacked_tutorials/archive/master.zip">download tutorial zip</a></li>
+                        <li><a href="https://github.com/LibrariesHacked/librarieshacked_tutorials" target="_blank">view on github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->

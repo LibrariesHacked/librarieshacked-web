@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumb.html' %}
+        {% include 'pageheader.html' %}
+        {{ content }}
+        <h2>general hack organising guides</h2>
+        <p>guides to running hackathons, codes of conduct, and tools.</p>
+        <div class="row">
+            {% set hackguides = 0 %}
+            {% for page in pages %}
+            {% if page.type == 'ResourcesOrganisation' %}
+            {% set hackguides = hackguides + 1 %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                    <div class="panel-body">
+                        <p>{{ page.description }}</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                    </div>
+                </div>
+            </div>
+            {% if (hackguides % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+            {% if (hackguides % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+            {% if (hackguides % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <h2>library hacks</h2>
+        <p>guides to library hacks and makerspaces - the current situation, where to find them, and opinion.</p>
+        <div class="row">
+            {% set hackguides = 0 %}
+            {% for page in pages %}
+            {% if page.type == 'ResourcesLibraryHacks' %}
+            {% set libraryhacks = libraryhacks + 1 %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                    <div class="panel-body">
+                        <p>{{ page.description }}</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                    </div>
+                </div>
+            </div>
+            {% if (libraryhacks % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+            {% if (libraryhacks % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+            {% if (libraryhacks % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <h2>diversity</h2>
+        <p>posts around diversity in hack events and hackathons - how to ensure that hacks appeal to all.</p>
+        <div class="row">
+            {% set hackdiversity = 0 %}
+            {% for page in pages %}
+            {% if page.type == 'ResourcesDiversity' %}
+            {% set hackdiversity = hackdiversity + 1 %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                    <div class="panel-body">
+                        <p>{{ page.description }}</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                    </div>
+                </div>
+            </div>
+            {% if (hackdiversity % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+            {% if (hackdiversity % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+            {% if (hackdiversity % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <h2>experiences</h2>
+        <p>first hand experiences of library hack days.  if you have a post you want to share here please send it in.  or if you'd like to write one, it can be hosted here.</p>
+        <div class="row">
+            {% set hackexperiences = 0 %}
+            {% for page in pages %}
+            {% if page.type == 'ResourcesExperiences' %}
+            {% set hackexperiences = hackexperiences + 1 %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                    <div class="panel-body">
+                        <p>{{ page.description }}</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                    </div>
+                </div>
+            </div>
+            {% if (hackexperiences % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+            {% if (hackexperiences % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+            {% if (hackexperiences % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <h2>learning</h2>
+        <p>when hack events encourage beginners they can be a great environment for learning.  but it can also be useful to point people towards online learning resources to use before and after the hacks.</p>
+        <div class="row">
+            {% set hacklearning = 0 %}
+            {% for page in pages %}
+            {% if page.type == 'ResourcesLearning' %}
+            {% set hacklearning = hacklearning + 1 %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
+                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
+                    <div class="panel-body">
+                        <p>{{ page.description }}</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
+                    </div>
+                </div>
+            </div>
+            {% if (hacklearning % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+            {% if (hacklearning % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+            {% if (hacklearning % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+</body>
+</html>

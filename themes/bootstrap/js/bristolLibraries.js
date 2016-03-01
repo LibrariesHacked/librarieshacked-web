@@ -1,0 +1,877 @@
+var bristolLibraries = [
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Hartcliffe Library",
+           "attributes": {
+               "OBJECTID": "5",
+               "Name": "Hartcliffe Library",
+               "SAO": "@Symes Building",
+               "PAO": "Hartcliffe Library",
+               "Street": "Peterson Avenue",
+               "Locality": "Hartcliffe",
+               "Town": "Bristol",
+               "Postcode": "BS13 0BE",
+               "UPRN": "000000309574",
+               "Telephone": "0117 9038568",
+               "Email": "hartcliffe.library@bristol.gov.uk",
+               "X": "358470",
+               "Y": "167463",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 358470,
+               "y": 167463,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Stockwood Library",
+           "attributes": {
+               "OBJECTID": "7",
+               "Name": "Stockwood Library",
+               "SAO": "Null",
+               "PAO": "Stockwood Library",
+               "Street": "Stockwood Road",
+               "Locality": "Stockwood",
+               "Town": "Bristol",
+               "Postcode": "BS14 8PL",
+               "UPRN": "000000159907",
+               "Telephone": "0117 9038546",
+               "Email": "stockwood.library@bristol.gov.uk",
+               "X": "362048",
+               "Y": "168329",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 362048,
+               "y": 168329,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Whitchurch Library",
+           "attributes": {
+               "OBJECTID": "1633",
+               "Name": "Whitchurch Library",
+               "SAO": "Unit 7",
+               "PAO": "Whitchurch District Centre",
+               "Street": "Oatlands Avenue",
+               "Locality": "Whitchurch",
+               "Town": "Bristol",
+               "Postcode": "BS14 0SX",
+               "UPRN": "000000276047",
+               "Telephone": "0117 9031185",
+               "Email": "whitchurch.library@bristol.gov.uk ",
+               "X": "360329",
+               "Y": "168488",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 360329,
+               "y": 168488,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Bishopsworth Library",
+           "attributes": {
+               "OBJECTID": "4",
+               "Name": "Bishopsworth Library",
+               "SAO": "Null",
+               "PAO": "Bishopsworth Library",
+               "Street": "Bishopsworth Road",
+               "Locality": "Bedminster Down",
+               "Town": "Bristol",
+               "Postcode": "BS13 7LN",
+               "UPRN": "000000253118",
+               "Telephone": "0117 9038566",
+               "Email": "bishopsworth.library@bristol.gov.uk",
+               "X": "357197",
+               "Y": "169065",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 357197,
+               "y": 169065,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Filwood Library",
+           "attributes": {
+               "OBJECTID": "2",
+               "Name": "Filwood Library",
+               "SAO": "Null",
+               "PAO": "Filwood Library",
+               "Street": "Filwood Broadway",
+               "Locality": "Knowle",
+               "Town": "Bristol",
+               "Postcode": "BS4 1JN",
+               "UPRN": "000000147115",
+               "Telephone": "0117 9038581",
+               "Email": "filwood.library@bristol.gov.uk",
+               "X": "359364",
+               "Y": "169562",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 359364,
+               "y": 169562,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Marksbury Road Library",
+           "closing": true,
+           "attributes": {
+               "OBJECTID": "14",
+               "Name": "Marksbury Road Library",
+               "SAO": "Null",
+               "PAO": "Marksbury Road Library",
+               "Street": "Marksbury Road",
+               "Locality": "Bedminster",
+               "Town": "Bristol",
+               "Postcode": "BS3 5LG",
+               "UPRN": "000000136944",
+               "Telephone": "0117 9038574",
+               "Email": "marksburyrd.library@bristol.gov.uk",
+               "X": "358227",
+               "Y": "170695",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 358227,
+               "y": 170695,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Knowle Library",
+           "attributes": {
+               "OBJECTID": "9",
+               "Name": "Knowle Library",
+               "SAO": "Knowle Library",
+               "PAO": "Broadwalk Shopping Centre",
+               "Street": "Broad Walk",
+               "Locality": "Knowle",
+               "Town": "Bristol",
+               "Postcode": "BS4 2QU",
+               "UPRN": "000000255248",
+               "Telephone": "0117 9038585",
+               "Email": "knowle.library@bristol.gov.uk",
+               "X": "360612",
+               "Y": "170756",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 360612,
+               "y": 170756,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Wick Road Library",
+           "closing": true,
+           "attributes": {
+               "OBJECTID": "10",
+               "Name": "Wick Road Library",
+               "SAO": "Null",
+               "PAO": "Wick Road Library",
+               "Street": "Wick Road",
+               "Locality": "Brislington",
+               "Town": "Bristol",
+               "Postcode": "BS4 4HE",
+               "UPRN": "000000126038",
+               "Telephone": "0117 9038557",
+               "Email": "wickrd.library@bristol.gov.uk",
+               "X": "361752",
+               "Y": "171289",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 361752,
+               "y": 171289,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Bedminster Library",
+           "attributes": {
+               "OBJECTID": "12",
+               "Name": "Bedminster Library",
+               "SAO": "4",
+               "PAO": "St Peters Court",
+               "Street": "Bedminster Parade",
+               "Locality": "Bedminster",
+               "Town": "Bristol",
+               "Postcode": "BS3 4AQ",
+               "UPRN": "000000300690",
+               "Telephone": "0117 9038529",
+               "Email": "bedminster.library@bristol.gov.uk",
+               "X": "358840",
+               "Y": "171859",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 358840,
+               "y": 171859,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Central Library",
+           "attributes": {
+               "OBJECTID": "22",
+               "Name": "Central Library",
+               "SAO": "Null",
+               "PAO": "Central Library",
+               "Street": "College Green",
+               "Locality": "City Centre",
+               "Town": "Bristol",
+               "Postcode": "BS1 5TL",
+               "UPRN": "000000199356",
+               "Telephone": "0117 9037200",
+               "Email": "bristol.library.service@bristol.gov.uk",
+               "X": "358236",
+               "Y": "172671",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 358236,
+               "y": 172671,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Clifton Library",
+           "closing": true,
+           "attributes": {
+               "OBJECTID": "25",
+               "Name": "Clifton Library",
+               "SAO": "Null",
+               "PAO": "Clifton Library",
+               "Street": "Princess Victoria Street",
+               "Locality": "Clifton",
+               "Town": "Bristol",
+               "Postcode": "BS8 4BX",
+               "UPRN": "000000103836",
+               "Telephone": "0117 9038572",
+               "Email": "clifton.library@bristol.gov.uk",
+               "X": "357044",
+               "Y": "173021",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 357044,
+               "y": 173021,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "St George Library",
+           "attributes": {
+               "OBJECTID": "21",
+               "Name": "St George Library",
+               "SAO": "Null",
+               "PAO": "St George Library",
+               "Street": "Church Road",
+               "Locality": "St George",
+               "Town": "Bristol",
+               "Postcode": "BS5 8AL",
+               "UPRN": "000000091711",
+               "Telephone": "0117 9038523",
+               "Email": "st.george.library@bristol.gov.uk",
+               "X": "362291",
+               "Y": "173650",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 362291,
+               "y": 173650,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "St Pauls Library",
+           "attributes": {
+               "OBJECTID": "24",
+               "Name": "St Pauls Library",
+               "SAO": "Null",
+               "PAO": "94",
+               "Street": "Grosvenor Road",
+               "Locality": "St Pauls",
+               "Town": "Bristol",
+               "Postcode": "BS2 8XJ",
+               "UPRN": "000000259917",
+               "Telephone": "0117 9145489",
+               "Email": "st.pauls.library@bristol.gov.uk",
+               "X": "359663",
+               "Y": "174111",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 359663,
+               "y": 174111,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Redland Library ",
+           "closing": true,
+           "attributes": {
+               "OBJECTID": "1",
+               "Name": "Redland Library ",
+               "SAO": "Null",
+               "PAO": "Redland Library",
+               "Street": "Whiteladies Road",
+               "Locality": "Clifton",
+               "Town": "Bristol",
+               "Postcode": "BS8 2PY",
+               "UPRN": "000000076586",
+               "Telephone": "0117 9038549",
+               "Email": "redland.library@bristol.gov.uk",
+               "X": "357663",
+               "Y": "174215",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 357663,
+               "y": 174215,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Junction 3 Library",
+           "attributes": {
+               "OBJECTID": "2273",
+               "Name": "Junction 3 Library",
+               "SAO": "Baptist Mills",
+               "PAO": "Null",
+               "Street": "Null",
+               "Locality": "Easton",
+               "Town": "Bristol",
+               "Postcode": "BS5 0FJ",
+               "UPRN": "Null",
+               "Telephone": "0117 9223001",
+               "Email": "junction3@bristol.gov.uk",
+               "X": "360311",
+               "Y": "174249",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 360311,
+               "y": 174249,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Cheltenham Road Library",
+           "attributes": {
+               "OBJECTID": "18",
+               "Name": "Cheltenham Road Library",
+               "SAO": "Null",
+               "PAO": "Cheltenham Road Library",
+               "Street": "Cheltenham Road",
+               "Locality": "Montpelier",
+               "Town": "Bristol",
+               "Postcode": "BS6 5QX",
+               "UPRN": "000000069545",
+               "Telephone": "0117 9038562",
+               "Email": "cheltenhamrd.library@bristol.gov.uk",
+               "X": "358958",
+               "Y": "174488",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 358958,
+               "y": 174488,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Hillfields Library",
+           "attributes": {
+               "OBJECTID": "23",
+               "Name": "Hillfields Library",
+               "SAO": "Null",
+               "PAO": "Hillfields Library",
+               "Street": "Summerleaze",
+               "Locality": "Speedwell",
+               "Town": "Bristol",
+               "Postcode": "BS16 4HL",
+               "UPRN": "000000055729",
+               "Telephone": "0117 9038576",
+               "Email": "hillfields.library@bristol.gov.uk",
+               "X": "364225",
+               "Y": "175198",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 364225,
+               "y": 175198,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Eastville Library",
+           "closing": true,
+           "attributes": {
+               "OBJECTID": "19",
+               "Name": "Eastville Library",
+               "SAO": "Null",
+               "PAO": "Eastville Library",
+               "Street": "Muller Road",
+               "Locality": "Horfield",
+               "Town": "Bristol",
+               "Postcode": "BS5 6XP",
+               "UPRN": "000000181977",
+               "Telephone": "0117 9038578",
+               "Email": "eastville.library@bristol.gov.uk",
+               "X": "360574",
+               "Y": "175454",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 360574,
+               "y": 175454,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Fishponds Library ",
+           "attributes": {
+               "OBJECTID": "1953",
+               "Name": "Fishponds Library ",
+               "SAO": "Fishponds Library",
+               "PAO": "Robinson House",
+               "Street": "Hockeys Lane",
+               "Locality": "Fishponds",
+               "Town": "Bristol",
+               "Postcode": "BS16 3HL",
+               "UPRN": "000000258418",
+               "Telephone": "0117 9038560",
+               "Email": "fishponds.library@bristol.gov.uk",
+               "X": "363072",
+               "Y": "175538",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 363072,
+               "y": 175538,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Henleaze Library",
+           "attributes": {
+               "OBJECTID": "1297",
+               "Name": "Henleaze Library",
+               "SAO": "Null",
+               "PAO": "Henleaze Library",
+               "Street": "Northumbria Drive",
+               "Locality": "Henleaze",
+               "Town": "Bristol",
+               "Postcode": "BS9 4HP",
+               "UPRN": "000000260189",
+               "Telephone": "0117 9038541",
+               "Email": "henleaze.library@bristol.gov.uk",
+               "X": "357612",
+               "Y": "175941",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 357612,
+               "y": 175941,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Shirehampton Library",
+           "attributes": {
+               "OBJECTID": "15",
+               "Name": "Shirehampton Library",
+               "SAO": "Null",
+               "PAO": "Shirehampton Library",
+               "Street": "Station Road",
+               "Locality": "Shirehampton",
+               "Town": "Bristol",
+               "Postcode": "BS11 9TU",
+               "UPRN": "000000258098",
+               "Telephone": "0117 9038570",
+               "Email": "shirehampton.library@bristol.gov.uk",
+               "X": "353201",
+               "Y": "176657",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 353201,
+               "y": 176657,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Sea Mills Library",
+           "closing": true,
+           "attributes": {
+               "OBJECTID": "8",
+               "Name": "Sea Mills Library",
+               "SAO": "Null",
+               "PAO": "Sea Mills Library",
+               "Street": "Sylvan Way",
+               "Locality": "Sea Mills",
+               "Town": "Bristol",
+               "Postcode": "BS9 2NA",
+               "UPRN": "000000023541",
+               "Telephone": "0117 9038555",
+               "Email": "seamills.library@bristol.gov.uk",
+               "X": "355020",
+               "Y": "177143",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 355020,
+               "y": 177143,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Westbury Library",
+           "closing": true,
+           "attributes": {
+               "OBJECTID": "20",
+               "Name": "Westbury Library",
+               "SAO": "Null",
+               "PAO": "Westbury Library",
+               "Street": "Falcondale Road",
+               "Locality": "Westbury",
+               "Town": "Bristol",
+               "Postcode": "BS9 3JZ",
+               "UPRN": "000000021923",
+               "Telephone": "0117 9038552",
+               "Email": "westbury.library@bristol.gov.uk",
+               "X": "356896",
+               "Y": "177271",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 356896,
+               "y": 177271,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Horfield Library",
+           "attributes": {
+               "OBJECTID": "27",
+               "Name": "Horfield Library",
+               "SAO": "Null",
+               "PAO": "Horfield Library",
+               "Street": "Filton Avenue",
+               "Locality": "Horfield",
+               "Town": "Bristol",
+               "Postcode": "BS7 0BD",
+               "UPRN": "000000018539",
+               "Telephone": "0117 9038538",
+               "Email": "horfield.library@bristol.gov.uk",
+               "X": "360251",
+               "Y": "177472",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 360251,
+               "y": 177472,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Avonmouth Library",
+           "attributes": {
+               "OBJECTID": "3",
+               "Name": "Avonmouth Library",
+               "SAO": "Null",
+               "PAO": "Avonmouth Library",
+               "Street": "Avonmouth Road",
+               "Locality": "Avonmouth",
+               "Town": "Bristol",
+               "Postcode": "BS11 9EN",
+               "UPRN": "000000010908",
+               "Telephone": "0117 9038580",
+               "Email": "avonmouth.library@bristol.gov.uk",
+               "X": "351616",
+               "Y": "178138",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 351616,
+               "y": 178138,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Lawrence Weston Library",
+           "attributes": {
+               "OBJECTID": "17",
+               "Name": "Lawrence Weston Library",
+               "SAO": "Null",
+               "PAO": "One Stop Shop",
+               "Street": "Ridingleaze",
+               "Locality": "Lawrence Weston",
+               "Town": "Bristol",
+               "Postcode": "BS11 0QE",
+               "UPRN": "000000010519",
+               "Telephone": "0117 3534667",
+               "Email": "lawrencew.library@bristol.gov.uk",
+               "X": "354343",
+               "Y": "178233",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 354343,
+               "y": 178233,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Southmead Library",
+           "attributes": {
+               "OBJECTID": "6",
+               "Name": "Southmead Library",
+               "SAO": "Null",
+               "PAO": "Southmead Library",
+               "Street": "Greystoke Avenue",
+               "Locality": "Southmead",
+               "Town": "Bristol",
+               "Postcode": "BS10 6AS",
+               "UPRN": "000000201220",
+               "Telephone": "0117 9038583",
+               "Email": "southmead.library@bristol.gov.uk",
+               "X": "358184",
+               "Y": "178409",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 358184,
+               "y": 178409,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       },
+       {
+           "layerId": 60,
+           "layerName": "Libraries",
+           "displayFieldName": "Name",
+           "value": "Henbury Library",
+           "attributes": {
+               "OBJECTID": "16",
+               "Name": "Henbury Library",
+               "SAO": "Null",
+               "PAO": "Henbury Library",
+               "Street": "Crow Lane",
+               "Locality": "Henbury",
+               "Town": "Bristol",
+               "Postcode": "BS10 7DR",
+               "UPRN": "000000003424",
+               "Telephone": "0117 9038522",
+               "Email": "henbury.library@bristol.gov.uk",
+               "X": "357107",
+               "Y": "179160",
+               "Shape": "Point"
+           },
+           "geometryType": "esriGeometryPoint",
+           "geometry": {
+               "x": 357107,
+               "y": 179160,
+               "spatialReference": {
+                   "wkid": 27700,
+                   "latestWkid": 27700
+               }
+           }
+       }
+];

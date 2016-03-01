@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumbtutorials.html' %}
+        {% include 'pageheader.html' %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>search twitter for links</legend>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="txtTwitterSearch">term</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" id="txtTwitterSearch" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button class="btn btn-success btn-flat" type="button" onclick="GetResults($('#txtTwitterSearch').val())">search</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="progress progress-striped active">
+                    <div id="divProg" class="progress-bar" style="width: 0%;"></div>
+                </div>
+                <span id="progressInfo"></span>
+                <div class="list-group" id="divUrlResults"></div>
+            </div>
+        </div>
+        {{ content }}
+        {% include 'disqus.html' %}
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+    <script src="{{ theme_url }}/js/tutorialpagetwitterurls.js"></script>
+</body>
+</html>

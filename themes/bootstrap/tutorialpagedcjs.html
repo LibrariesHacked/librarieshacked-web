@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/dc/1.7.0/dc.css" rel="stylesheet" />
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumbtutorials.html' %}
+        {% include 'pageheader.html' %}
+        <div class="row">
+            {{ content }}
+            <div class="bs-container">
+                <div id="chtDataTable"></div>
+            </div>
+        </div>
+        {% include 'disqus.html' %}
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+    <script src="{{ theme_url }}/js/d3.v3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.9/crossfilter.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dc/1.7.0/dc.min.js"></script>
+    <script src="{{ theme_url }}/js/tutorial_dcjs.js"></script>
+</body>
+</html>
