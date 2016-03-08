@@ -16,25 +16,7 @@
             {% if page.type == 'Article' %}
             {% set blogs = blogs + 1 %}
             {% if blogs < 5 %}
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="panel panel-{{ random(['success', 'danger', 'warning', 'primary']) }}">
-                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                    <div class="panel-body">
-                        <p class="lead"><i class="fa fa-calendar-o"></i>&nbsp;{{ page.date_formatted }}</p>
-                        <small class="text-muted">summary</small>
-                        <p>{{ page.description }}</p>
-                        <small class="text-muted">tags</small>
-                        <p>
-                            {% for tag in page.tags|split(',') %}
-                            <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
-                            {% endfor %}
-                        </p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="{{ page.url }}" class="btn btn-success btn-flat" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
-                    </div>
-                </div>
-            </div>
+            {% include 'blogindexcard.html' %}
             {% endif %}
             {% if (blogs % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
             {% if (blogs % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
@@ -42,7 +24,6 @@
             {% endif %}
             {% endfor %}
         </div>
-
         <h2 class="text-warning">archive</h2>
         <div id="posts" class="row">
             {% set archiveblogs = 0 %}
@@ -52,15 +33,7 @@
             {% set blogs = blogs + 1 %}
             {% if blogs > 4 %}
             {% set archiveblogs = archiveblogs + 1 %}
-            <div class="col-lg-2 col-md-3 col-sm-6">
-                <p class="lead">{{ page.title }}</p>
-                <p>
-                    {% for tag in page.tags|split(',') %}
-                    <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
-                    {% endfor %}
-                </p>
-                <a href="{{ page.url }}" class="btn btn-success btn-flat btn-sm" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
-            </div>
+            {% include 'blogindexcardmini.html' %}
             {% if (archiveblogs % 6) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
             {% if (archiveblogs % 4) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
             {% if (archiveblogs % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}

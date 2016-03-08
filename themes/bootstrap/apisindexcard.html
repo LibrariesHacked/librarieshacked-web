@@ -1,0 +1,33 @@
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="lhcard">
+        <h3 class="text-success">{{ page.title }}</h3>
+        <p>{{ page.description }}</p>
+        {% if page.format != '' %}
+        <p>
+            {% for outputformat in page.format|split(',') %}
+            <span class="label label-info">{{ outputformat }}</span>
+            {% endfor %}
+        </p>
+        {% endif %}
+        {% if page.apiexampleurl != '' %}
+        <small class="text-muted">example usage</small>
+        <p><a href="{{ page.apiexampleurl }}" title="link to {{ page.apiexampletext }}" target="_blank" class="btn btn-flat btn-sm btn-primary">{{ page.apiexampletext }}</a></p>
+        {% endif %}
+        <p>
+            {% if page.apiurl != '' %}
+            <a href="{{ page.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-flat btn-primary"><i class="fa fa-external-link"></i>&nbsp;website</a>
+            {% endif %}
+            {% if page.apitwitter != '' %}
+            <a href="https://twitter.com/{{ page.apitwitter }}" class="btn btn-flat btn-info" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+            {% endif %}
+            {% if page.apidisplaypage %}
+            <a href="{{ page.apidisplaypage }}" class="btn btn-flat btn-success" title="more info on {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;{{ page.title }}</a>
+            {% endif %}
+            {% if page.apikey != '' %}
+            <button class="btn btn-flat btn-warning" type="button" data-toggle="popover" data-content="{{ page.apikey }}" data-placement="top" data-container="body"><i class="fa fa-lock text-danger"></i></button>
+            {% else %}
+            <button class="btn btn-flat btn-primary" type="button" data-toggle="popover" data-content="no registration required" data-placement="top" data-container="body"><i class="fa fa-unlock text-success"></i></button>
+            {% endif %}
+        </p>
+    </div>
+</div>

@@ -14,35 +14,13 @@
         <div id="computerformats">
             <div class="row">
                 {% set computerformats = 0 %}{% for page in pages %}{% if page.type == 'ComputerFormat' %}{% set computerformats = computerformats + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                        <div class="panel-body">
-                            <small class="text-muted">description</small>
-                            <p>{{ page.description }}</p>
-                            {% if page.format != '' %}
-                            <small class="text-muted">output formats</small>
-                            <p>
-                                {% for outputformat in page.format|split(',') %}
-                                <span class="label label-info">{{ outputformat }}</span>&nbsp;
-                                {% endfor %}
-                            </p>
-                            {% endif %}
-                        </div>
-                        <div class="panel-footer">
-                            {% if page.dataurl != '' %}
-                            <a href="{{ page.dataurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;get data</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'dataindexcard.html' %}
                 {% if (computerformats % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (computerformats % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (computerformats % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
                 {% endif %}{% endfor %}
             </div>
         </div>
-
         <h2>spreadsheets</h2>
         <p>non-CSV spreadsheet formats such as excel/google sheets</p>
         <div id="spreadsheets">
@@ -51,28 +29,7 @@
                 {% for page in pages %}
                 {% if page.type == 'Spreadsheet' %}
                 {% set spreadsheets = spreadsheets + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                        <div class="panel-body">
-                            <small class="text-muted">description</small>
-                            <p>{{ page.description }}</p>
-                            {% if page.format != '' %}
-                            <small class="text-muted">output formats</small>
-                            <p>
-                                {% for outputformat in page.format|split(',') %}
-                                <span class="label label-info">{{ outputformat }}</span>&nbsp;
-                                {% endfor %}
-                            </p>
-                            {% endif %}
-                        </div>
-                        <div class="panel-footer">
-                            {% if page.dataurl != '' %}
-                            <a href="{{ page.dataurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;&nbsp;get data</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'dataindexcard.html' %}
                 {% if (spreadsheets % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (spreadsheets % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (spreadsheets % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -80,7 +37,6 @@
                 {% endfor %}
             </div>
         </div>
-
         <h2>report downloads</h2>
         <p>reports that include data embedded e.g. PDF documents.</p>
         <p>to read PDF documents, you will need a PDF reader such as adobe acrobat. this is freely available, you can get the latest version (which has a number of accessibility features) from the <a href="http://get.adobe.com/uk/reader/" title="Get Adobe Acrobat Reader">adobe acrobat website (external link)</a>.  alternatively there is also foxit PDF reader, also available to <a href="https://www.foxitsoftware.com/products/pdf-reader/" title="Foxit PDF Reader" target="_blank">download for free</a>.</p>
@@ -90,28 +46,7 @@
                 {% for page in pages %}
                 {% if page.type == 'Download' %}
                 {% set reports = reports + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                        <div class="panel-body">
-                            <small class="text-muted">description</small>
-                            <p>{{ page.description }}</p>
-                            {% if page.format != '' %}
-                            <small class="text-muted">output formats</small>
-                            <p>
-                                {% for outputformat in page.format|split(',') %}
-                                <span class="label label-info">{{ outputformat }}</span>&nbsp;
-                                {% endfor %}
-                            </p>
-                            {% endif %}
-                        </div>
-                        <div class="panel-footer">
-                            {% if page.dataurl != '' %}
-                            <a href="{{ page.dataurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;get data</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'dataindexcard.html' %}
                 {% if (reports % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (reports % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (reports % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -119,7 +54,6 @@
                 {% endfor %}
             </div>
         </div>
-
         <h2>web pages</h2>
         <p>web pages that include useful data within the page.</p>
         <div id="webpages">
@@ -128,28 +62,7 @@
                 {% for page in pages %}
                 {% if page.type == 'Webpage' %}
                 {% set webpages = webpages + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                        <div class="panel-body">
-                            <small class="text-muted">description</small>
-                            <p>{{ page.description }}</p>
-                            {% if page.format != '' %}
-                            <small class="text-muted">output formats</small>
-                            <p>
-                                {% for outputformat in page.format|split(',') %}
-                                <span class="label label-info">{{ outputformat }}</span>
-                                {% endfor %}
-                            </p>
-                            {% endif %}
-                        </div>
-                        <div class="panel-footer">
-                            {% if page.dataurl != '' %}
-                            <a href="{{ page.dataurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;get data</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'dataindexcard.html' %}
                 {% if (webpages % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (webpages % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (webpages % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}

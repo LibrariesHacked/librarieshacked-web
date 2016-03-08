@@ -5,7 +5,10 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
     <link rel="stylesheet" href="{{ theme_url }}/css/leaflet.awesome-markers.css">
     <style>
-        #map { height: 400px; border: 1px solid #ccc; }
+        #map {
+            height: 400px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
@@ -20,34 +23,7 @@
         <div id="fablabs">
             <div class="row">
                 {% set fablabs = 0 %}{% for page in pages %}{% if page.type == 'FabLab' or page.type == 'Event' %}{% set fablabs = fablabs + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">{{ page.title }}</h3>
-                        </div>
-                        <div class="panel-body">
-                            {% if page.date != '' %}
-                            <p class="lead"><i class="fa fa-calendar-o"></i>&nbsp;{{ page.date_formatted }}</p>
-                            {% endif %}
-                            <p>
-                                <small class="text-muted">{{ page.eventlocation }}</small>
-                            </p>
-                            <p>{{ page.description }}</p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.eventurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                            {% if page.eventtwitter != '' %}
-                            <a href="https://twitter.com/{{ page.eventtwitter }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
-                            {% endif %}
-                            {% if page.eventhashtag != '' %}
-                            <a href="https://twitter.com/hashtag/{{ page.eventhashtag }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;hashtag</a>
-                            {% endif %}
-                            <script>
-                                hackEvents.push({ location: "{{ page.eventlocation}}", popup: "{{ page.title }}", lat: "{{ page.lat }}", lng: "{{ page.lng }}" });
-                            </script>
-                        </div>
-                    </div>
-                </div>
+                {% include 'eventindexcard.html' %}
                 {% if (fablabs % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (fablabs % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (fablabs % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -55,35 +31,16 @@
             </div>
         </div>
     </div>
-
     <div class="container">
         <div class="custom-popup" id="map"></div>
     </div>
-
     <div class="container">
         <h2>past events</h2>
         <p>events that have been and gone - still often useful for finding out what happened and how it was done.</p>
         <div id="pastevents">
             <div class="row">
                 {% set pastevents = 0 %}{% for page in pages %}{% if page.type == 'PastEvent' %}{% set pastevents = pastevents + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <p><i class="fa fa-calendar-o"></i>&nbsp;{{ page.date_formatted }}</p>
-                            <p class="lead">{{ page.title }}</p>
-                            <p>{{ page.description }}</p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.eventurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                            {% if page.eventtwitter != '' %}
-                            <a href="https://twitter.com/{{ page.eventtwitter }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
-                            {% endif %}
-                            {% if page.eventhashtag != '' %}
-                            <a href="https://twitter.com/hashtag/{{ page.eventhashtag }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;hashtag</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'eventindexcardmini.html' %}
                 {% if (pastevents % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (pastevents % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (pastevents % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}

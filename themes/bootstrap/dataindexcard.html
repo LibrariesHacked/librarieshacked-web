@@ -1,0 +1,16 @@
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="lhcard">
+        <h3 class="text-info">{{ page.title }}</h3>
+        <p>{{ page.description }}</p>
+        {% if page.format != '' %}
+        <p>
+            {% for outputformat in page.format|split(',') %}
+            <span class="label label-info">{{ outputformat }}</span>&nbsp;
+            {% endfor %}
+        </p>
+        {% endif %}
+        {% if page.dataurl != '' %}
+        <a href="{{ page.dataurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;get data</a>
+        {% endif %}
+    </div>
+</div>
