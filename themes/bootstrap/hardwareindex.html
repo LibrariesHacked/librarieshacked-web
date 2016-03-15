@@ -8,29 +8,13 @@
     <div class="container">
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        {{ content }}
+        <div class="container">{{ content }}</div>
         <h2>computer boards and electronics</h2>
         <p>small prototyping boards for code and electronic hardware projects.</p>
         <div id="computerhardware">
             <div class="row">
-                {% set computerhardware = 0 %}{% for page in pages %}{% if page.type == 'HardwareComputer' %}{% set computerhardware = computerhardware + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">{{ page.title }}</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>{{ page.description }}</p>
-                            <p><span class="label label-danger">{{ page.price }}</span></p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.hardwareurl }}" class="btn btn-success btn-flat" title="{{ page.hardwareurltitle }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{{ page.hardwareurltitle }}</a>
-                            {% if page.hardwaretwitter != '' %}
-                            <a href="https://twitter.com/{{ page.hardwaretwitter }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% set computerhardware = 0 %}{% for page in pages %}{% if page.meta.type == 'HardwareComputer' %}{% set computerhardware = computerhardware + 1 %}
+                {% include 'hardwareindexcard.html' %}
                 {% if (computerhardware % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (computerhardware % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (computerhardware % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -42,24 +26,8 @@
         <p>mobile-technology prototyping</p>
         <div id="mobilehardware">
             <div class="row">
-                {% set mobilehardware = 0 %}{% for page in pages %}{% if page.type == 'HardwareMobile' %}{% set mobilehardware = mobilehardware + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6 divHardware">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">{{ page.title }}</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>{{ page.description }}</p>
-                            <p><span class="label label-danger">{{ page.price }}</span></p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.hardwareurl }}" class="btn btn-success btn-flat" title="{{ page.hardwareurltitle }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{{ page.hardwareurltitle }}</a>
-                            {% if page.hardwaretwitter != '' %}
-                            <a href="https://twitter.com/{{ page.hardwaretwitter }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% set mobilehardware = 0 %}{% for page in pages %}{% if page.meta.type == 'HardwareMobile' %}{% set mobilehardware = mobilehardware + 1 %}
+                {% include 'hardwareindexcard.html' %}
                 {% if (mobilehardware % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (mobilehardware % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (mobilehardware % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -70,24 +38,8 @@
         <p>creating physical objects.</p>
         <div id="printinghardware">
             <div class="row">
-                {% set printinghardware = 0 %}{% for page in pages %}{% if page.type == 'HardwarePrinting' %}{% set printinghardware = printinghardware + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6 divHardware">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">{{ page.title }}</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>{{ page.description }}</p>
-                            <p><span class="label label-danger">{{ page.price }}</span></p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.hardwareurl }}" class="btn btn-success btn-flat" title="{{ page.hardwareurltitle }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{{ page.hardwareurltitle }}</a>
-                            {% if page.hardwaretwitter != '' %}
-                            <a href="https://twitter.com/{{ page.hardwaretwitter }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% set printinghardware = 0 %}{% for page in pages %}{% if page.meta.type == 'HardwarePrinting' %}{% set printinghardware = printinghardware + 1 %}
+                {% include 'hardwareindexcard.html' %}
                 {% if (printinghardware % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (printinghardware % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (printinghardware % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -99,24 +51,8 @@
         <p>tools for presenting and displaying visuals.</p>
         <div id="presentinghardware">
             <div class="row">
-                {% set presentinghardware = 0 %}{% for page in pages %}{% if page.type == 'HardwarePresenting' %}{% set presentinghardware = presentinghardware + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6 divHardware">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">{{ page.title }}</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>{{ page.description }}</p>
-                            <p><span class="label label-danger">{{ page.price }}</span></p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.hardwareurl }}" class="btn btn-success btn-flat" title="{{ page.hardwareurltitle }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{{ page.hardwareurltitle }}</a>
-                            {% if page.hardwaretwitter != '' %}
-                            <a href="https://twitter.com/{{ page.hardwaretwitter }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% set presentinghardware = 0 %}{% for page in pages %}{% if page.meta.type == 'HardwarePresenting' %}{% set presentinghardware = presentinghardware + 1 %}
+                {% include 'hardwareindexcard.html' %}
                 {% if (presentinghardware % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (presentinghardware % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (presentinghardware % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}

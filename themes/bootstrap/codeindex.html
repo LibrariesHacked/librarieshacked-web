@@ -8,14 +8,14 @@
     <div class="container">
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        {{ content }}
+        <div class="container">{{ content }}</div>
         <h2>tutorials and learning</h2>
         <p>code to learn from.</p>
         <div id="codetutorials">
             <div class="row">
                 {% set codetutorials = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'SourceLearning' %}
+                {% if page.meta.type == 'SourceLearning' %}
                 {% set codetutorials = codetutorials + 1 %}
                 {% include 'codeindexcard.html' %}
                 {% if (codetutorials % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
@@ -31,7 +31,7 @@
             <div class="row">
                 {% set codeapps = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'SourceApp' %}
+                {% if page.meta.type == 'SourceApp' %}
                 {% set codeapps = codeapps + 1 %}
                 {% include 'codeindexcard.html' %}
                 {% if (codeapps % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
@@ -47,7 +47,7 @@
             <div class="row">
                 {% set librarieshackedcode = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'SourceLibrariesHacked' %}
+                {% if page.meta.type == 'SourceLibrariesHacked' %}
                 {% set librarieshackedcode = librarieshackedcode + 1 %}
                 {% include 'codeindexcard.html' %}
                 {% if (librarieshackedcode % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}

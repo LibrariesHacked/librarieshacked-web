@@ -13,7 +13,7 @@
         <div class="row">
             {% set blogs = 0 %}
             {% for page in pages %}
-            {% if page.type == 'Article' %}
+            {% if page.meta.type == 'Article' %}
             {% set blogs = blogs + 1 %}
             {% if blogs < 5 %}
             {% include 'blogindexcard.html' %}
@@ -29,7 +29,7 @@
             {% set archiveblogs = 0 %}
             {% set blogs = 0 %}
             {% for page in pages %}
-            {% if page.type == 'Article' %}
+            {% if page.meta.type == 'Article' %}
             {% set blogs = blogs + 1 %}
             {% if blogs > 4 %}
             {% set archiveblogs = archiveblogs + 1 %}

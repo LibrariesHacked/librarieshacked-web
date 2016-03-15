@@ -8,25 +8,15 @@
     <div class="container">
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        {{ content }}
+        <div class="container">{{ content }}</div>
         <h2>general hack organising guides</h2>
         <p>guides to running hackathons, codes of conduct, and tools.</p>
         <div class="row">
             {% set hackguides = 0 %}
             {% for page in pages %}
-            {% if page.type == 'ResourcesOrganisation' %}
+            {% if page.meta.type == 'ResourcesOrganisation' %}
             {% set hackguides = hackguides + 1 %}
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                    <div class="panel-body">
-                        <p>{{ page.description }}</p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                    </div>
-                </div>
-            </div>
+            {% include 'resourcesindexcard.html' %}
             {% if (hackguides % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
             {% if (hackguides % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
             {% if (hackguides % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -38,19 +28,9 @@
         <div class="row">
             {% set hackguides = 0 %}
             {% for page in pages %}
-            {% if page.type == 'ResourcesLibraryHacks' %}
+            {% if page.meta.type == 'ResourcesLibraryHacks' %}
             {% set libraryhacks = libraryhacks + 1 %}
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                    <div class="panel-body">
-                        <p>{{ page.description }}</p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                    </div>
-                </div>
-            </div>
+            {% include 'resourcesindexcard.html' %}
             {% if (libraryhacks % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
             {% if (libraryhacks % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
             {% if (libraryhacks % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -62,19 +42,9 @@
         <div class="row">
             {% set hackdiversity = 0 %}
             {% for page in pages %}
-            {% if page.type == 'ResourcesDiversity' %}
+            {% if page.meta.type == 'ResourcesDiversity' %}
             {% set hackdiversity = hackdiversity + 1 %}
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                    <div class="panel-body">
-                        <p>{{ page.description }}</p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                    </div>
-                </div>
-            </div>
+            {% include 'resourcesindexcard.html' %}
             {% if (hackdiversity % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
             {% if (hackdiversity % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
             {% if (hackdiversity % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -86,19 +56,9 @@
         <div class="row">
             {% set hackexperiences = 0 %}
             {% for page in pages %}
-            {% if page.type == 'ResourcesExperiences' %}
+            {% if page.meta.type == 'ResourcesExperiences' %}
             {% set hackexperiences = hackexperiences + 1 %}
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                    <div class="panel-body">
-                        <p>{{ page.description }}</p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                    </div>
-                </div>
-            </div>
+            {% include 'resourcesindexcard.html' %}
             {% if (hackexperiences % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
             {% if (hackexperiences % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
             {% if (hackexperiences % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -110,19 +70,9 @@
         <div class="row">
             {% set hacklearning = 0 %}
             {% for page in pages %}
-            {% if page.type == 'ResourcesLearning' %}
+            {% if page.meta.type == 'ResourcesLearning' %}
             {% set hacklearning = hacklearning + 1 %}
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                    <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                    <div class="panel-body">
-                        <p>{{ page.description }}</p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="{{ page.resourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }}" target="_blank" rel="nofollow"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                    </div>
-                </div>
-            </div>
+            {% include 'resourcesindexcard.html' %}
             {% if (hacklearning % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
             {% if (hacklearning % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
             {% if (hacklearning % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}

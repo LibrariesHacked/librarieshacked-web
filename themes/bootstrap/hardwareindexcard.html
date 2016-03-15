@@ -1,0 +1,11 @@
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="lhcard">
+        <h3 class="text-info">{{ page.title }}</h3>
+        <p>{{ page.description }}</p>
+        <p><span class="label label-danger">{{ page.meta.price }}</span></p>
+        <a href="{{ page.meta.hardwareurl }}" class="btn btn-success btn-flat" title="{{ page.meta.hardwareurltitle }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{{ page.meta.hardwareurltitle }}</a>
+        {% if page.meta.hardwaretwitter != '' %}
+        <a href="https://twitter.com/{{ page.meta.hardwaretwitter }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+        {% endif %}
+    </div>
+</div>

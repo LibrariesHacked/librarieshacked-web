@@ -7,7 +7,7 @@
     <style>
         #map {
             height: 400px;
-            border: 1px solid #ccc;
+            border: 1px solid white;
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
     <div class="container">
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        {{ content }}
+        <div class="container">{{ content }}</div>
         <h2>future events, makerspaces, fablabs</h2>
         <p>upcoming events for the diary.  some are ongoing series of events and FabLabs that it is worth keeping an eye on.</p>
         <script>var hackEvents = [];</script>
         <div id="fablabs">
             <div class="row">
-                {% set fablabs = 0 %}{% for page in pages %}{% if page.type == 'FabLab' or page.type == 'Event' %}{% set fablabs = fablabs + 1 %}
+                {% set fablabs = 0 %}{% for page in pages %}{% if page.meta.type == 'FabLab' or page.meta.type == 'Event' %}{% set fablabs = fablabs + 1 %}
                 {% include 'eventindexcard.html' %}
                 {% if (fablabs % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (fablabs % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
@@ -39,7 +39,7 @@
         <p>events that have been and gone - still often useful for finding out what happened and how it was done.</p>
         <div id="pastevents">
             <div class="row">
-                {% set pastevents = 0 %}{% for page in pages %}{% if page.type == 'PastEvent' %}{% set pastevents = pastevents + 1 %}
+                {% set pastevents = 0 %}{% for page in pages %}{% if page.meta.type == 'PastEvent' %}{% set pastevents = pastevents + 1 %}
                 {% include 'eventindexcardmini.html' %}
                 {% if (pastevents % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (pastevents % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
@@ -59,7 +59,7 @@
         });
 
         var latlng = L.latLng(53.5, -2.6);
-        var map = L.map('map', { center: latlng, layers: [tiles] });
+        var map = L.map('map', { center: latlng, layers: [tiles], scrollWheelZoom: false });
         var bounds = [[53.5, -2.6]];
 
         $.each(hackEvents, function () {
@@ -85,7 +85,6 @@
             ];
             return colours[Math.floor(Math.random() * colours.length)];
         }
-
     </script>
 </body>
 </html>

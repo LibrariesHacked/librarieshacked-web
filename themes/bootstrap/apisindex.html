@@ -15,7 +15,7 @@
             <div class="row">
                 {% set biblioapis = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'BibliographicApi' %}
+                {% if page.meta.type == 'BibliographicApi' %}
                 {% set biblioapis = biblioapis + 1 %}
                 {% include 'apisindexcard.html' %}
                 {% if (biblioapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
@@ -31,7 +31,7 @@
             <div class="row">
                 {% set collectionapis = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'CollectionApi' %}
+                {% if page.meta.type == 'CollectionApi' %}
                 {% set collectionapis = collectionapis + 1 %}
                 {% include 'apisindexcard.html' %}
                 {% if (collectionapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
@@ -47,7 +47,7 @@
             <div class="row">
                 {% set libraryapi = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'LibraryApi' %}
+                {% if page.meta.type == 'LibraryApi' %}
                 {% set libraryapi = libraryapi + 1 %}
                 {% include 'apisindexcard.html' %}
                 {% if (libraryapi % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
@@ -63,7 +63,7 @@
             <div class="row">
                 {% set nationalapi = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'NationalApi' %}
+                {% if page.meta.type == 'NationalApi' %}
                 {% set nationalapi = nationalapi + 1 %}
                 {% include 'apisindexcard.html' %}
                 {% if (nationalapi % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
@@ -79,7 +79,7 @@
             <div class="row">
                 {% set addressapis = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'AddressApi' %}
+                {% if page.meta.type == 'AddressApi' %}
                 {% set addressapis = addressapis + 1 %}
                 {% include 'apisindexcard.html' %}
                 {% if (addressapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}

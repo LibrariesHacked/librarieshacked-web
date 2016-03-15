@@ -8,6 +8,7 @@
     <div class="container">
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
+        <div class="container">{{ content }}</div>
         <div class="row">
             <div class="col-lg-6 message-form-showing">
                 <div class="well bs-component">
@@ -50,7 +51,6 @@
                 </div>
             </div>
         </div>
-        {{ content }}
         <h2>comment</h2>
         <p>for any comment on anything about the site, or if you think it should include other details you can directly use this comments page.</p>
         {% include 'disqus.html' %}

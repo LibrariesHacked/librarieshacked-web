@@ -6,37 +6,18 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="/">home</a></li>
-            <li class="active">{{ meta.title }}</li>
-        </ul>
-        <div class="page-header">
-            <h1>{{ meta.title }}</h1>
-            <p class="lead">{{ meta.description }}</p>
-        </div>
-        {{ content }}
+        {% include 'breadcrumb.html' %}
+        {% include 'pageheader.html' %}
+        <div class="container">{{ content }}</div>
         <h2>data portals</h2>
         <div id="dataportals">
             <p>software and cloud-based platforms for publishing datasets.</p>
             <div class="row">
                 {% set portals = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'DataPortal' %}
+                {% if page.meta.type == 'DataPortal' %}
                 {% set portals = portals + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                        <div class="panel-body">
-                            <p>{{ page.description }}</p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.toolurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                            {% if page.toolexampleurl != '' %}
-                            <a href="{{ page.toolexampleurl }}" class="btn btn-info btn-flat" title="{{ page.toolexampleurltitle }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{{ toolexampleurltitle }}</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'toolsindexcard.html' %}
                 {% if (portals % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (portals % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (portals % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -44,32 +25,15 @@
                 {% endfor %}
             </div>
         </div>
-
         <h2>visualisation tools</h2>
         <p>tools for visualising data, typically on webpages using JavaScript technologies.</p>
         <div id="visualisations">
             <div class="row">
                 {% set visualisations = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'Visualisation' %}
+                {% if page.meta.type == 'Visualisation' %}
                 {% set visualisations = visualisations + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                        <div class="panel-body">
-                            <p>{{ page.description }}</p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.toolurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                            {% if page.toolexampleurl != '' %}
-                            <a href="{{ page.toolexampleurl }}" class="btn btn-info btn-flat" title="{{ page.toolexampleurltitle }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                            {% endif %}
-                            {% if page.toolvisualisation != '' %}
-                            <a href="/examples/{{ page.toolvisualisation }}" class="btn btn-info btn-flat" title="visualisation example"><i class="fa fa-bar-chart"></i>&nbsp;example</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'toolsindexcard.html' %}
                 {% if (visualisations % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (visualisations % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (visualisations % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -77,29 +41,15 @@
                 {% endfor %}
             </div>
         </div>
-
         <h2>data querying tools</h2>
         <p>tools for querying and manipulating data into the format you require.</p>
         <div id="querytools">
             <div class="row">
                 {% set querytools = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'DataQuery' %}
+                {% if page.meta.type == 'DataQuery' %}
                 {% set querytools = querytools + 1 %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="panel panel-{{ random(['info', 'success', 'danger', 'warning', 'primary']) }}">
-                        <div class="panel-heading"><h3 class="panel-title">{{ page.title }}</h3></div>
-                        <div class="panel-body">
-                            <p>{{ page.description }}</p>
-                        </div>
-                        <div class="panel-footer">
-                            <a href="{{ page.toolurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
-                            {% if page.toolexampleurl != '' %}
-                            |  <a href="{{ page.toolexampleurl }}" class="btn btn-info btn-flat" title="{{ page.toolexampleurltitle }}" target="_blank"><i class="fa fa-ellipsis-h"></i>&nbsp;{{ page.toolexampleurltitle }}</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'toolsindexcard.html' %}
                 {% if (querytools % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (querytools % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (querytools % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}

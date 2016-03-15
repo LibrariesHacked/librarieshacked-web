@@ -14,7 +14,7 @@
         <div id="webapps">
             <div class="row">
                 {% set webapps = 0 %}{% for page in pages %}
-                {% if page.type == 'WebApp' %}{% set webapps = webapps + 1 %}
+                {% if page.meta.type == 'WebApp' %}{% set webapps = webapps + 1 %}
                 {% include 'appsindexcard.html' %}
                 {% if (webapps % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (webapps % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
@@ -28,7 +28,7 @@
         <div id="mobileappscatalogue">
             <div class="row">
                 {% set mobileappsaccount = 0 %}{% for page in pages %}
-                {% if page.type == 'MobileAccountApp' %}{% set mobileappsaccount = mobileappsaccount + 1 %}
+                {% if page.meta.type == 'MobileAccountApp' %}{% set mobileappsaccount = mobileappsaccount + 1 %}
                 {% include 'appsindexcard.html' %}
                 {% if (mobileappsaccount % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (mobileappsaccount % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
@@ -43,7 +43,7 @@
             <div class="row">
                 {% set mobileappscollection = 0 %}
                 {% for page in pages %}
-                {% if page.type == 'MobileCollectionsApp' %}{% set mobileappscollection = mobileappscollection + 1 %}
+                {% if page.meta.type == 'MobileCollectionsApp' %}{% set mobileappscollection = mobileappscollection + 1 %}
                 {% include 'appsindexcard.html' %}
                 {% if (mobileappscollection % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (mobileappscollection % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}

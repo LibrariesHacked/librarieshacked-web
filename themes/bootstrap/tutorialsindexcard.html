@@ -3,9 +3,10 @@
         <h3 class="text-success">{{ page.title }}</h3>
         <p class="lead"><i class="fa fa-calendar-o"></i>&nbsp;{{ page.date_formatted }}</p>
         <p>{{ page.description }}</p>
+        <small>technologies/skils</small>
         <p>
-            {% for tag in page.meta.tags|split(',') %}
-            <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
+            {% for skill in page.meta.tutorialskillsrequired|split(',') %}
+            <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ skill }}</span>
             {% endfor %}
         </p>
         <a href="{{ page.url }}" class="btn btn-success btn-flat" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
