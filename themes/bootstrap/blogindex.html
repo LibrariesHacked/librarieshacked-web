@@ -9,7 +9,6 @@
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
-        <h2 class="text-success">latest posts</h2>
         <div class="row">
             {% set blogs = 0 %}
             {% for page in pages %}
@@ -24,7 +23,7 @@
             {% endif %}
             {% endfor %}
         </div>
-        <h2 class="text-warning">archive</h2>
+        <h2>archive</h2>
         <div id="posts" class="row">
             {% set archiveblogs = 0 %}
             {% set blogs = 0 %}
