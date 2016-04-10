@@ -22,16 +22,15 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="subs text-success">latest articles and tutorials</h2>
         <div class="row">
             {% set tutorial = 0 %}{% for page in pages %}{% if (page.meta.type == 'Tutorial' or page.meta.type == 'Article') and tutorial < 3 %}
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="lhcard">
-                    <p class="lead">{{ page.title }}</p>
+                    <h3>{{ page.title }}</h3>
                     <p>{{ page.description }}</p>
                     {% if page.meta.tags != '' %}{% for tag in page.meta.tags|split(',') %}<span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> {% endfor %}{% endif %}
                     {% if page.meta.tutorialskillsrequired != '' %}{% for tag in page.meta.tutorialskillsrequired|split(',') %}<span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> {% endfor %}{% endif %}
-                    <p><a class="btn btn-flat btn-sm btn-success" href="{{ page.url }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a></p>
+                    <p><a class="btn btn-flat btn-success" href="{{ page.url }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a></p>
                 </div>
             </div>
             {% set tutorial = tutorial + 1 %}{% endif %}{% endfor %}

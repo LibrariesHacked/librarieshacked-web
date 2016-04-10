@@ -1,14 +1,11 @@
 /* Custom page CSS
 -------------------------------------------------- */
-body {
-    /* padding-top: 60px; */
-}
-
 .lhcard {
-    border: 1px solid white;
+    border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
+    background: white;
 }
 
 .size-64 i {
@@ -42,11 +39,6 @@ body {
     font-weight: 700 !important;
 }
 
-/*.navbar.navbar .dropdown-menu li > a {
-    font-size: 14px !important;
-    padding: 3px 20px !important;
-}*/
-
 pre.prettyprint {
     border: none !important;
     margin: 20px !important;
@@ -58,12 +50,6 @@ pre.prettyprint {
 
 .table-nonfluid {
     width: auto !important;
-}
-
-h2.subs {
-    /*text-transform: uppercase !important;
-    font-weight: 700 !important;
-    text-align:center !important;*/
 }
 
 .background-white {
