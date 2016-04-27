@@ -1,11 +1,21 @@
 /* Custom page CSS
 -------------------------------------------------- */
+body {
+    padding-top: 70px;
+}
+
 .lhcard {
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
     padding: 10px;
     margin-bottom: 10px;
     background: white;
+}
+
+.lhcard h4 {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .size-64 i {
