@@ -9,50 +9,41 @@
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
-        <div class="row">
-            <div class="col-lg-6 message-form-showing">
-                <div class="well bs-component">
-                    <form class="form-horizontal" method="post" name="contact">
-                        <fieldset>
-                            <legend>send a message</legend>
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label" for="name">name</label>
-                                <div class="col-lg-10">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="enter name" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label" for="mail">email address</label>
-                                <div class="col-lg-10">
-                                    <input type="email" class="form-control" id="mail" name="mail" placeholder="enter email" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label" for="subject">subject</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="subject" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label" for="message">message</label>
-                                <div class="col-lg-10">
-                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-10 col-lg-offset-2">
-                                    <button type="submit" class="btn btn-success btn-flat btn-lg" name="contact" value="true">submit</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+        <div class="message-form-showing">
+            <form method="post" name="contact">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="name">name</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="enter name" required>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12 message-thanks-hidden">
-                <div class="well bs-component">
-                    <p>thank you for your message!</p>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="mail">email address</label>
+                    <div class="col-lg-10">
+                        <input type="email" class="form-control" id="mail" name="mail" placeholder="enter email" required>
+                    </div>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="subject">subject</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="subject" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="message">message</label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-success btn-flat btn-lg" name="contact" value="true">submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="well message-thanks-hidden">
+            <p>thank you for your message!</p>
         </div>
         {% include 'footer.html' %}
     </div>

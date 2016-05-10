@@ -1,12 +1,12 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
     <div class="lhcard">
-        <h3 class="text-muted">{{ page.title }}</h3>
+        <h3 class="text-{{ colour }}">{{ page.title }}</h3>
         <p>{{ page.description }}</p>
         {% if page.meta.sourcetype == 'BitBucket' %}
-        <a href="{{ page.meta.sourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }} repository on BitBucket" target="_blank"><i class="fa fa-bitbucket"></i>&nbsp;code repository</a>
+        <a href="{{ page.meta.sourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }} repository on BitBucket" target="_blank"><i class="fa fa-bitbucket"></i>&nbsp;BitBucket</a>
         {% endif %}
         {% if page.meta.sourcetype == 'GitHub' %}
-        <a href="{{ page.meta.sourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }} repository on GitHub" target="_blank"><i class="fa fa-github"></i>&nbsp;code repository</a>
+        <a href="{{ page.meta.sourceurl }}" class="btn btn-success btn-flat" title="{{ page.title }} repository on GitHub" target="_blank"><i class="fa fa-github"></i>&nbsp;GitHub</a>
         {% endif %}
     </div>
 </div>

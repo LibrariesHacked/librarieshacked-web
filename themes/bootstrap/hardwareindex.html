@@ -9,50 +9,48 @@
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
-        <h2>computer boards and electronics</h2>
+        <h2 class="text-danger">computer boards and electronics</h2>
         <p>small prototyping boards for code and electronic hardware projects.</p>
         <div id="computerhardware">
             <div class="row">
                 {% set computerhardware = 0 %}{% for page in pages %}{% if page.meta.type == 'HardwareComputer' %}{% set computerhardware = computerhardware + 1 %}
-                {% include 'hardwareindexcard.html' %}
+                {% include 'hardwareindexcard.html' with {'colour': 'danger'} %}
                 {% if (computerhardware % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (computerhardware % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (computerhardware % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
                 {% endif %}{% endfor %}
             </div>
         </div>
-
-        <h2>mobile</h2>
+        <h2 class="text-primary">mobile</h2>
         <p>mobile-technology prototyping</p>
         <div id="mobilehardware">
             <div class="row">
                 {% set mobilehardware = 0 %}{% for page in pages %}{% if page.meta.type == 'HardwareMobile' %}{% set mobilehardware = mobilehardware + 1 %}
-                {% include 'hardwareindexcard.html' %}
+                {% include 'hardwareindexcard.html' with {'colour': 'primary'} %}
                 {% if (mobilehardware % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (mobilehardware % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (mobilehardware % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
                 {% endif %}{% endfor %}
             </div>
         </div>
-        <h2>printing</h2>
+        <h2 class="text-warning">printing</h2>
         <p>creating physical objects.</p>
         <div id="printinghardware">
             <div class="row">
                 {% set printinghardware = 0 %}{% for page in pages %}{% if page.meta.type == 'HardwarePrinting' %}{% set printinghardware = printinghardware + 1 %}
-                {% include 'hardwareindexcard.html' %}
+                {% include 'hardwareindexcard.html' with {'colour': 'warning'} %}
                 {% if (printinghardware % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (printinghardware % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (printinghardware % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
                 {% endif %}{% endfor %}
             </div>
         </div>
-
-        <h2>presenting</h2>
+        <h2 class="text-info">presenting</h2>
         <p>tools for presenting and displaying visuals.</p>
         <div id="presentinghardware">
             <div class="row">
                 {% set presentinghardware = 0 %}{% for page in pages %}{% if page.meta.type == 'HardwarePresenting' %}{% set presentinghardware = presentinghardware + 1 %}
-                {% include 'hardwareindexcard.html' %}
+                {% include 'hardwareindexcard.html' with {'colour': 'info'} %}
                 {% if (presentinghardware % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (presentinghardware % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (presentinghardware % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}

@@ -9,7 +9,7 @@
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
-        <h2>computer formats</h2>
+        <h2 class="text-danger">computer formats</h2>
         <p>data available to download and use in computer based formats such as XML,JSON and CSV.</p>
         <div id="computerformats">
             <div class="row">
@@ -17,14 +17,14 @@
                 {% for page in pages %}
                 {% if page.meta.type == 'ComputerFormat' %}
                 {% set computerformats = computerformats + 1 %}
-                {% include 'dataindexcard.html' %}
+                {% include 'dataindexcard.html' with {'colour': 'danger'} %}
                 {% if (computerformats % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (computerformats % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (computerformats % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
                 {% endif %}{% endfor %}
             </div>
         </div>
-        <h2>spreadsheets</h2>
+        <h2 class="text-success">spreadsheets</h2>
         <p>non-CSV spreadsheet formats such as excel/google sheets</p>
         <div id="spreadsheets">
             <div class="row">
@@ -32,7 +32,7 @@
                 {% for page in pages %}
                 {% if page.meta.type == 'Spreadsheet' %}
                 {% set spreadsheets = spreadsheets + 1 %}
-                {% include 'dataindexcard.html' %}
+                {% include 'dataindexcard.html' with {'colour': 'success'} %}
                 {% if (spreadsheets % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (spreadsheets % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (spreadsheets % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -40,7 +40,7 @@
                 {% endfor %}
             </div>
         </div>
-        <h2>report downloads</h2>
+        <h2 class="text-warning">report downloads</h2>
         <p>reports that include data embedded e.g. PDF documents.</p>
         <p>to read PDF documents, you will need a PDF reader such as adobe acrobat. this is freely available, you can get the latest version (which has a number of accessibility features) from the <a href="http://get.adobe.com/uk/reader/" title="Get Adobe Acrobat Reader">adobe acrobat website (external link)</a>.  alternatively there is also foxit PDF reader, also available to <a href="https://www.foxitsoftware.com/products/pdf-reader/" title="Foxit PDF Reader" target="_blank">download for free</a>.</p>
         <div id="reports">
@@ -49,7 +49,7 @@
                 {% for page in pages %}
                 {% if page.meta.type == 'Download' %}
                 {% set reports = reports + 1 %}
-                {% include 'dataindexcard.html' %}
+                {% include 'dataindexcard.html' with {'colour': 'warning'} %}
                 {% if (reports % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (reports % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (reports % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -57,7 +57,7 @@
                 {% endfor %}
             </div>
         </div>
-        <h2>web pages</h2>
+        <h2 class="text-info">web pages</h2>
         <p>web pages that include useful data within the page.</p>
         <div id="webpages">
             <div class="row">
@@ -65,7 +65,7 @@
                 {% for page in pages %}
                 {% if page.meta.type == 'Webpage' %}
                 {% set webpages = webpages + 1 %}
-                {% include 'dataindexcard.html' %}
+                {% include 'dataindexcard.html' with {'colour': 'info'} %}
                 {% if (webpages % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (webpages % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (webpages % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}

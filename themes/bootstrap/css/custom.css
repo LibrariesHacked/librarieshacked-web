@@ -12,11 +12,11 @@ body {
     background: #F5F5F5;
 }
 
-.lhcard h4 {
-    text-align: right;
-    text-transform: uppercase;
-    font-weight: 500;
-}
+    .lhcard h4 {
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
 
 .size-64 i {
     font-size: 64px;
@@ -64,6 +64,11 @@ pre.prettyprint {
 
 .background-white {
     background-color: white !important;
+}
+
+#map {
+    height: 400px;
+    border: 1px solid white;
 }
 
 /*

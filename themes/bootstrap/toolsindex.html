@@ -9,7 +9,7 @@
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
-        <h2>data portals</h2>
+        <h2 class="text-primary">data portals</h2>
         <div id="dataportals">
             <p>software and cloud-based platforms for publishing datasets.</p>
             <div class="row">
@@ -17,7 +17,7 @@
                 {% for page in pages %}
                 {% if page.meta.type == 'DataPortal' %}
                 {% set portals = portals + 1 %}
-                {% include 'toolsindexcard.html' %}
+                {% include 'toolsindexcard.html' with {'colour': 'primary'} %}
                 {% if (portals % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (portals % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (portals % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -25,7 +25,7 @@
                 {% endfor %}
             </div>
         </div>
-        <h2>visualisation tools</h2>
+        <h2 class="text-danger">visualisation tools</h2>
         <p>tools for visualising data, typically on webpages using JavaScript technologies.</p>
         <div id="visualisations">
             <div class="row">
@@ -33,7 +33,7 @@
                 {% for page in pages %}
                 {% if page.meta.type == 'Visualisation' %}
                 {% set visualisations = visualisations + 1 %}
-                {% include 'toolsindexcard.html' %}
+                {% include 'toolsindexcard.html' with {'colour': 'danger'} %}
                 {% if (visualisations % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (visualisations % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (visualisations % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
@@ -41,7 +41,7 @@
                 {% endfor %}
             </div>
         </div>
-        <h2>data querying tools</h2>
+        <h2 class="text-warning">data querying tools</h2>
         <p>tools for querying and manipulating data into the format you require.</p>
         <div id="querytools">
             <div class="row">
@@ -49,7 +49,7 @@
                 {% for page in pages %}
                 {% if page.meta.type == 'DataQuery' %}
                 {% set querytools = querytools + 1 %}
-                {% include 'toolsindexcard.html' %}
+                {% include 'toolsindexcard.html' with {'colour': 'warning'} %}
                 {% if (querytools % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
                 {% if (querytools % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (querytools % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
