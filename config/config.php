@@ -1,21 +1,48 @@
 <?php
 
+/*
+ * BASIC
+ */
 $config['site_title'] = 'libraries hacked';					// Site title
-$config['base_url'] = 'http://staging.librarieshacked.org';	// Override base URL (e.g. http://example.com)
+$config['base_url'] = 'https://www.librarieshacked.org';	// Override base URL (e.g. http://example.com)
+$config['rewrite_url'] = true;								// A boolean indicating forced URL rewriting
 
-$config['theme'] = 'bootstrap'; 							// Set the theme (defaults to "default")
-$config['pages_order_by'] = 'date';							// Order pages by "alpha" or "date"
-$config['pages_order'] = 'desc';							// Order pages "asc" or "desc"
-$config['cache_enabled'] = false;							// default
-$config['cache_dir'] = 'content/cache/';					// default
-$config['cache_time'] = '604800';							// 60*60*24*7, seven days (default)
+/*
+ * THEME
+ */
+$config['theme'] = 'bootstrap';		// Set the theme (defaults to "default")
+$config['twig_config'] = array(		// Twig settings
+	'cache' => 'content/cache',		// To enable Twig caching change this to a path to a writable directory
+	'autoescape' => false,			// Auto-escape Twig vars
+	'debug' => false				// Enable Twig debug
+);
+
+/*
+ * CONTENT
+ */
+$config['date_format'] = '%D %T';		// Set the PHP date format as described here: http://php.net/manual/en/function.strftime.php
+$config['pages_order_by'] = 'date';		// Order pages by "alpha" or "date"
+$config['pages_order'] = 'desc';		// Order pages "asc" or "desc"
+$config['content_dir'] = 'content/';	// Content directory
+$config['content_ext'] = '.md';			// File extension of content files to serve
+$config['excerpt_length'] = 50;			// The pages excerpt length (in words)
+
+/*
+ * DISQUS
+ */
 $config['disqus_id'] = 'librarieshacked';
 
+/*
+ * CONTACT FORM
+ */
 $config['contact'] = array(
     'post' => $_POST,
     'send_to' => 'info@librarieshacked.org',
 );
 
+/*
+ * NANO RESOURCES PLUGIN
+ */
 $config["nano_resources"] = array(
     "css" => array(
         "files" => array(
@@ -49,22 +76,5 @@ $config["nano_resources"] = array(
 	"debug" => false
 );
 
-$config['rewrite_url'] = true;
-
-$config['twig_config'] = array(			// Twig settings
-	'cache' => false,					// To enable Twig caching change this to CACHE_DIR
-	'autoescape' => false,				// Autoescape Twig vars
-	'debug' => false					// Enable Twig debug
-);
-
-/*
-
-$config['date_format'] = 'jS M Y';		// Set the PHP date format
-$config['pages_order_by'] = 'alpha';	// Order pages by "alpha" or "date"
-$config['pages_order'] = 'asc';			// Order pages "asc" or "desc"
-$config['excerpt_length'] = 50;			// The pages excerpt length (in words)
-
 // To add a custom config setting:
-$config['custom_setting'] = 'Hello';	// Can be accessed by {{ config.custom_setting }} in a theme
-
-*/
+// $config['custom_setting'] = 'Hello';	// Can be accessed by {{ config.custom_setting }} in a theme

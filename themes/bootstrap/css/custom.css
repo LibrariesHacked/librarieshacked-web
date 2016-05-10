@@ -6,10 +6,10 @@ body {
 
 .lhcard {
     border: 1px solid #e5e5e5;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 10px;
     margin-bottom: 10px;
-    background: white;
+    background: #F5F5F5;
 }
 
 .lhcard h4 {

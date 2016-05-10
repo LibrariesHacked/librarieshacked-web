@@ -1,4 +1,4 @@
-Sitemap: http://www.librarieshacked.org/sitemap.xml
+Sitemap: https://www.librarieshacked.org/sitemap.xml
 User-agent: *
 Disallow: /apis/
 Disallow: /otherdata/
