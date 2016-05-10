@@ -35,8 +35,8 @@
             <div class="row">
                 {% set pastevents = 0 %}{% for page in pages %}{% if page.meta.type == 'PastEvent' %}{% set pastevents = pastevents + 1 %}
                 {% include 'eventindexcardmini.html' with {'colour': 'muted'} %}
-                {% if (pastevents % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (pastevents % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
+                {% if (pastevents % 6) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
+                {% if (pastevents % 4) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
                 {% if (pastevents % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
                 {% endif %}{% endfor %}
             </div>
@@ -46,6 +46,6 @@
     {% include 'scripts.html' %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
     <script src="{{ theme_url }}/js/leaflet.awesome-markers.min.js"></script>
-    <script src="{{ theme_url }}/js/events.js"></script>
+    <script src="{{ theme_url }}/js/eventindex.js"></script>
 </body>
 </html>

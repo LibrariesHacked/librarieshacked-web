@@ -15,7 +15,7 @@
         {% endif %}
         <p>
             {% if page.meta.apiurl != '' %}
-            <a href="{{ page.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-flat btn-primary"><i class="fa fa-external-link"></i>&nbsp;website</a>
+            <a href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-flat btn-primary"><i class="fa fa-external-link"></i>&nbsp;website</a>
             {% endif %}
             {% if page.meta.apitwitter != '' %}
             <a href="https://twitter.com/{{ page.meta.apitwitter }}" class="btn btn-flat btn-info" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>

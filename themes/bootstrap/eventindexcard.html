@@ -2,14 +2,14 @@
     <div class="lhcard">
         <h3 class="text-{{ colour }}">{{ page.title }}</h3>
         {% if page.date != '' %}
-        <p class="lead"><i class="fa fa-calendar-o"></i>&nbsp;{{ page.date_formatted }}</p>
+        <p class="lead text-muted"><i class="fa fa-calendar-o"></i>&nbsp;{{ page.meta.date_formatted }}</p>
         {% endif %}
         <p>
             <small class="text-warning">{{ page.meta.eventlocation }}</small>
         </p>
         <p>{{ page.description }}</p>
         <a href="{{ page.meta.eventurl }}" class="btn btn-success btn-flat" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;web</a>
-        {% if page.eventtwitter != '' %}
+        {% if page.meta.eventtwitter != '' %}
         <a href="https://twitter.com/{{ page.meta.eventtwitter }}" class="btn btn-info btn-flat" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twtr</a>
         {% endif %}
         {% if page.meta.eventhashtag != '' %}
