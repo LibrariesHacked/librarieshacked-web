@@ -4,6 +4,12 @@ body {
     padding-top: 70px;
 }
 
+.hdrHome {
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+}
+
 .lhcard {
     border: 1px solid #e5e5e5;
     border-radius: 4px;
