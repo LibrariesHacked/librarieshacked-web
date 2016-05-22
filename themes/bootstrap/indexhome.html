@@ -5,7 +5,6 @@
 </head>
 <body>
     {% include 'navigation.html' %}
-   
     <div class="container">
         {% include 'pageheader.html' %}
         <br />
@@ -15,13 +14,16 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="hdrHome">latest articles</h2>
+        <h2 class="hdrHome text-warning">latest</h2>
+        <p class="center">
+            <a class="btn btn-lg btn-info" href="/articles"><i class="fa fa-newspaper-o"></i>&nbsp;articles</a>
+            <a class="btn btn-lg btn-success" href="/tutorials"><i class="fa fa-graduation-cap"></i>&nbsp;tutorials</a>
+        </p>
         <div class="row">
             {% set tutorial = 0 %}{% for page in pages %}{% if (page.meta.type == 'Tutorial' or page.meta.type == 'Article') and tutorial < 3 %}
-           
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="lhcard">
-                    <h3>{{ page.title }}</h3>
+                    <h3 class="text-warning">{{ page.title }}</h3>
                     <p>{{ page.description }}</p>
                     {% if page.meta.tags != '' %}{% for tag in page.meta.tags|split(',') %}<span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> {% endfor %}{% endif %}
                     {% if page.meta.tutorialskillsrequired != '' %}{% for tag in page.meta.tutorialskillsrequired|split(',') %}<span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> {% endfor %}{% endif %}
@@ -29,59 +31,59 @@
                 </div>
             </div>
             {% set tutorial = tutorial + 1 %}{% endif %}{% endfor %}
-       
         </div>
     </div>
     <br />
     <div class="container">
-        <h2 class="hdrHome">Pages</h2>
+        <h2 class="hdrHome text-success">Pages</h2>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h2 class="text-danger">data services</h2>
+                <h3 class="text-danger">data services</h3>
                 <p class="lead">systems providing library data web services to integrate into your hacks and projects.</p>
-                <p><a class="btn  btn-lg btn-danger" href="/apis"><i class="fa fa-cubes"></i>&nbsp;data</a></p>
+                <a class="btn  btn-lg btn-danger" href="/apis"><i class="fa fa-cubes"></i>&nbsp;data</a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h2 class="text-info">hack events</h2>
+                <h3 class="text-info">hack events</h3>
                 <p class="lead">a listing of past and future events to get involved in and get inspiration from.</p>
-                <p><a class="btn btn-lg btn-info" href="/events"><i class="fa fa-calendar-o"></i>&nbsp;events</a></p>
+                <a class="btn btn-lg btn-info" href="/events"><i class="fa fa-calendar-o"></i>&nbsp;events</a>
             </div>
             <div class="clearfix visible-md visible-sm"></div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h2 class="text-primary">downloads</h2>
+                <h3 class="text-primary">downloads</h3>
                 <p class="lead">links to download reports and stats in various static formats (pdf, excel, access).</p>
-                <p><a class="btn btn-lg btn-primary" href="/otherdata"><i class="fa fa-file-excel-o"></i>&nbsp;downloads</a></p>
+                <a class="btn btn-lg btn-primary" href="/otherdata"><i class="fa fa-file-excel-o"></i>&nbsp;downloads</a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h2 class="text-success">tutorials</h2>
+                <h3 class="text-success">tutorials</h3>
                 <p class="lead">examples of using the available APIs and various other code based hacks.</p>
-                <p><a class="btn btn-lg btn-success" href="/tutorials"><i class="fa fa-graduation-cap"></i>&nbsp;tutorials</a></p>
+                <a class="btn btn-lg btn-success" href="/tutorials"><i class="fa fa-graduation-cap"></i>&nbsp;tutorials</a>
             </div>
             <div class="clearfix visible-md visible-sm"></div>
             <div class="clearfix visible-lg"></div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h2 class="text-warning">resources</h2>
+                <h3 class="text-warning">resources</h3>
                 <p class="lead">external resources for hosting hacks, including encouraging diversity, helping beginners, and providing food!</p>
-                <p><a class="btn btn-lg btn-warning" href="/resources"><i class="fa fa-external-link"></i>&nbsp;resources</a></p>
+                <a class="btn btn-lg btn-warning" href="/resources"><i class="fa fa-external-link"></i>&nbsp;resources</a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h2 class="text-info">articles</h2>
+                <h3 class="text-info">articles</h3>
                 <p class="lead">general posts about library technology and open library data.</p>
-                <p><a class="btn btn-lg btn-info" href="/articles"><i class="fa fa-newspaper-o"></i>&nbsp;articles</a></p>
+                <a class="btn btn-lg btn-info" href="/articles"><i class="fa fa-newspaper-o"></i>&nbsp;articles</a>
             </div>
             <div class="clearfix visible-md visible-sm"></div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h2 class="text-danger">tools</h2>
+                <h3 class="text-danger">tools</h3>
                 <p class="lead">tools for use in data analysis/crunching, data portals, and visualisations.</p>
-                <p><a class="btn btn-lg btn-danger" href="/tools"><i class="fa fa-bar-chart"></i>&nbsp;tools</a></p>
+                <a class="btn btn-lg btn-danger" href="/tools"><i class="fa fa-bar-chart"></i>&nbsp;tools</a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h2 class="text-primary">contribute</h2>
+                <h3 class="text-primary">contribute</h3>
                 <p class="lead">any content, links, or code that you may like to share?</p>
-                <p><a class="btn btn-lg btn-primary" href="/contribute"><i class="fa fa-pencil-square-o"></i>&nbsp;submit</a></p>
+                <a class="btn btn-lg btn-primary" href="/contribute"><i class="fa fa-pencil-square-o"></i>&nbsp;submit</a>
             </div>
         </div>
         <br />
+        <hr />
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}

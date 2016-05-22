@@ -3,10 +3,13 @@
 body {
     padding-top: 70px;
 }
+p.center{
+    text-align: center;
+}
 
 .hdrHome {
-    font-weight: 700;
-    text-transform: capitalize;
+    font-weight: 500;
+    text-transform: uppercase;
     text-align: center;
 }
 
