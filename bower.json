@@ -1,0 +1,17 @@
+{
+  "name": "librarieshacked-web",
+  "homepage": "https://github.com/LibrariesHacked/librarieshacked-web",
+  "authors": [
+    "Dave <david_rowe@bathnes.gov.uk>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
