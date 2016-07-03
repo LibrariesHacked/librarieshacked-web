@@ -13,15 +13,9 @@
         <p>services providing bibliographic data.</p>
         <div id="biblioapis">
             <div class="row">
-                {% set biblioapis = 0 %}
-                {% for page in pages %}
-                {% if page.meta.type == 'BibliographicApi' %}
-                {% set biblioapis = biblioapis + 1 %}
+                {% for page in pages if (page.meta.type == 'BibliographicApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'success'} %}
-                {% if (biblioapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (biblioapis % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (biblioapis % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}
+                {% include 'clearfix4.html' %}
                 {% endfor %}
             </div>
         </div>
@@ -29,15 +23,9 @@
         <p>APIs exposing data about other collections.</p>
         <div id="collectionapis">
             <div class="row">
-                {% set collectionapis = 0 %}
-                {% for page in pages %}
-                {% if page.meta.type == 'CollectionApi' %}
-                {% set collectionapis = collectionapis + 1 %}
+                {% for page in pages if (page.meta.type == 'CollectionApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'danger'} %}
-                {% if (collectionapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (collectionapis % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (collectionapis % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}
+                {% include 'clearfix4.html' %}
                 {% endfor %}
             </div>
         </div>
@@ -45,15 +33,9 @@
         <p>APIs dealing with data about libraries.</p>
         <div id="libraryapis">
             <div class="row">
-                {% set libraryapi = 0 %}
-                {% for page in pages %}
-                {% if page.meta.type == 'LibraryApi' %}
-                {% set libraryapi = libraryapi + 1 %}
+                {% for page in pages if (page.meta.type == 'LibraryApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'primary'} %}
-                {% if (libraryapi % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (libraryapi % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (libraryapi % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}
+                {% include 'clearfix4.html' %}
                 {% endfor %}
             </div>
         </div>
@@ -61,15 +43,9 @@
         <p>services that provide national specific collection data.</p>
         <div id="nationalapis">
             <div class="row">
-                {% set nationalapi = 0 %}
-                {% for page in pages %}
-                {% if page.meta.type == 'NationalApi' %}
-                {% set nationalapi = nationalapi + 1 %}
+                {% for page in pages if (page.meta.type == 'NationalApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'info'} %}
-                {% if (nationalapi % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (nationalapi % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (nationalapi % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}
+                {% include 'clearfix4.html' %}
                 {% endfor %}
             </div>
         </div>
@@ -77,15 +53,9 @@
         <p>not library related but useful in many projects, address data can be hard to find that isn't restricted.</p>
         <div id="addressapis">
             <div class="row">
-                {% set addressapis = 0 %}
-                {% for page in pages %}
-                {% if page.meta.type == 'AddressApi' %}
-                {% set addressapis = addressapis + 1 %}
+                {% for page in pages if )page.meta.type == 'AddressApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'warning'} %}
-                {% if (addressapis % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (addressapis % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (addressapis % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}
+                {% include 'clearfix4.html' %}
                 {% endfor %}
             </div>
         </div>

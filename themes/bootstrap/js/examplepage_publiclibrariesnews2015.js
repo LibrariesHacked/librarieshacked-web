@@ -4,25 +4,25 @@ $(function () {
     var locations = [];
     var locationsObj = {};
 
-    function click() {
+    var click = function () {
         $('.modal-header').text(this.textContent);
         $('.modal-body').html(locationsObj[this.textContent].text);
         $('#infoModal').modal('show');
-    }
+    };
 
-    function mouseover(p) {
+    var mouseover = function (p) {
         var g = d3.select(this).node().parentNode;
         d3.select(g).selectAll("circle").style("display", "none");
         d3.select(g).selectAll("text.value").style("display", "block");
-    }
+    };
 
-    function mouseout(p) {
+    var mouseout = function (p) {
         var g = d3.select(this).node().parentNode;
         d3.select(g).selectAll("circle").style("display", "block");
         d3.select(g).selectAll("text.value").style("display", "none");
-    }
+    };
 
-    $.getJSON("https://www.librarieshacked.org/themes/bootstrap/data/data_publiclibrariesnews2015.json", function (data) {
+    $.getJSON("/data/PublicLibrariesNews_LocalNews_2015.json", function (data) {
         $('#progress').hide();
         newsData = data;
         $.each(data, function (i, item) {
@@ -54,7 +54,7 @@ $(function () {
             locations.push({ stories: stories, name: key, text: locationsObj[key].text, total: total });
         });
 
-        var margin = { top: 20, right: 200, bottom: 0, left: 20 }
+        var margin = { top: 20, right: 200, bottom: 0, left: 20 };
         var width = 360;
         var height = 3800;
 

@@ -1,14 +1,14 @@
 var catalogues = new Array();
-var proxyUrl = 'https://www.librarieshacked.org/proxy.php?url=';
+var proxyUrl = '/proxy.php?url=';
 var cataloguesUrl = 'http://gb.mobilearena.axiell.com:8080/arena.ps.pacs/utility';
 var cataloguesSOAP = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><util:GetMobileAgencies xmlns:util="http://utility.pacs.services.arena.axiell.com/"/></soap:Body></soap:Envelope>';
 var catalogueSearchSOAP = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:Search xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:sear="http://axiell.com/arena/services/palma/search/searchrequest" xmlns:util="http://axiell.com/arena/services/palma/util"><sear:searchRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><util:language>en</util:language><sear:pageSize>[[PAGE_SIZE]]</sear:pageSize><sear:page>[[PAGE]]</sear:page><sear:sortOrder><field>relevance</field><direction>descending</direction></sear:sortOrder><sear:query>[[SEARCH_QUERY]]</sear:query><sear:covers util:enable="no" /><sear:facets util:enable="yes"><sear:facet count="5">mediaclass_facet</sear:facet></sear:facets><sear:queryFacets>[[SEARCHFACETS]]</sear:queryFacets><sear:queryFilter>[[QUERYFILTER1]]</sear:queryFilter></sear:searchRequest></ser:Search></soap:Body></soap:Envelope>';
 var catalogueCheckSOAP = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:Search xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:sear="http://axiell.com/arena/services/palma/search/searchrequest" xmlns:util="http://axiell.com/arena/services/palma/util"><sear:searchRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><util:language>en</util:language><sear:pageSize>0</sear:pageSize><sear:page>1</sear:page><sear:sortOrder><field>relevance</field><direction>descending</direction></sear:sortOrder><sear:query></sear:query><sear:covers util:enable="no" /><sear:facets util:enable="yes"><sear:facet count="5">mediaclass_facet</sear:facet><sear:facet count="5">language_facet</sear:facet></sear:facets></sear:searchRequest></ser:Search></soap:Body></soap:Envelope>';
 var catalogueDetailSOAP = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:GetCatalogueRecordDetail xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:cat="http://axiell.com/arena/services/palma/search/catalogueRecordDetailrequest" xmlns:util="http://axiell.com/arena/services/palma/util" xmlns:crd="http://axiell.com/arena/services/palma/util/crd"><cat:catalogueRecordDetailRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><crd:id>[[CATALOGUE_RECORD_ID]]</crd:id><util:language>en</util:language><cat:cover util:enable="yes" /><cat:holdings enable="yes"/></cat:catalogueRecordDetailRequest></ser:GetCatalogueRecordDetail></soap:Body></soap:Envelope>';
-var currentMember = "";
+var currentMember = '';
 var count = 0;
 
-$(document).ready(function () {
+$(function () {
 
     $('#divSearch').hide();
     $('#divResults').hide();
@@ -17,9 +17,9 @@ $(document).ready(function () {
 
     $.ajax({
         url: proxyUrl + encodeURIComponent(cataloguesUrl),
-        type: "POST",
+        type: 'POST',
         data: { data: cataloguesSOAP },
-        dataType: "json",
+        dataType: 'json',
         success: function (data) {
             var items = $($.parseXML(data.contents)).find("installation");
             $.each(items, function () {
@@ -30,9 +30,9 @@ $(document).ready(function () {
                     var name = $('name', this).text();
                     $.ajax({
                         url: proxyUrl + encodeURIComponent(serviceUrl + '/catalogue'),
-                        type: "POST",
+                        type: 'POST',
                         data: { data: catalogueCheckSOAP.replace('[[ARENA_MEMBER_ID]]', memberId) },
-                        dataType: "json",
+                        dataType: 'json',
                         success: function (data) {
                             if (data.contents && data.contents.indexOf('soap') != -1) {
 
@@ -40,8 +40,8 @@ $(document).ready(function () {
                                 var mediatypes = [];
                                 var xmlDoc = $.parseXML(data.contents);
                                 var totalItems = $('nofRecordsTotal', xmlDoc).text();
-                                var languageItems = $(xmlDoc).find("language_facet");
-                                var mediaItems = $(xmlDoc).find("mediaclass_facet");
+                                var languageItems = $(xmlDoc).find('language_facet');
+                                var mediaItems = $(xmlDoc).find('mediaclass_facet');
 
                                 $.each(mediaItems, function () {
                                     mediatypes.push({ type: $('name', this).text(), count: $('count', this).text(), value: $('code', this).text() });

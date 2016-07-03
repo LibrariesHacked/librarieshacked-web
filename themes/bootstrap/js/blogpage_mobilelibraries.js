@@ -3,7 +3,8 @@ var libraryCircles;
 var mobilesDisplayed = false;
 var librariesDisplayed = true;
 var map;
-$(document).ready(function () {
+
+$(function () {
 
     // create a map in the "map" div, set the view to a given place and zoom
     map = L.map('map').setView([51.360829369113446, -2.480187706610642], 11);
@@ -28,7 +29,6 @@ $(document).ready(function () {
     });
 
     map.addLayer(libraryCircles);
-    // map.addLayer(mobileLibraryCircles);
 });
 
 function toggleMobileLibraries() {

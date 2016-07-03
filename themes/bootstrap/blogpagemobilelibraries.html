@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     {% include 'head.html' %}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
-    <style>
-        #map { width: 100%; height: 500px; border: 1px solid #ccc; }
-    </style>
+    <link href="{{ theme_url }}/bower/css/leaflet.css" rel="stylesheet" />
 </head>
 <body>
     {% include 'navigation.html' %}
@@ -14,15 +11,12 @@
         {% include 'pageheaderwithtags.html' %}
         {{ content }}
         <button onclick="toggleMobileLibraries()" class="btn btn-success btn-flat">toggle mobile libraries</button><br /><br />
-        <div id="map"></div><br/>
+        <div id="map"></div><br />
         {% include 'disqus.html' %}
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
-    <script src="{{ theme_url }}/js/boundary.js"></script>
-    <script src="{{ theme_url }}/js/libraries.js"></script>
-    <script src="{{ theme_url }}/js/mobileLibraries.js"></script>
-    <script src="{{ theme_url }}/js/blogpagemobilelibraries.js"></script>
+    <script src="{{ theme_url }}/bower/js/leaflet.js"></script>
+    <script src="{{ theme_url }}/js/blogpage_mobilelibraries.js"></script>
 </body>
 </html>

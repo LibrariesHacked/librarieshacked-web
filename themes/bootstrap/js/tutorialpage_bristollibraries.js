@@ -1,6 +1,6 @@
 var closingCircles, libraryCircles, map, closingDisplayed = false;
 
-$(document).ready(function () {
+$(function () {
     // set up the leaflet map.  initial view of Bristol centre.
     map = L.map('map').setView([51.45, -2.60], 12);
     L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}' + (L.Browser.retina ? '@2x' : '') + '.png', {

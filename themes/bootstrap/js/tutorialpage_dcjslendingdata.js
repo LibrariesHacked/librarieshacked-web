@@ -1,4 +1,4 @@
-d3.csv("https://www.librarieshacked.org/themes/bootstrap/data/LibraryLendingTransactions.csv", function (data) {
+d3.csv("/data/LibraryLendingTransactions.csv", function (data) {
 
     var parseDate = d3.time.format("%m/%d/%Y 12:00:00 AM").parse;
     data.forEach(function (d) {

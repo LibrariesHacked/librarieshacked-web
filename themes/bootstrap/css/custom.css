@@ -3,7 +3,8 @@
 body {
     padding-top: 70px;
 }
-p.center{
+
+p.center {
     text-align: center;
 }
 
@@ -80,11 +81,6 @@ pre.prettyprint {
     border: 1px solid white;
 }
 
-/*
- * These CSS rules affect the tooltips within maps with the custom-popup
- * class. See the full CSS for all customizable options:
- * https://github.com/mapbox/mapbox.js/blob/001754177f3985c0e6b4a26e3c869b0c66162c99/theme/style.css#L321-L366
- */
 .custom-popup .leaflet-popup-content-wrapper {
     background: #2c3e50;
     color: #fff;
@@ -107,8 +103,6 @@ pre.prettyprint {
 }
 
 .custom-popup .leaflet-popup-tip {
-    /*border-left: 15px solid transparent;
-    border-right: 15px solid transparent;*/
     border-top: 15px solid #2c3e50;
     background: #2c3e50;
 }
@@ -133,4 +127,45 @@ pre.prettyprint {
 
 .leaflet-layers.active.following a {
     color: #FC8428;
+}
+
+/* Blog Page Catalogue
+-------------------------------------------------- */
+.catlink a:link {
+    text-decoration: none !important;
+}
+
+/* Blog Page: Public Lending Right
+-------------------------------------------------- */
+div.DTTT {
+    margin-bottom: 0.5em;
+    float: right;
+}
+
+div.dataTables_wrapper {
+    clear: both;
+}
+
+.DTTT .btn {
+    margin-left: 2px !important;
+}
+
+/* Example Page: D3 Libraries
+-------------------------------------------------- */
+.node circle {
+    cursor: pointer;
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font-size: 10px;
+    text-transform: lowercase;
+}
+
+path.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
 }

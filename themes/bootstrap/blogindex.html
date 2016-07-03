@@ -10,34 +10,16 @@
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
         <div class="row">
-            {% set blogs = 0 %}
-            {% for page in pages %}
-            {% if page.meta.type == 'Article' %}
-            {% set blogs = blogs + 1 %}
-            {% if blogs < 5 %}
+            {% for page in pages if (page.meta.type == 'Article')|slice(1,5) %}
             {% include 'blogindexcard.html' %}
-            {% endif %}
-            {% if (blogs % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-            {% if (blogs % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-            {% if (blogs % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-            {% endif %}
+            {% include 'clearfix4.html' %}
             {% endfor %}
         </div>
         <h2>archive</h2>
         <div id="posts" class="row">
-            {% set archiveblogs = 0 %}
-            {% set blogs = 0 %}
-            {% for page in pages %}
-            {% if page.meta.type == 'Article' %}
-            {% set blogs = blogs + 1 %}
-            {% if blogs > 4 %}
-            {% set archiveblogs = archiveblogs + 1 %}
+            {% for page in pages if page.meta.type == 'Article') | slice(5) %}
             {% include 'blogindexcardmini.html' %}
-            {% if (archiveblogs % 6) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-            {% if (archiveblogs % 4) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-            {% if (archiveblogs % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-            {% endif %}
-            {% endif %}
+            {% include 'clearfix6.html' %}
             {% endfor %}
         </div>
         {% include 'footer.html' %}

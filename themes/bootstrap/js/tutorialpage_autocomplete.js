@@ -1,4 +1,4 @@
-$(document).ready(function () {  // only begin once page has loaded
+$(function () { // only begin once page has loaded
     $("#txtBookSearch").autocomplete({ // attach auto-complete functionality to textbox
         // define source of the data
         source: function (request, response) {

@@ -6,12 +6,14 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumbarticles.html' %}
-        {% include 'pageheaderwithtags.html' %}
+        {% include 'breadcrumb.html' %}
+        {% include 'pageheader.html' %}
         {{ content }}
-        {% include 'disqus.html' %}
+        <div id="body"></div>
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
+    <script src="{{ theme_url }}/bower/js/d3.v3.min.js"></script>
+    <script src="{{ theme_url }}/js/examplepage_d3libraries.js"></script>
 </body>
 </html>

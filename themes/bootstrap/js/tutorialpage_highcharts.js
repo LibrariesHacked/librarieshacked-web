@@ -14,7 +14,7 @@ $(function () {
             results.data.slice(1).forEach(function (item, index) {
                 // For each column in the individual library row return it as a number (replacing the N/A values with zeros)
                 var data = item.slice(1).map(function (val) {
-                    return val != 'N/A'? Number(val) : null;
+                    return val != 'N/A' ? Number(val) : null;
                 });
                 // Add the library to the series array
                 // Because there are so many libraries, the visibility of the library is only set for the first five
