@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <button class="btn btn-success btn-flat" type="button" onclick="GetBarcode($('#txtAccountNumber').val())">create</button>
+                                <button class="btn btn-success" type="button" onclick="GetBarcode($('#txtAccountNumber').val())">create</button>
                             </div>
                         </div>
                     </fieldset>
@@ -34,8 +34,8 @@
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
-    <script src="{{ theme_url }}/js/jquery-barcode.min.js"></script>
-    <script src="{{ theme_url }}/js/tutorialpagebarcode.js"></script>
-    <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="../../bower_components/code-prettify/src/run_prettify.js"></script>
+    <script src="../../bower_components/barcode-jquery/jquery-barcode.min.js"></script>
+    <script src="{{ theme_url }}/js/tutorialpage_barcode.js"></script>
 </body>
 </html>

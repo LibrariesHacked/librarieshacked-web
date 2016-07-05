@@ -10,34 +10,16 @@
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
         <div class="row">
-            {% set tutorials = 0 %}
-            {% for page in pages %}
-            {% if page.meta.type == 'Tutorial' %}
-            {% set tutorials = tutorials + 1 %}
-            {% if tutorials < 5 %}
+            {% for page in pages if (page.meta.type == 'Tutorial') | slice(1,5) %}
             {% include 'tutorialsindexcard.html' %}
-            {% endif %}
-            {% if (tutorials % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-            {% if (tutorials % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-            {% if (tutorials % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-            {% endif %}
+            {% include 'clearfix4.html' %}
             {% endfor %}
         </div>
         <h2>archive</h2>
         <div class="row" id="postsarchive">
-            {% set tutorials = 0 %}
-            {% set tutorialarchives = 0 %}
-            {% for page in pages %}
-            {% if page.meta.type == 'Tutorial' %}
-            {% set tutorials = tutorials + 1 %}
-            {% if tutorials > 4 %}
-            {% set tutorialarchives = tutorialarchives + 1 %}
+            {% for page in pages if page.meta.type == 'Tutorial') | slice(5) %}
             {% include 'tutorialsindexcardmini.html' %}
-            {% if (tutorialarchives % 6) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-            {% if (tutorialarchives % 4) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-            {% if (tutorialarchives % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-            {% endif %}
-            {% endif %}
+            {% include 'clearfix6.html' %}
             {% endfor %}
         </div>
         {% include 'footer.html' %}

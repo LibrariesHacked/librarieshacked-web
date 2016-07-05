@@ -9,5 +9,5 @@ gulp.task('bower', function () {
 });
 
 gulp.task('bowerJs', function () {
-    return gulp.src(config.bowerDir + '/fontawesome/fonts/**.*').pipe(gulp.dest('./public/fonts'));
+    return gulp.src(config.bowerDir + '/fontawesome/fonts/*.*').pipe(gulp.dest(bowerPublic + '/fonts'));
 });

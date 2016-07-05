@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     {% include 'head.html' %}
-    <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" rel="stylesheet" />
-    <link href="{{ theme_url }}/css/leaflet.awesome-markers.css" rel="stylesheet" >
+    <link href="../../bower_components/leaflet/dist/leaflet.css" rel="stylesheet" />
+    <link href="../../bower_components/drmonty-leaflet-awesome-markers/css/leaflet.awesome-markers.css" rel="stylesheet" />
 </head>
 <body>
     {% include 'navigation.html' %}
@@ -16,12 +16,10 @@
         <script>var hackEvents = [];</script>
         <div id="fablabs">
             <div class="row">
-                {% set fablabs = 0 %}{% for page in pages %}{% if page.meta.type == 'FabLab' or page.meta.type == 'Event' %}{% set fablabs = fablabs + 1 %}
+                {% for page in pages if (page.meta.type == 'FabLab' or page.meta.type == 'Event') %}
                 {% include 'eventindexcard.html' with {'colour': 'success'} %}
-                {% if (fablabs % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (fablabs % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (fablabs % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}{% endfor %}
+                {% include 'clearfix4.html' %}
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -33,19 +31,17 @@
         <p>events that have been and gone - still often useful for finding out what happened and how it was done.</p>
         <div id="pastevents">
             <div class="row">
-                {% set pastevents = 0 %}{% for page in pages %}{% if page.meta.type == 'PastEvent' %}{% set pastevents = pastevents + 1 %}
-                {% include 'eventindexcardmini.html' with {'colour': 'muted'} %}
-                {% if (pastevents % 6) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (pastevents % 4) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (pastevents % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}{% endfor %}
+                {% for page in pages if (page.meta.type == 'PastEvent') %}
+                {% include 'eventindexcard.html' with {'colour': 'muted'} %}
+                {% include 'clearfix4.html' %}
+                {% endfor %}
             </div>
         </div>
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
-    <script src="{{ theme_url }}/js/leaflet.awesome-markers.min.js"></script>
+    <script src="../../bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="../../bower_components/drmonty-leaflet-awesome-markers/js/leaflet.awesome-markers.min.js"></script>
     <script src="{{ theme_url }}/js/eventindex.js"></script>
 </body>
 </html>

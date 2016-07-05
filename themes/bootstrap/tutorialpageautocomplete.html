@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     {% include 'head.html' %}
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 </head>
 <body>
     {% include 'navigation.html' %}
     <div class="container">
         {% include 'breadcrumbtutorials.html' %}
         {% include 'pageheader.html' %}
-
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="form-group">
@@ -52,6 +50,7 @@
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
+    <script src="../../bower_components/code-prettify/src/run_prettify.js"></script>
     <script src="{{ theme_url }}/js/tutorial_autocomplete.js"></script>
 </body>
 </html>

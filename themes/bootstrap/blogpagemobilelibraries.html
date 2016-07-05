@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     {% include 'head.html' %}
-    <link href="{{ theme_url }}/bower/css/leaflet.css" rel="stylesheet" />
+    <link href="../../bower_components/leaflet/dist/leaflet.css" rel="stylesheet" />
 </head>
 <body>
     {% include 'navigation.html' %}
@@ -10,13 +10,15 @@
         {% include 'breadcrumbarticles.html' %}
         {% include 'pageheaderwithtags.html' %}
         {{ content }}
-        <button onclick="toggleMobileLibraries()" class="btn btn-success btn-flat">toggle mobile libraries</button><br /><br />
-        <div id="map"></div><br />
+        <div class="container">
+            <p><button onclick="toggleMobileLibraries()" class="btn btn-success">toggle mobile libraries</button></p>
+            <div id="map"></div>
+        </div>
         {% include 'disqus.html' %}
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
-    <script src="{{ theme_url }}/bower/js/leaflet.js"></script>
+    <script src="../../bower_components/leaflet/dist/leaflet.js"></script>
     <script src="{{ theme_url }}/js/blogpage_mobilelibraries.js"></script>
 </body>
 </html>

@@ -169,3 +169,40 @@ path.link {
     stroke: #ccc;
     stroke-width: 1.5px;
 }
+
+/* Example Page: Public Libraries News
+-------------------------------------------------- */
+.axis path, .axis line {
+    fill: none;
+    stroke: #b6b6b6;
+    shape-rendering: crispEdges;
+}
+
+g.journal.active {
+    cursor: pointer;
+}
+
+text.label {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+text.value {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Tutorial Page: Bristol Libraries
+-------------------------------------------------- */
+.customLabel {
+    color: #ccc !important;
+    border: none;
+    background: none;
+    font-size: 7px;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 0px !important;
+    border: 1px solid #ccc;
+}

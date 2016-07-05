@@ -1,19 +1,11 @@
 ﻿<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% if meta.description %}<meta name="description" content="{{ meta.description }}">{% endif %}
-{% if meta.robots %}<meta name="robots" content="{{ meta.robots }}">{% endif %}
-{% if meta.keys %}<meta name="keywords" content="{{ meta.keys }}">{% endif %}
-{% if meta.author %}<meta name="author" content="{{ meta.author }}">{% endif %}
-<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
-<!-- Material Design fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<meta name="description" content="{{ meta.description }}">
+<meta name="robots" content="{{ meta.robots }}">
+<meta name="keywords" content="{{ meta.keys }}">
+<meta name="author" content="{{ meta.author }}">
+<title>{{ meta.title }}</title>
+<link href="../../bower_components/bootswatch/sandstone/bootstrap.min.css" rel="stylesheet" />
 <link href="{{ theme_url }}/css/site.css" rel="stylesheet">
-<link href="{{ theme_url }}/css/bootstrap-material-design.min.css" rel="stylesheet">
 <link href="/favicon.ico" rel="shortcut icon">
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->

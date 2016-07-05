@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     {% include 'head.html' %}
-    <link href="//cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" >
-    <link href="//cdn.datatables.net/tabletools/2.2.3/css/dataTables.tableTools.min.css" rel="stylesheet" >
+    <link href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bower_components/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bower_components/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     {% include 'navigation.html' %}
@@ -15,9 +16,15 @@
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
-    <script src="{{ theme_url }}/js/jquery.csvToTable.js"></script>
-    <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
-    <script src="//cdn.datatables.net/tabletools/2.2.3/js/dataTables.tableTools.min.js"></script>
-    <script src="{{ theme_url }}/js/dataTables.bootstrap.min.js"></script>
+    <script src="../../bower_components/papaparse/papaparse.min.js"></script>
+    <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../../bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../../bower_components/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../../bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../../bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../../bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../bower_components/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="{{ theme_url }}/js/blogpage_publiclendingright.js"></script>
 </body>
 </html>

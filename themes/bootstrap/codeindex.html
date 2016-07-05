@@ -13,15 +13,9 @@
         <p>code to learn from.</p>
         <div id="codetutorials">
             <div class="row">
-                {% set codetutorials = 0 %}
-                {% for page in pages %}
-                {% if page.meta.type == 'SourceLearning' %}
-                {% set codetutorials = codetutorials + 1 %}
+                {% for page in pages if (page.meta.type == 'SourceLearning') %}
                 {% include 'codeindexcard.html' with {'colour': 'success'} %}
-                {% if (codetutorials % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (codetutorials % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (codetutorials % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}
+                {% include 'clearfix4.html' %}
                 {% endfor %}
             </div>
         </div>
@@ -29,15 +23,9 @@
         <p>code repositories for applications and hacks made from library data or from library hack events.</p>
         <div id="codeapps">
             <div class="row">
-                {% set codeapps = 0 %}
-                {% for page in pages %}
-                {% if page.meta.type == 'SourceApp' %}
-                {% set codeapps = codeapps + 1 %}
+                {% for page in pages if (page.meta.type == 'SourceApp') %}
                 {% include 'codeindexcard.html' with {'colour': 'info'} %}
-                {% if (codeapps % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (codeapps % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (codeapps % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}
+                {% include 'clearfix4.html' %}
                 {% endfor %}
             </div>
         </div>
@@ -45,15 +33,9 @@
         <p>code from libraries hacked projects and tutorials.</p>
         <div id="mobileapps">
             <div class="row">
-                {% set librarieshackedcode = 0 %}
-                {% for page in pages %}
-                {% if page.meta.type == 'SourceLibrariesHacked' %}
-                {% set librarieshackedcode = librarieshackedcode + 1 %}
+                {% for page in pages if (page.meta.type == 'SourceLibrariesHacked') %}
                 {% include 'codeindexcard.html' with {'colour': 'warning'} %}
-                {% if (librarieshackedcode % 4) == 0 %}<div class="clearfix visible-lg"></div>{% endif %}
-                {% if (librarieshackedcode % 3) == 0 %}<div class="clearfix visible-md"></div>{% endif %}
-                {% if (librarieshackedcode % 2) == 0 %}<div class="clearfix visible-sm"></div>{% endif %}
-                {% endif %}
+                {% include 'clearfix4.html' %}
                 {% endfor %}
             </div>
         </div>
