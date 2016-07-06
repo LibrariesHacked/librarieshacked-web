@@ -2,8 +2,8 @@
 
 /**
  * Search plugin for Pico
- *
- * @author Dave Rowe
+ * Description: 
+ * Author: @librarieshacked
  */
 class Pico_Search {
 
@@ -50,5 +50,4 @@ class Pico_Search {
 		}
 	}
 }
-
 ?>
