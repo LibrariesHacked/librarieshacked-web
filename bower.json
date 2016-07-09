@@ -34,5 +34,8 @@
     "proj4": "^2.3.14",
     "highcharts": "^4.2.5",
     "barcode-jquery": "*"
+  },
+  "resolutions": {
+    "d3": "^4.1.0"
   }
 }

@@ -2,10 +2,11 @@
 
 /**
  * Search plugin for Pico
- * Description: 
+ * Description: Provides a simple JSON search interface with search term to the site content.
  * Author: @librarieshacked
  */
-class Pico_Search {
+
+class PicoSearch {
 
 	private $is_search;
 	private $plugin_path;
@@ -50,4 +51,5 @@ class Pico_Search {
 		}
 	}
 }
+
 ?>
