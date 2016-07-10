@@ -1,4 +1,4 @@
-<div class="navbar navbar-warning navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">{{ site_title }}</a>
+            <a class="navbar-brand" href="/">{ libraries: hacked }</a>
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
@@ -42,26 +42,23 @@
                     <ul class="dropdown-menu" aria-labelledby="blog">
                         <li><a href="/articles">articles</a></li>
                         <li><a href="/tutorials">tutorials</a></li>
-                        <li class="divider"></li>
-                        <li><a href="/contribute">contribute</a></li>
                     </ul>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/about">about</a></li>
-                <li><a href="/contact">contact</a></li>
             </ul>
         </div>
     </div>
 </div>
 <div class="container social">
-    <a href="http://www.facebook.com/sharer.php?u={{ current_page.url }}&amp;t={{ meta.title|escape('url') }}" class="btn btn-primary btn-lg" target="_blank" title="Share on Facebook">
+    <a href="http://www.facebook.com/sharer.php?u={{ current_page.url }}&amp;t={{ meta.title|escape('url') }}" class="btn btn-primary btn-sm" target="_blank" title="Share on Facebook">
         <span class="fa fa-facebook"></span>&nbsp;&nbsp;<span id="facebookCount"> share</span>
     </a>
-    <a href="https://twitter.com/intent/tweet?original_referer={{ current_page.url }}&amp;text={{ meta.title|escape('url') }}%20{{ current_page.url }}%20via%20@librarieshacked" class="btn btn-success" target="_blank" title="Tweet This!">
+    <a href="https://twitter.com/intent/tweet?original_referer={{ current_page.url }}&amp;text={{ meta.title|escape('url') }}%20{{ current_page.url }}%20via%20@librarieshacked" class="btn btn-success btn-sm" target="_blank" title="Tweet This!">
         <span class="fa fa-twitter"></span>&nbsp;&nbsp;<span id="twitterCount"> tweet</span>
     </a>
-    <a href="https://plus.google.com/share?url={{ current_page.url }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-danger" title="Post it on Google+">
+    <a href="https://plus.google.com/share?url={{ current_page.url }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-danger btn-sm" title="Post it on Google+">
         <span class="fa fa-google-plus"></span>&nbsp;&nbsp;<span id="googleCount"> post</span>
     </a>
 </div>

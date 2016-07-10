@@ -18,7 +18,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'FabLab' or page.meta.type == 'Event') %}
                 {% include 'eventindexcard.html' with {'colour': 'success'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -32,8 +32,8 @@
         <div id="pastevents">
             <div class="row">
                 {% for page in pages if (page.meta.type == 'PastEvent') %}
-                {% include 'eventindexcard.html' with {'colour': 'muted'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'eventindexcardmini.html' with {'colour': 'muted'} %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -42,6 +42,6 @@
     {% include 'scripts.html' %}
     <script src="../../bower_components/leaflet/dist/leaflet.js"></script>
     <script src="../../bower_components/drmonty-leaflet-awesome-markers/js/leaflet.awesome-markers.min.js"></script>
-    <script src="{{ theme_url }}/js/eventindex.js"></script>
+    <script src="{{ theme_url }}/js/pageindex_events.js"></script>
 </body>
 </html>

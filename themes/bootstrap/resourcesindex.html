@@ -14,7 +14,7 @@
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesOrganisation') %}
             {% include 'resourcesindexcard.html' with {'colour': 'warning'} %}
-            {% include 'clearfix4.html' %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
             {% endfor %}
         </div>
         <h2 class="text-muted">library hacks</h2>
@@ -22,7 +22,7 @@
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesLibraryHacks') %}
             {% include 'resourcesindexcard.html' with {'colour': 'muted'} %}
-            {% include 'clearfix4.html' %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
             {% endfor %}
         </div>
         <h2 class="text-success">diversity</h2>
@@ -30,7 +30,7 @@
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesDiversity') %}
             {% include 'dataindexcard.html' with {'colour': 'success'} %}
-            {% include 'clearfix4.html' %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
             {% endfor %}
         </div>
         <h2 class="text-danger">experiences</h2>
@@ -38,7 +38,7 @@
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesExperiences') %}
             {% include 'resourcesindexcard.html' with {'colour': 'danger'} %}
-            {% include 'clearfix4.html' %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
             {% endfor %}
         </div>
         <h2 class="text-info">learning guides</h2>
@@ -46,7 +46,7 @@
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesLearning') %}
             {% include 'resourcesindexcard.html' with {'colour': 'info'} %}
-            {% include 'clearfix4.html' %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
             {% endfor %}
         </div>
         {% include 'footer.html' %}

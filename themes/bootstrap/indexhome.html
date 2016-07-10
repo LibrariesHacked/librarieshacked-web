@@ -13,20 +13,21 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="hdrHome text-warning">latest</h2>
-        <p class="center">
-            <a class="btn btn-info" href="/articles"><i class="fa fa-newspaper-o"></i>&nbsp;articles</a>
-            <a class="btn btn-success" href="/tutorials"><i class="fa fa-graduation-cap"></i>&nbsp;tutorials</a>
-        </p>
         <div class="row">
             {% set tutorial = 0 %}{% for page in pages %}{% if (page.meta.type == 'Tutorial' or page.meta.type == 'Article') and tutorial < 3 %}
-            <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="lhcard">
                     <h3 class="text-warning">{{ page.title }}</h3>
                     <p>{{ page.description }}</p>
-                    {% if page.meta.tags != '' %}{% for tag in page.meta.tags|split(',') %}<span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> {% endfor %}{% endif %}
-                    {% if page.meta.tutorialskillsrequired != '' %}{% for tag in page.meta.tutorialskillsrequired|split(',') %}<span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> {% endfor %}{% endif %}
-                    <p><a class="btn btn-success" href="{{ page.url }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a></p>
+                    <p>
+                        {% for tag in page.meta.tags|split(',') if page.meta.tags != '' %}
+                        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
+                        {% endfor %}
+                        {% for tag in page.meta.tutorialskillsrequired|split(',') if page.meta.tutorialskillsrequired != '' %}
+                        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
+                        {% endfor %}
+                    </p>
+                    <a class="btn btn-success btn-link" href="{{ page.url }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
                 </div>
             </div>
             {% set tutorial = tutorial + 1 %}{% endif %}{% endfor %}
@@ -34,7 +35,6 @@
     </div>
     <br />
     <div class="container">
-        <h2 class="hdrHome text-success">Pages</h2>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <h3 class="text-danger">data services</h3>
@@ -85,4 +85,4 @@
     </div>
     {% include 'scripts.html' %}
 </body>
-</html>
+</html> 

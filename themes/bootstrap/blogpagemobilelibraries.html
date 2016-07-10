@@ -10,10 +10,10 @@
         {% include 'breadcrumbarticles.html' %}
         {% include 'pageheaderwithtags.html' %}
         {{ content }}
-        <div class="container">
-            <p><button onclick="toggleMobileLibraries()" class="btn btn-success">toggle mobile libraries</button></p>
-            <div id="map"></div>
-        </div>
+        <p>
+            <button onclick="toggleMobileLibraries()" class="btn btn-success btn-sm">toggle mobile libraries</button>
+        </p>
+        <div id="map"></div>
         {% include 'disqus.html' %}
         {% include 'footer.html' %}
     </div>

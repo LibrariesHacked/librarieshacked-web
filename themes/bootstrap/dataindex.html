@@ -15,7 +15,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'ComputerFormat') %}
                 {% include 'dataindexcard.html' with {'colour': 'danger'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'Spreadsheet') %}
                 {% include 'dataindexcard.html' with {'colour': 'success'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -36,7 +36,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'Download') %}
                 {% include 'dataindexcard.html' with {'colour': 'warning'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -46,7 +46,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'Webpage') %}
                 {% include 'dataindexcard.html' with {'colour': 'info'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>

@@ -15,7 +15,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'WebApp') %}
                 {% include 'appsindexcard.html' with {'colour': 'success'}  %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index }  %}
                 {% endfor %}
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'MobileAccountApp') %}
                 {% include 'appsindexcard.html' with {'colour': 'info'}  %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -35,7 +35,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'MobileCollectionsApp') %}
                 {% include 'appsindexcard.html' with {'colour': 'warning'}  %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>

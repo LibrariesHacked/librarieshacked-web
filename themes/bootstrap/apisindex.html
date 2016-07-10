@@ -15,7 +15,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'BibliographicApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'success'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'CollectionApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'danger'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -35,7 +35,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'LibraryApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'primary'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -45,7 +45,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'NationalApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'info'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>
@@ -53,9 +53,9 @@
         <p>not library related but useful in many projects, address data can be hard to find that isn't restricted.</p>
         <div id="addressapis">
             <div class="row">
-                {% for page in pages if )page.meta.type == 'AddressApi') %}
+                {% for page in pages if (page.meta.type == 'AddressApi') %}
                 {% include 'apisindexcard.html' with {'colour': 'warning'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>

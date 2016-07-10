@@ -15,7 +15,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'DataPortal') %}
                 {% include 'toolsindexcard.html' with {'colour': 'primary'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index }  %}
                 {% endfor %}
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'Visualisation') %}
                 {% include 'toolsindexcard.html' with {'colour': 'danger'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index }  %}
                 {% endfor %}
             </div>
         </div>
@@ -35,7 +35,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'DataQuery') %}
                 {% include 'toolsindexcard.html' with {'colour': 'warning'} %}
-                {% include 'clearfix4.html' %}
+                {% include 'clearfix4.html' with { 'i': loop.index }  %}
                 {% endfor %}
             </div>
         </div>

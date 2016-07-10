@@ -3,8 +3,8 @@
         <h3 class="text-{{ colour }}">{{ page.title }}</h3>
         <p>{{ page.description }}</p>
         <a href="{{ page.meta.toolurl }}" class="btn btn-success" title="link to {{ page.title }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
-        {% if page.meta.toolexampleurl != '' %}
-        <a href="{{ page.meta.toolexampleurl }}" class="btn btn-info" title="{{ page.meta.toolexampleurltitle }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{{ page.meta.toolexampleurltitle }}</a>
+        {% if page.meta.toolvisualisation != '' %}
+        <a href="{{ site_url }}/examples/{{ page.meta.toolvisualisation }}" class="btn btn-info" title="visualisation example" target="_blank"><i class="fa fa-external-link"></i>&nbsp;visualisation</a>
         {% endif %}
     </div>
 </div>
