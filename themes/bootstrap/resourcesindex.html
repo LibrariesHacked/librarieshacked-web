@@ -29,7 +29,7 @@
         <p>posts around diversity in hack events and hackathons - how to ensure that hacks appeal to all.</p>
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesDiversity') %}
-            {% include 'dataindexcard.html' with {'colour': 'success'} %}
+            {% include 'resourcesindexcard.html' with {'colour': 'success'} %}
             {% include 'clearfix4.html' with { 'i': loop.index }  %}
             {% endfor %}
         </div>

@@ -33,7 +33,7 @@
             <div class="row">
                 {% for page in pages if (page.meta.type == 'PastEvent') %}
                 {% include 'eventindexcardmini.html' with {'colour': 'muted'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
+                {% include 'clearfix6.html' with { 'i': loop.index } %}
                 {% endfor %}
             </div>
         </div>

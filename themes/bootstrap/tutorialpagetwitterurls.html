@@ -9,10 +9,13 @@
         {% include 'breadcrumbtutorials.html' %}
         {% include 'pageheader.html' %}
         <div class="panel panel-default">
+            <div class="panel-heading">
+                twitter search
+            </div>
             <div class="panel-body">
                 <form class="form-horizontal">
                     <fieldset>
-                        <legend>search twitter for links</legend>
+                        <legend>find shared links</legend>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="txtTwitterSearch">term</label>
                             <div class="col-lg-10">
@@ -21,12 +24,12 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <button class="btn btn-success btn-flat" type="button" onclick="GetResults($('#txtTwitterSearch').val())">search</button>
+                                <button class="btn btn-success btn-sm" type="button" onclick="GetResults($('#txtTwitterSearch').val())">search</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
-                <div class="progress progress-striped active">
+                <div class="progress progress-striped">
                     <div id="divProg" class="progress-bar" style="width: 0%;"></div>
                 </div>
                 <span id="progressInfo"></span>
