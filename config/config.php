@@ -4,7 +4,7 @@
  * BASIC
  */
 $config['site_title'] = 'libraries: hacked';				// Site title
-$config['base_url'] = 'http://staging.librarieshacked.org';	// Override base URL (e.g. http://example.com)
+$config['base_url'] = 'https://www.librarieshacked.org';	// Override base URL (e.g. http://example.com)
 $config['rewrite_url'] = true;								// A boolean indicating forced URL rewriting
 
 /*

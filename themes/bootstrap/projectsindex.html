@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="container">
+        {% include 'breadcrumb.html' %}
+        {% include 'pageheader.html' %}
+        <div class="container">{{ content }}</div>
+        <div class="row">
+            {% for page in pages if (page.meta.type == 'Project') %}
+            {% include 'projectsindexcard.html' with {'colour': 'primary'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
+            {% endfor %}
+        </div>
+        {% include 'footer.html' %}
+    </div>
+    {% include 'scripts.html' %}
+</body>
+</html>
