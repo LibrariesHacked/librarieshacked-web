@@ -33,7 +33,8 @@
     "code-prettify": "*",
     "proj4": "^2.3.14",
     "highcharts": "^4.2.5",
-    "barcode-jquery": "*"
+    "barcode-jquery": "*",
+    "jquery-ui": "^1.12.0"
   },
   "resolutions": {
     "d3": "^4.1.0"
