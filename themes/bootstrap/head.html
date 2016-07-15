@@ -4,9 +4,22 @@
 <meta name="description" content="{{ meta.description }}">
 <meta name="robots" content="{{ meta.robots }}">
 <meta name="keywords" content="{{ meta.keys }}">
-<meta name="author" content="{{ meta.author }}">
-<title>{{ meta.title }}</title>
+<meta name="author" content="{% if meta.author != '' %}{{ meta.author }}{% else %}{ libraries: hacked }{% endif %}">
+<title>{{ meta.title }} | { libraries: hacked }</title>
 <link href="../../bower_components/bootswatch/sandstone/bootstrap.min.css" rel="stylesheet" />
 <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 <link href="{{ theme_url }}/css/custom.css" rel="stylesheet">
-<link href="/favicon.ico" rel="shortcut icon"> 
+<link href="/favicon.ico" rel="shortcut icon">
+<link href="/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" >
+<link href="/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" >
+<link href="/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" >
+<link href="/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" >
+<link href="/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" >
+<link href="/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" >
+<link href="/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" >
+<link href="/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" >
+<link href="/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" >
+<link href="/icons/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192" >
+<link href="/icons/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" >
+<link href="/icons/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96" >
+<link href="/icons/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" >
