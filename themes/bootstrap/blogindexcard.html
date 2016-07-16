@@ -5,7 +5,7 @@
         <p>{{ page.description }}</p>
         <p>
             {% for tag in page.meta.tags|split(',') %}
-            <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
+            <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
             {% endfor %}
         </p>
         <a href="{{ page.url }}" class="btn btn-success btn-sm" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
