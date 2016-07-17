@@ -21,10 +21,10 @@
                     <p>{{ page.description }}</p>
                     <p>
                         {% for tag in page.meta.tags|split(',') if page.meta.tags != '' %}
-                        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
+                        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
                         {% endfor %}
                         {% for tag in page.meta.tutorialskillsrequired|split(',') if page.meta.tutorialskillsrequired != '' %}
-                        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span>
+                        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
                         {% endfor %}
                     </p>
                     <a class="btn btn-success btn-link" href="{{ page.url }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
