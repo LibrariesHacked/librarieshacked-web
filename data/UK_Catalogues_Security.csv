@@ -1,209 +1,209 @@
-Authority,Domain,Grade,HTTPS,Issues
-Aberdeen City,aberdeencity.spydus.co.uk,F,Yes,Mixed Content
-Aberdeenshire,aberdeenshire.spydus.co.uk,F,Yes,Mixed Content
-Anglesey,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Angus,angus.spydus.co.uk,F,Yes,Mixed Content
-Argyll and Bute,argyll-bute.spydus.co.uk,C,Yes,Mixed Content
-Barking and Dagenham,arena.yourlondonlibrary.net,A,Yes,OK
-Barnet,www.libraries.barnet.gov.uk,U,No,Only HTTP
-Barnsley,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Bath and North East Somerset,www.librarieswest.org.uk,A,Yes,OK
-Bedford,beds-arena.culturalservices.net,A,Yes,OK
-Bexley,arena.yourlondonlibrary.net,A,Yes,OK
-Birmingham,library-opac.birmingham.gov.uk,A,Yes,OK
-Blackburn with Darwen,bwdlibraries.spydus.co.uk,C,Yes,Mixed Content
-Blackpool,libraries.blackpool.gov.uk,T,No,Only HTTP
-Blaenau Gwent,librarycatalogue.aneurinleisure.org.uk,U,No,Only HTTP
-Bolton,bolton.spydus.co.uk,C,Yes,Mixed Content
-Bournemouth,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Bracknell Forest,capitadiscovery.co.uk,A,Allows HTTP
-Bradford,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Brent,arena.yourlondonlibrary.net,A,Yes,Mixed Content
-Bridgend,opac.awen-wales.com,F,Yes,Mixed Content
-Brighton and Hove,brighton-hove.spydus.co.uk,F,Yes,Mixed Content
-Bristol City,www.librarieswest.org.uk,A+,Yes,OK
-Bromley,arena.yourlondonlibrary.net,A,Yes,Mixed Content
-Buckinghamshire,buckinghamshire.spydus.co.uk,F,Yes,Allows HTTP
-Bury,library.bury.gov.uk,F,Yes,Vulnerable
-Caerphilly,libraries.caerphilly.gov.uk,U,No,Only HTTP
-Calderdale,online.calderdale.gov.uk,F,Yes,Allows HTTP
-Cambridgeshire,cambridgeshire.spydus.co.uk,C,Yes,Allows HTTP
-Camden,camden.spydus.co.uk,F,Yes,Mixed Content
-Cardiff,ibistro.cardiff.gov.uk,F,No,Only HTTP
-Carmarthenshire,212.219.142.126,F,No,Only HTTP
-Ceredigion,libraries.ceredigion.gov.uk,U,Yes,AllowsHTTP
-Cheshire West and Chester,cheslive.koha-ptfs.co.uk,F,Yes,Vulnerable
-Cheshire East,cheslive.koha-ptfs.co.uk,F,Yes,Vulnerable
-City of London,col.ent.sirsidynix.net.uk,A+,Yes,OK
-Clackmannanshire,vufind-cl.sedar.org.uk,C,Yes,Allows HTTP
-Conwy,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Cornwall,capitadiscovery.co.uk,A,Yes,Mixed Content
-Coventry,librarycatalogue.coventry.gov.uk,C,Yes,OK
-Croydon,catalogue.croydonlibraries.com,F,No,Only HTTP
-Cumbria,cmbr.ent.sirsidynix.net.uk,A+,No,Only HTTP
-Darlington,www2.darlington.gov.uk,T,No,Only HTTP
-Denbighshire,onlinelibrary.denbighshire.gov.uk,B,Yes,OK
-Derby City,emlib.ent.sirsidynix.net.uk,A+,Yes,Mixed Content
-Derbyshire,emlib.ent.sirsidynix.net.uk,A+,Yes,Mixed Content
-Devon,www.devon.gov.uk,C,No,Only HTTP
-Doncaster,library.doncaster.gov.uk,T,No,Only HTTP
-Dorset,www.librarieswest.org.uk,A+,Yes,OK
-Dudley,libcat.dudley.gov.uk,A,Yes,Vulnerable
-Dumfries and Galloway,library.dumgal.gov.uk,U,No,Only HTTP
-Dundee City,opac.dundeecity.gov.uk,U,No,Only HTTP
-Durham,libraryonline.durham.gov.uk,C,Yes,OK
-Ealing,arena.yourlondonlibrary.net,A,Yes,Mixed Content
-East Ayrshire,libcatalogue.east-ayrshire.gov.uk,U,No,Only HTTP
-East Dunbartonshire,vufind-ed.sedar.org.uk,C,Yes,Allows HTTP
-East Lothian,capitadiscovery.co.uk,A,Yes,Allows HTTP
-East Renfrewshire,capitadiscovery.co.uk,A,Yes,Allows HTTP
-East Riding,library.eastriding.gov.uk,A,Yes,Vulnerable
-East Sussex,e-library.eastsussex.gov.uk,C,Yes,Vulnerable
-Edinburgh,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Enfield,arena.yourlondonlibrary.net,A,Yes,OK
-Essex,librarycatalogue.essex.gov.uk,F,Yes,Allows HTTP
-Falkirk,fct.ent.sirsidynix.net.uk,A+,No,Only HTTP
-Fife,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Flintshire,libraryonline.flintshire.gov.uk,U,No,Only HTTP
-Gateshead,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Glasgow,libcat.csglasgow.org,T,No,Only HTTP
-Gloucestershire,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Greenwich,capitadiscovery.co.uk,U,
-Guernsey,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Gwynedd,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Hackney,arena.yourlondonlibrary.net,A,Yes,Mixed Content
-Halton,hpl.koha-ptfs.eu,C,Yes,Allows HTTP
-Hammersmith and Fulham,trib.ent.sirsidynix.net.uk,A+,Yes,OK
-Hampshire,librarycat.hants.gov.uk,C,Yes,Vulunerable
-Haringey,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Harrow,arena.yourlondonlibrary.net,A,Yes,Mixed Content
-Hartlepool,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Havering,arena.yourlondonlibrary.net,A,Yes,Mixed Content
-Herefordshire,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Hertfordshire,herts.spydus.co.uk,F,Yes,Mixed Content
-Highland,hlh.spydus.co.uk,A,Yes,Mixed Content
-Hillingdon,hldn.ent.sirsidynix.net.uk,A+,No,Only HTTP
-Hounslow,www.hounslowlibraries.org,T,No,HTTP Only
-Hull,prismcollect.hullcc.gov.uk,U,No,HTTP Only
-Inverclyde,ipac.inverclyde-libraries.org,U,No,HTTP Only
-Isle of Wight,iow.spydus.co.uk,F,Yes,Allows HTTP
-Isle of Man,www.douglas.gov.im,F,No,Only HTTP
-Islington,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Jersey,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Kensington and Chelsea,trib.ent.sirsidynix.net.uk,A+,Yes,OK
-Kent,kent.spydus.co.uk,F,Yes,Mixed Content
-Kingston,arena.yourlondonlibrary.net,A,Yes,OK
-Kirklees,kir.ent.sirsidynix.net.uk,A+,No,Only HTTP
-Knowsley,kmbc.sdp.sirsidynix.net.uk,T,No,Only HTTP
-Lambeth,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Lancashire,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Leeds,capitadiscovery.co.uk,U,Yes,Allows HTTP
-Leicester City,bookfinder.leicester.gov.uk,A,Yes,OK
-Leicestershire,emlib.ent.sirsidynix.net.uk,A+,Yes,OK
-Lewisham,arena.yourlondonlibrary.net,A,Yes,OK
-Lincolnshire,lincolnshire.spydus.co.uk,C,Yes,OK
-Liverpool,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Luton,arena.yourlondonlibrary.net,A,Yes,OK
-Manchester,manchester.spydus.co.uk,C,Yes,OK
-Medway,medway.spydus.co.uk,F,Yes,Mixed Content
-Merthyr Tydfil,capitadiscovery.co.uk,A,Yes,Allow HTTP
-Merton,arena.yourlondonlibrary.net,A,Yes,OK
-Middlesbrough,libraries.middlesbrough.gov.uk,B,Yes,OK
-Midlothian,libraries.midlothian.gov.uk,A,Yes,OK
-Milton Keynes,miltonkeynes.spydus.co.uk,F,Yes,Allows HTTP
-Monmouthshire,catalogue.monmouthshire.gov.uk,U,No,Only HTTP
-Moray,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Neath Port Talbot,212.219.142.126,A,No,Only HTTP
-Newcastle,library.newcastle.gov.uk,A,Yes,OK
-Newham,arena.yourlondonlibrary.net,A,Yes,OK
-Newport,opac.newport.gov.uk,C,Yes,OK
-Norfolk,norfolk.spydus.co.uk,C,Yes,OK
-North Ayrshire,capitadiscovery.co.uk,A,Yes,Mixed Content
-North East Lincolnshire,www.lincsinspirelibraries.com,T,No,Only HTTP
-North Lanarkshire,librariesnl.northlan.gov.uk,F,Yes,Vulnerable
-North Lincolnshire,www.opac.northlincs.gov.uk,T,No,Only HTTP
-North Somerset,www.librarieswest.org.uk,A+,Yes,OK
-North Tyneside,capitadiscovery.co.uk,A,Yes,Allows HTTP
-North Yorkshire,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Northamptonshire,www.librarycatalogue.northamptonshire.gov.uk,A,Yes,Vulnerable
-Northumberland,library.northumberland.gov.uk,U,No,Only HTTP
-Nottingham City,emlib.ent.sirsidynix.net.uk,A+,Yes,Mixed Content
-Nottinghamshire,emlib.ent.sirsidynix.net.uk,A+,Yes,Mixed Content
-Northern Ireland,lni.ent.sirsidynix.net.uk,A+,Yes,Vulnerable
-Oldham,oldham.spydus.co.uk,C,Yes,Mixed Content
-Orkney,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Oxfordshire,libcat.oxfordshire.gov.uk,F,,Yes,Vulnerable
-Pembrokeshire,212.219.142.126,U,No,Only HTTP
-Perth and Kinross,pkc.spydus.co.uk,F,Yes,Mixed Content
-Peterborough,peterborough.spydus.co.uk,F,Yes,Allows HTTP
-Plymouth,www.webopac.plymouth.gov.uk,C,Yes,OK
-Poole,www.librarieswest.org.uk,A+,Yes,OK
-Portsmouth,librarycat.portsmouth.gov.uk,A-,Yes,OK
-Powys,powys.sirsidynix.net.uk,U,No,Only HTTP
-Reading,reading-hip.epixtech.co.uk,U,No,Only HTTP
-Redbridge,arena.yourlondonlibrary.net,A,Yes,OK
-Redcar & Cleveland,libraries.redcar-cleveland.gov.uk,A,Yes,OK
-Renfrewshire,libcat.renfrewshire.gov.uk,B,Yes,OK
-Rhondda Cynon Taf,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Richmond,richmond.spydus.co.uk,F,Yes,Mixed Content
-Rochdale,rochdale.spydus.co.uk,C,Yes,Mixed Content
-Rotherham,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Rutland,emlib.ent.sirsidynix.net.uk,A+,Yes,Mixed Content
-Salford,salfordlibraries.spydus.co.uk,C,Yes,Mixed Content
-Sandwell,opac-lib.smbc.sandwell.gov.uk,F,Yes,Vulnerable
-Scottish Borders,librarysearch.scotborders.gov.uk,F,Yes,Vulnerable
-Sefton,catalogue2.sefton.gov.uk,B,Yes,OK
-Sheffield,library.sheffield.gov.uk,U,No,Only HTTP
-Shetland,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Shropshire,libraries.shropshire.gov.uk,A,Yes,OK
-Slough,slough.spydus.co.uk,F,Yes,Mixed Content
-Solihull,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Somerset,www.librarieswest.org.uk,A+,Yes,OK
-South Ayrshire,library.south-ayrshire.gov.uk,F,Yes,Vulnerable
-South Gloucestershire,www.librarieswest.org.uk,A+,Yes,OK
-South Lanarkshire,www.sllclibrary.co.uk,C,Yes,OK
-South Tyneside,capitadiscovery.co.uk,A,Yes,Mixed Content
-Southampton,southampton.spydus.co.uk,F,Yes,Mixed Content
-Southend on Sea,librarycatalogue.essex.gov.uk,F,Yes,Allows HTTP
-Southwark,capitadiscovery.co.uk,A,Yes,Allows HTTP
-St Helens,sthlibraries.koha-ptfs.co.uk,A-,Yes,OK
-Staffordshire,www.yourlibcat.staffordshire.gov.uk,A,Yes,OK
-Stirling,vufind-st.sedar.org.uk,C,Yes,Allows HTTP
-Stockport,stockport.spydus.co.uk,C,Yes,Mixed Content
-Stockton,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Stoke on Trent,librariesonline.stoke.gov.uk,C,Yes,Allows HTTP
-Suffolk,suffolk.spydus.co.uk,C,Yes,Allows HTTP
-Sunderland,www.sunderland.gov.uk,A,Yes,Vulnerable
-Surrey,arena.surreylibraries.org,F,Yes,Vulnerable
-Sutton,www.sutton-libraries.gov.uk,U,No,Only HTTP
-Swansea,swan.ent.sirsidynix.net.uk,A+,Yes,Mixed Content
-Swindon,capitadiscovery.co.uk,A,Yes,Mixed Content
-Tameside,intouch.tameside.gov.uk,U,No,Only HTTP
-Telford and Wrekin,library.telford.gov.uk,A,Yes,OK
-Thurrock,librarycatalogue.essex.gov.uk,F,Yes,Allows HTTP
-Torbay,libraries.torbay.gov.uk,F,Yes,Vulnerable
-Torfaen,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Tower Hamlets,arena.yourlondonlibrary.net,A,Yes,OK
-Trafford,trafford.spydus.co.uk,C,Yes,Mixed Content
-Vale of Glamorgan,libhip.valeofglamorgan.gov.uk,U,No,Only HTTP
-Wakefield,libraries.wakefield.gov.uk,A,Yes,OK
-Walsall,libcat.walsall.gov.uk,A,Yes,OK
-Waltham Forest,arena.yourlondonlibrary.net,A,Yes,OK
-Wandsworth,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Warrington,warc.ent.sirsidynix.net.uk,A+,No,Only HTTP
-Warwickshire,library.warwickshire.gov.uk,C,Yes,Allows HTTP
-West Berkshire,westberks.spydus.co.uk,F,Yes,Mixed Content
-West Dunbartonshire,wd.ent.sirsidynix.net.uk,A+,No,Only HTTP
-West Lothian,webpac.westlothian.gov.uk,U,No,Only HTTP
-West Sussex,arena.westsussex.gov.uk,C,Yes,OK
-Western Isles,vufind-wi.sedar.org.uk,C,Yes,Allows HTTP
-Westminster,elibrary.westminster.gov.uk,A+,Yes,Mixed Content
-Wigan,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Wiltshire,libraries.wiltshire.gov.uk,A,Yes,OK
-Windsor & Maidenhead,rbwm.spydus.co.uk,F,Yes,Allows HTTP
-Wirral,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Wokingham,wokingham.spydus.co.uk,F,Yes,Allows HTTP
-Wolverhampton,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Worcestershire,capitadiscovery.co.uk,A,Yes,Allows HTTP
-Wrexham,www.wrexham.gov.uk,A,Yes,Allows HTTP
-York City,cyc.sdp.sirsidynix.net.uk,A+,Yes,OK
+Authority,Domain,HTTPS,Issues
+Aberdeen City,aberdeencity.spydus.co.uk,Yes,Mixed Content
+Aberdeenshire,aberdeenshire.spydus.co.uk,Yes,Mixed Content
+Anglesey,capitadiscovery.co.uk,Yes,Allows HTTP
+Angus,angus.spydus.co.uk,Yes,Mixed Content
+Argyll and Bute,argyll-bute.spydus.co.uk,Yes,Mixed Content
+Barking and Dagenham,arena.yourlondonlibrary.net,Yes,OK
+Barnet,www.libraries.barnet.gov.uk,No,Only HTTP
+Barnsley,capitadiscovery.co.uk,Yes,Allows HTTP
+Bath and North East Somerset,www.librarieswest.org.uk,Yes,OK
+Bedford,beds-arena.culturalservices.net,Yes,OK
+Bexley,arena.yourlondonlibrary.net,Yes,OK
+Birmingham,library-opac.birmingham.gov.uk,Yes,OK
+Blackburn with Darwen,bwdlibraries.spydus.co.uk,Yes,Mixed Content
+Blackpool,libraries.blackpool.gov.uk,No,Only HTTP
+Blaenau Gwent,librarycatalogue.aneurinleisure.org.uk,No,Only HTTP
+Bolton,bolton.spydus.co.uk,Yes,Mixed Content
+Bournemouth,capitadiscovery.co.uk,Yes,Allows HTTP
+Bracknell Forest,capitadiscovery.co.uk,Yes,Allows HTTP
+Bradford,capitadiscovery.co.uk,Yes,Allows HTTP
+Brent,arena.yourlondonlibrary.net,Yes,Mixed Content
+Bridgend,opac.awen-wales.com,Yes,Mixed Content
+Brighton and Hove,brighton-hove.spydus.co.uk,Yes,Mixed Content
+Bristol City,www.librarieswest.org.uk,Yes,OK
+Bromley,arena.yourlondonlibrary.net,Yes,Mixed Content
+Buckinghamshire,buckinghamshire.spydus.co.uk,Yes,Allows HTTP
+Bury,library.bury.gov.uk,Yes,Vulnerable
+Caerphilly,libraries.caerphilly.gov.uk,No,Only HTTP
+Calderdale,online.calderdale.gov.uk,Yes,Allows HTTP
+Cambridgeshire,cambridgeshire.spydus.co.uk,Yes,Allows HTTP
+Camden,camden.spydus.co.uk,Yes,Mixed Content
+Cardiff,ibistro.cardiff.gov.uk,No,Only HTTP
+Carmarthenshire,212.219.142.126,No,Only HTTP
+Ceredigion,libraries.ceredigion.gov.uk,Yes,AllowsHTTP
+Cheshire West and Chester,cheslive.koha-ptfs.co.uk,Yes,Vulnerable
+Cheshire East,cheslive.koha-ptfs.co.uk,Yes,Vulnerable
+City of London,col.ent.sirsidynix.net.uk,Yes,OK
+Clackmannanshire,vufind-cl.sedar.org.uk,Yes,Allows HTTP
+Conwy,capitadiscovery.co.uk,Yes,Allows HTTP
+Cornwall,capitadiscovery.co.uk,Yes,Mixed Content
+Coventry,librarycatalogue.coventry.gov.uk,Yes,OK
+Croydon,catalogue.croydonlibraries.com,No,Only HTTP
+Cumbria,cmbr.ent.sirsidynix.net.uk,No,Only HTTP
+Darlington,www2.darlington.gov.uk,No,Only HTTP
+Denbighshire,onlinelibrary.denbighshire.gov.uk,Yes,OK
+Derby City,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
+Derbyshire,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
+Devon,www.devon.gov.uk,No,Only HTTP
+Doncaster,library.doncaster.gov.uk,No,Only HTTP
+Dorset,www.librarieswest.org.uk,Yes,OK
+Dudley,libcat.dudley.gov.uk,Yes,Vulnerable
+Dumfries and Galloway,library.dumgal.gov.uk,No,Only HTTP
+Dundee City,opac.dundeecity.gov.uk,No,Only HTTP
+Durham,libraryonline.durham.gov.uk,Yes,OK
+Ealing,arena.yourlondonlibrary.net,Yes,Mixed Content
+East Ayrshire,libcatalogue.east-ayrshire.gov.uk,No,Only HTTP
+East Dunbartonshire,vufind-ed.sedar.org.uk,Yes,Allows HTTP
+East Lothian,capitadiscovery.co.uk,Yes,Allows HTTP
+East Renfrewshire,capitadiscovery.co.uk,Yes,Allows HTTP
+East Riding,library.eastriding.gov.uk,Yes,Vulnerable
+East Sussex,e-library.eastsussex.gov.uk,Yes,Vulnerable
+Edinburgh,capitadiscovery.co.uk,Yes,Allows HTTP
+Enfield,arena.yourlondonlibrary.net,Yes,OK
+Essex,librarycatalogue.essex.gov.uk,Yes,Allows HTTP
+Falkirk,fct.ent.sirsidynix.net.uk,No,Only HTTP
+Fife,capitadiscovery.co.uk,Yes,Allows HTTP
+Flintshire,libraryonline.flintshire.gov.uk,No,Only HTTP
+Gateshead,capitadiscovery.co.uk,Yes,Allows HTTP
+Glasgow,libcat.csglasgow.org,No,Only HTTP
+Gloucestershire,capitadiscovery.co.uk,Yes,Allows HTTP
+Greenwich,capitadiscovery.co.uk,Yes,Allows HTTP
+Guernsey,capitadiscovery.co.uk,Yes,Allows HTTP
+Gwynedd,capitadiscovery.co.uk,Yes,Allows HTTP
+Hackney,arena.yourlondonlibrary.net,Yes,Mixed Content
+Halton,hpl.koha-ptfs.eu,Yes,Allows HTTP
+Hammersmith and Fulham,trib.ent.sirsidynix.net.uk,Yes,OK
+Hampshire,librarycat.hants.gov.uk,Yes,Vulunerable
+Haringey,capitadiscovery.co.uk,Yes,Allows HTTP
+Harrow,arena.yourlondonlibrary.net,Yes,Mixed Content
+Hartlepool,capitadiscovery.co.uk,Yes,Allows HTTP
+Havering,arena.yourlondonlibrary.net,Yes,Mixed Content
+Herefordshire,capitadiscovery.co.uk,Yes,Allows HTTP
+Hertfordshire,herts.spydus.co.uk,Yes,Mixed Content
+Highland,hlh.spydus.co.uk,Yes,Mixed Content
+Hillingdon,hldn.ent.sirsidynix.net.uk,No,Only HTTP
+Hounslow,www.hounslowlibraries.org,No,HTTP Only
+Hull,prismcollect.hullcc.gov.uk,No,HTTP Only
+Inverclyde,ipac.inverclyde-libraries.org,No,HTTP Only
+Isle of Wight,iow.spydus.co.uk,Yes,Allows HTTP
+Isle of Man,www.douglas.gov.im,No,Only HTTP
+Islington,capitadiscovery.co.uk,Yes,Allows HTTP
+Jersey,capitadiscovery.co.uk,Yes,Allows HTTP
+Kensington and Chelsea,trib.ent.sirsidynix.net.uk,Yes,OK
+Kent,kent.spydus.co.uk,Yes,Mixed Content
+Kingston,arena.yourlondonlibrary.net,Yes,OK
+Kirklees,kir.ent.sirsidynix.net.uk,No,Only HTTP
+Knowsley,kmbc.sdp.sirsidynix.net.uk,No,Only HTTP
+Lambeth,capitadiscovery.co.uk,Yes,Allows HTTP
+Lancashire,capitadiscovery.co.uk,Yes,Allows HTTP
+Leeds,capitadiscovery.co.uk,Yes,Allows HTTP
+Leicester City,bookfinder.leicester.gov.uk,Yes,OK
+Leicestershire,emlib.ent.sirsidynix.net.uk,Yes,OK
+Lewisham,arena.yourlondonlibrary.net,Yes,OK
+Lincolnshire,lincolnshire.spydus.co.uk,Yes,OK
+Liverpool,capitadiscovery.co.uk,Yes,Allows HTTP
+Luton,arena.yourlondonlibrary.net,Yes,OK
+Manchester,manchester.spydus.co.uk,Yes,OK
+Medway,medway.spydus.co.uk,Yes,Mixed Content
+Merthyr Tydfil,capitadiscovery.co.uk,Yes,Allow HTTP
+Merton,arena.yourlondonlibrary.net,Yes,OK
+Middlesbrough,libraries.middlesbrough.gov.uk,Yes,OK
+Midlothian,libraries.midlothian.gov.uk,Yes,OK
+Milton Keynes,miltonkeynes.spydus.co.uk,Yes,Allows HTTP
+Monmouthshire,catalogue.monmouthshire.gov.uk,No,Only HTTP
+Moray,capitadiscovery.co.uk,Yes,Allows HTTP
+Neath Port Talbot,212.219.142.126,No,Only HTTP
+Newcastle,library.newcastle.gov.uk,Yes,OK
+Newham,arena.yourlondonlibrary.net,Yes,OK
+Newport,opac.newport.gov.uk,Yes,OK
+Norfolk,norfolk.spydus.co.uk,Yes,OK
+North Ayrshire,capitadiscovery.co.uk,Yes,Mixed Content
+North East Lincolnshire,www.lincsinspirelibraries.com,No,Only HTTP
+North Lanarkshire,librariesnl.northlan.gov.uk,Yes,Vulnerable
+North Lincolnshire,www.opac.northlincs.gov.uk,No,Only HTTP
+North Somerset,www.librarieswest.org.uk,Yes,OK
+North Tyneside,capitadiscovery.co.uk,Yes,Allows HTTP
+North Yorkshire,capitadiscovery.co.uk,Yes,Allows HTTP
+Northamptonshire,www.librarycatalogue.northamptonshire.gov.uk,Yes,Vulnerable
+Northumberland,library.northumberland.gov.uk,No,Only HTTP
+Nottingham City,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
+Nottinghamshire,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
+Northern Ireland,lni.ent.sirsidynix.net.uk,Yes,Vulnerable
+Oldham,oldham.spydus.co.uk,Yes,Mixed Content
+Orkney,capitadiscovery.co.uk,Yes,Allows HTTP
+Oxfordshire,libcat.oxfordshire.gov.uk,Yes,Vulnerable
+Pembrokeshire,212.219.142.126,No,Only HTTP
+Perth and Kinross,pkc.spydus.co.uk,Yes,Mixed Content
+Peterborough,peterborough.spydus.co.uk,Yes,Allows HTTP
+Plymouth,www.webopac.plymouth.gov.uk,Yes,OK
+Poole,www.librarieswest.org.uk,Yes,OK
+Portsmouth,librarycat.portsmouth.gov.uk,Yes,OK
+Powys,powys.sirsidynix.net.uk,No,Only HTTP
+Reading,reading-hip.epixtech.co.uk,No,Only HTTP
+Redbridge,arena.yourlondonlibrary.net,Yes,OK
+Redcar & Cleveland,libraries.redcar-cleveland.gov.uk,Yes,OK
+Renfrewshire,libcat.renfrewshire.gov.uk,Yes,OK
+Rhondda Cynon Taf,capitadiscovery.co.uk,Yes,Allows HTTP
+Richmond,richmond.spydus.co.uk,Yes,Mixed Content
+Rochdale,rochdale.spydus.co.uk,Yes,Mixed Content
+Rotherham,capitadiscovery.co.uk,Yes,Allows HTTP
+Rutland,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
+Salford,salfordlibraries.spydus.co.uk,Yes,Mixed Content
+Sandwell,opac-lib.smbc.sandwell.gov.uk,Yes,Vulnerable
+Scottish Borders,librarysearch.scotborders.gov.uk,Yes,Vulnerable
+Sefton,catalogue2.sefton.gov.uk,Yes,OK
+Sheffield,library.sheffield.gov.uk,No,Only HTTP
+Shetland,capitadiscovery.co.uk,Yes,Allows HTTP
+Shropshire,libraries.shropshire.gov.uk,Yes,OK
+Slough,slough.spydus.co.uk,Yes,Mixed Content
+Solihull,capitadiscovery.co.uk,Yes,Allows HTTP
+Somerset,www.librarieswest.org.uk,Yes,OK
+South Ayrshire,library.south-ayrshire.gov.uk,Yes,Vulnerable
+South Gloucestershire,www.librarieswest.org.uk,Yes,OK
+South Lanarkshire,www.sllclibrary.co.uk,Yes,OK
+South Tyneside,capitadiscovery.co.uk,Yes,Mixed Content
+Southampton,southampton.spydus.co.uk,Yes,Mixed Content
+Southend on Sea,librarycatalogue.essex.gov.uk,Yes,Allows HTTP
+Southwark,capitadiscovery.co.uk,Yes,Allows HTTP
+St Helens,sthlibraries.koha-ptfs.co.uk,Yes,OK
+Staffordshire,www.yourlibcat.staffordshire.gov.uk,Yes,OK
+Stirling,vufind-st.sedar.org.uk,Yes,Allows HTTP
+Stockport,stockport.spydus.co.uk,Yes,Mixed Content
+Stockton,capitadiscovery.co.uk,Yes,Allows HTTP
+Stoke on Trent,librariesonline.stoke.gov.uk,Yes,Allows HTTP
+Suffolk,suffolk.spydus.co.uk,Yes,Allows HTTP
+Sunderland,www.sunderland.gov.uk,Yes,Vulnerable
+Surrey,arena.surreylibraries.org,Yes,Vulnerable
+Sutton,www.sutton-libraries.gov.uk,No,Only HTTP
+Swansea,swan.ent.sirsidynix.net.uk,Yes,Mixed Content
+Swindon,capitadiscovery.co.uk,Yes,Mixed Content
+Tameside,intouch.tameside.gov.uk,No,Only HTTP
+Telford and Wrekin,library.telford.gov.uk,Yes,OK
+Thurrock,librarycatalogue.essex.gov.uk,Yes,Allows HTTP
+Torbay,libraries.torbay.gov.uk,Yes,Vulnerable
+Torfaen,capitadiscovery.co.uk,Yes,Allows HTTP
+Tower Hamlets,arena.yourlondonlibrary.net,Yes,OK
+Trafford,trafford.spydus.co.uk,Yes,Mixed Content
+Vale of Glamorgan,libhip.valeofglamorgan.gov.uk,No,Only HTTP
+Wakefield,libraries.wakefield.gov.uk,Yes,OK
+Walsall,libcat.walsall.gov.uk,Yes,OK
+Waltham Forest,arena.yourlondonlibrary.net,Yes,OK
+Wandsworth,capitadiscovery.co.uk,Yes,Allows HTTP
+Warrington,warc.ent.sirsidynix.net.uk,No,Only HTTP
+Warwickshire,library.warwickshire.gov.uk,Yes,Allows HTTP
+West Berkshire,westberks.spydus.co.uk,Yes,Mixed Content
+West Dunbartonshire,wd.ent.sirsidynix.net.uk,No,Only HTTP
+West Lothian,webpac.westlothian.gov.uk,No,Only HTTP
+West Sussex,arena.westsussex.gov.uk,Yes,OK
+Western Isles,vufind-wi.sedar.org.uk,Yes,Allows HTTP
+Westminster,elibrary.westminster.gov.uk,Yes,Mixed Content
+Wigan,capitadiscovery.co.uk,Yes,Allows HTTP
+Wiltshire,libraries.wiltshire.gov.uk,Yes,OK
+Windsor & Maidenhead,rbwm.spydus.co.uk,Yes,Allows HTTP
+Wirral,capitadiscovery.co.uk,Yes,Allows HTTP
+Wokingham,wokingham.spydus.co.uk,Yes,Allows HTTP
+Wolverhampton,capitadiscovery.co.uk,Yes,Allows HTTP
+Worcestershire,capitadiscovery.co.uk,Yes,Allows HTTP
+Wrexham,www.wrexham.gov.uk,Yes,Allows HTTP
+York City,cyc.sdp.sirsidynix.net.uk,Yes,OK
