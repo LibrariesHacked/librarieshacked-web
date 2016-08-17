@@ -1,9 +1,10 @@
 $(function () {
     var buildDataTable = function (tableId, csv) {
         Papa.parse(csv, {
+            download: true,
             complete: function (results) {
                 var table = $(tableId).DataTable({
-                    data: results,
+                    data: results.data.slice(1,100),
                     columns: [
                         { title: "Position" },
                         { title: "ISBN" },

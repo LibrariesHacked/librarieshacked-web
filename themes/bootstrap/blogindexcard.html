@@ -1,8 +1,7 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
     <div class="lhcard">
-        <h3 class="text-primary">{{ page.title }}</h3>
-        <p class="lead text-muted"><i class="fa fa-calendar-o"></i>&nbsp;{{ page.date_formatted }}</p>
-        <p>{{ page.description }}</p>
+        <h3 class="text-warning">{{ page.title }}</h3>
+        <p class="lead">{{ page.description }}</p>
         <p>
             {% for tag in page.meta.tags|split(',') %}
             <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
