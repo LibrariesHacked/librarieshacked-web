@@ -13,7 +13,7 @@ Bexley,arena.yourlondonlibrary.net,Yes,OK
 Birmingham,library-opac.birmingham.gov.uk,Yes,OK
 Blackburn with Darwen,bwdlibraries.spydus.co.uk,Yes,Mixed Content
 Blackpool,libraries.blackpool.gov.uk,No,Only HTTP
-Blaenau Gwent,librarycatalogue.aneurinleisure.org.uk,No,Only HTTP
+Blaenau Gwent,bglibcat.blaenau-gwent.gov.uk,No,Only HTTP
 Bolton,bolton.spydus.co.uk,Yes,Mixed Content
 Bournemouth,capitadiscovery.co.uk,Yes,Allows HTTP
 Bracknell Forest,capitadiscovery.co.uk,Yes,Allows HTTP
@@ -83,9 +83,9 @@ Herefordshire,capitadiscovery.co.uk,Yes,Allows HTTP
 Hertfordshire,herts.spydus.co.uk,Yes,Mixed Content
 Highland,hlh.spydus.co.uk,Yes,Mixed Content
 Hillingdon,hldn.ent.sirsidynix.net.uk,No,Only HTTP
-Hounslow,www.hounslowlibraries.org,No,HTTP Only
-Hull,prismcollect.hullcc.gov.uk,No,HTTP Only
-Inverclyde,ipac.inverclyde-libraries.org,No,HTTP Only
+Hounslow,www.hounslowlibraries.org,No,Only HTTP
+Hull,prismcollect.hullcc.gov.uk,No,Only HTTP
+Inverclyde,ipac.inverclyde-libraries.org,No,Only HTTP
 Isle of Wight,iow.spydus.co.uk,Yes,Allows HTTP
 Isle of Man,www.douglas.gov.im,No,Only HTTP
 Islington,capitadiscovery.co.uk,Yes,Allows HTTP
@@ -106,7 +106,7 @@ Liverpool,capitadiscovery.co.uk,Yes,Allows HTTP
 Luton,arena.yourlondonlibrary.net,Yes,OK
 Manchester,manchester.spydus.co.uk,Yes,OK
 Medway,medway.spydus.co.uk,Yes,Mixed Content
-Merthyr Tydfil,capitadiscovery.co.uk,Yes,Allow HTTP
+Merthyr Tydfil,capitadiscovery.co.uk,Yes,Allows HTTP
 Merton,arena.yourlondonlibrary.net,Yes,OK
 Middlesbrough,libraries.middlesbrough.gov.uk,Yes,OK
 Midlothian,libraries.midlothian.gov.uk,Yes,OK
@@ -175,10 +175,10 @@ Stoke on Trent,librariesonline.stoke.gov.uk,Yes,Allows HTTP
 Suffolk,suffolk.spydus.co.uk,Yes,Allows HTTP
 Sunderland,www.sunderland.gov.uk,Yes,Vulnerable
 Surrey,arena.surreylibraries.org,Yes,Vulnerable
-Sutton,www.sutton-libraries.gov.uk,No,Only HTTP
+Sutton,arena.yourlondonlibrary.net,Yes,OK
 Swansea,swan.ent.sirsidynix.net.uk,Yes,Mixed Content
 Swindon,capitadiscovery.co.uk,Yes,Mixed Content
-Tameside,intouch.tameside.gov.uk,No,Only HTTP
+Tameside,tameside.spydus.co.uk,Yes,Mixed Content
 Telford and Wrekin,library.telford.gov.uk,Yes,OK
 Thurrock,librarycatalogue.essex.gov.uk,Yes,Allows HTTP
 Torbay,libraries.torbay.gov.uk,Yes,Vulnerable
