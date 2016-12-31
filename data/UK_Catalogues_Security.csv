@@ -31,7 +31,7 @@ Cambridgeshire,cambridgeshire.spydus.co.uk,Yes,Allows HTTP
 Camden,camden.spydus.co.uk,Yes,Mixed Content
 Cardiff,ibistro.cardiff.gov.uk,No,Only HTTP
 Carmarthenshire,212.219.142.126,No,Only HTTP
-Ceredigion,libraries.ceredigion.gov.uk,Yes,AllowsHTTP
+Ceredigion,libraries.ceredigion.gov.uk,Yes,Allows HTTP
 Cheshire West and Chester,cheslive.koha-ptfs.co.uk,Yes,Vulnerable
 Cheshire East,cheslive.koha-ptfs.co.uk,Yes,Vulnerable
 City of London,col.ent.sirsidynix.net.uk,Yes,OK
@@ -40,8 +40,8 @@ Conwy,wales.ent.sirsidynix.net.uk,Yes,OK
 Cornwall,capitadiscovery.co.uk,Yes,Mixed Content
 Coventry,librarycatalogue.coventry.gov.uk,Yes,OK
 Croydon,catalogue.croydonlibraries.com,No,Only HTTP
-Cumbria,cmbr.ent.sirsidynix.net.uk,No,Only HTTP
-Darlington,www2.darlington.gov.uk,No,Only HTTP
+Cumbria,cmbr.ent.sirsidynix.net.uk,Yes,Mixed Content
+Darlington,www2.darlington.gov.uk,Yes,OK
 Denbighshire,wales.ent.sirsidynix.net.uk,Yes,OK
 Derby City,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
 Derbyshire,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
@@ -119,9 +119,9 @@ Newham,arena.yourlondonlibrary.net,Yes,OK
 Newport,opac.newport.gov.uk,Yes,OK
 Norfolk,norfolk.spydus.co.uk,Yes,OK
 North Ayrshire,capitadiscovery.co.uk,Yes,Mixed Content
-North East Lincolnshire,www.lincsinspirelibraries.com,No,Only HTTP
+North East Lincolnshire,www.lincsinspirelibraries.com,Yes,OK
 North Lanarkshire,librariesnl.northlan.gov.uk,Yes,Vulnerable
-North Lincolnshire,www.opac.northlincs.gov.uk,No,Only HTTP
+North Lincolnshire,www.opac.northlincs.gov.uk,Yes,OK
 North Somerset,www.librarieswest.org.uk,Yes,OK
 North Tyneside,capitadiscovery.co.uk,Yes,Allows HTTP
 North Yorkshire,capitadiscovery.co.uk,Yes,Allows HTTP

@@ -14,28 +14,6 @@
     </div>
     <div class="container">
         <div class="row">
-            {% set tutorial = 0 %}{% for page in pages %}{% if (page.meta.type == 'Tutorial' or page.meta.type == 'Article') and tutorial < 3 %}
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="lhcard">
-                    <h3 class="text-warning">{{ page.title }}</h3>
-                    <p>{{ page.description }}</p>
-                    <p>
-                        {% for tag in page.meta.tags|split(',') if page.meta.tags != '' %}
-                        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
-                        {% endfor %}
-                        {% for tag in page.meta.tutorialskillsrequired|split(',') if page.meta.tutorialskillsrequired != '' %}
-                        <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
-                        {% endfor %}
-                    </p>
-                    <a class="btn btn-success btn-link" href="{{ page.url }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
-                </div>
-            </div>
-            {% set tutorial = tutorial + 1 %}{% endif %}{% endfor %}
-        </div>
-    </div>
-    <br />
-    <div class="container">
-        <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <h3 class="text-danger">data services</h3>
                 <p class="lead">systems providing library data web services to integrate into your hacks and projects.</p>
