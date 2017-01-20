@@ -1,4 +1,4 @@
-d3.csv("/data/LibraryLendingTransactions.csv", function (data) {
+d3.csv("/data/BathHacked_LibraryLendingTransactions.csv", function (data) {
 
     var parseDate = d3.time.format("%m/%d/%Y 12:00:00 AM").parse;
     data.forEach(function (d) {
@@ -50,7 +50,6 @@ d3.csv("/data/LibraryLendingTransactions.csv", function (data) {
     categoryChart
         .width(300)
         .height(200)
-        .outerPadding(0)
         .gap(1)
         .margins({ top: 0, right: 0, bottom: 95, left: 30 })
         .group(categoryDimGroup)
