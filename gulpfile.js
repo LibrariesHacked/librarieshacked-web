@@ -1,4 +1,7 @@
-﻿var gulp = require('gulp'),     bower = require('gulp-bower');  var config = {
+﻿var gulp = require('gulp'),
+    bower = require('gulp-bower');
+
+var config = {
     bowerDir: './bower_components',
     bowerPublic: './themes/bootstrap/bower'
 };

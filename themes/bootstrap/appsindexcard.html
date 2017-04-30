@@ -1,7 +1,11 @@
-<div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="lhcard">
-        <h3 class="text-{{ colour }}">{{ page.title }}</h3>
-        <p>{{ page.description }}</p>
-        <a href="{{ page.meta.appurl }}" class="btn btn-success btn-sm" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
+<div class="col-3">
+    <div class="card">
+        <div class="card-block">
+            <h5 class="card-title">{{ page.title }}</h5>
+        </div>
+        <div class="card-block">
+            <p class="card-text">{{ page.description }}</p>
+            <a href="{{ page.meta.appurl }}" class="card-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
+        </div>
     </div>
 </div>

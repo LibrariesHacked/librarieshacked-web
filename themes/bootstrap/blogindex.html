@@ -18,7 +18,7 @@
             {% endfor %}
         </div>
         <h2>archive</h2>
-        <div id="posts" class="row">
+        <div id="div_posts" class="row">
             {% for page in pages if (page.meta.type == 'Article') %}
             {% if loop.index > 4 %}
             {% include 'blogindexcardmini.html' %}

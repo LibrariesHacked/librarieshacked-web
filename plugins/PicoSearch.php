@@ -3,7 +3,7 @@
 /**
  * Search plugin for Pico
  * Description: Provides a simple JSON search interface with search term to the site content.
- * Author: @librarieshacked
+ * Author: Dave @librarieshacked
  */
 
 class PicoSearch {
@@ -51,5 +51,4 @@ class PicoSearch {
 		}
 	}
 }
-
 ?>

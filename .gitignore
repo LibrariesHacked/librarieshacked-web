@@ -1,5 +1,6 @@
 /content/
-publiclibrariesnews-widget.js
-publiclibrariesnews-widget2.js
 /bower_components/
 /node_modules/
+
+publiclibrariesnews-widget.js
+publiclibrariesnews-widget2.js

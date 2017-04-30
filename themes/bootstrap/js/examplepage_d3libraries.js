@@ -1,40 +1,9 @@
-﻿jQuery(document).ready(function () {
-    $.getJSON("https://www.librarieshacked.org/themes/bootstrap/data/nodeJson.txt", function (data) {
-        var rootJson = data;
-        var m = [20, 120, 20, 120],
-        w = 1280 - m[1] - m[3],
-        h = 1280 - m[0] - m[2],
-        i = 0,
-        root;
+﻿$(function() {
 
-        var tree = d3.layout.tree()
-            .size([h, w]);
-
-        var diagonal = d3.svg.diagonal()
-            .projection(function (d) { return [d.y, d.x]; });
-
-        var vis = d3.select("#body").append("svg:svg")
-            .attr("width", w + m[1] + m[3])
-            .attr("height", h + m[0] + m[2])
-          .append("svg:g")
-            .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
-
-        root = rootJson;
-        root.x0 = h / 2;
-        root.y0 = 0;
-
-        function toggleAll(d) {
-            if (d.children) {
-                d.children.forEach(toggleAll);
-                toggle(d);
-            }
-        }
-
-        root.children.forEach(toggleAll);
-
-        update(root);
-
-        function update(source) {
+        /////////////////////////////////////////////////////////////////////
+        // Function: update
+        /////////////////////////////////////////////////////////////////////
+        var update = function (source) {
             var duration = d3.event && d3.event.altKey ? 5000 : 500;
             // Compute the new tree layout.
             var nodes = tree.nodes(root).reverse();
@@ -120,10 +89,12 @@
                 d.x0 = d.x;
                 d.y0 = d.y;
             });
-        }
+        };
 
-        // Toggle children.
-        function toggle(d) {
+        /////////////////////////////////////////////////////////////////////
+        // Function: toggle
+        /////////////////////////////////////////////////////////////////////
+        var toggle = function(d) {
             if (d.children) {
                 d._children = d.children;
                 d.children = null;
@@ -132,5 +103,36 @@
                 d._children = null;
             }
         }
+
+        /////////////////////////////////////////////////////////////////////
+        // On load
+        /////////////////////////////////////////////////////////////////////
+    $.getJSON("/data/Libraries_All.json.txt", function (data) {
+        var m = [20, 120, 20, 120], w = 1280 - m[1] - m[3], h = 1280 - m[0] - m[2], i = 0, root = data;
+
+        var tree = d3.layout.tree().size([h, w]);
+
+        var diagonal = d3.svg.diagonal().projection(function (d) { return [d.y, d.x]; });
+
+        var vis = d3.select("#body").append("svg:svg")
+            .attr("width", w + m[1] + m[3])
+            .attr("height", h + m[0] + m[2])
+          .append("svg:g")
+            .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
+
+        root.x0 = h / 2;
+        root.y0 = 0;
+
+        var toggleAll = function (d) {
+            if (d.children) {
+                d.children.forEach(toggleAll);
+                toggle(d);
+            }
+        };
+
+        root.children.forEach(toggleAll);
+        update(root);
+
+
     });
 });

@@ -9,35 +9,29 @@
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
-        <h2 class="text-success">web apps</h2>
-        <p>web apps - typically those that have come out of open library data or library hack events.</p>
-        <div id="webapps">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'WebApp') %}
-                {% include 'appsindexcard.html' with {'colour': 'success'}  %}
-                {% include 'clearfix4.html' with { 'i': loop.index }  %}
-                {% endfor %}
-            </div>
+        <h2>web apps</h2>
+        <p>web apps.  typically those that have come out of open library data or library hack events.</p>
+        <div id="div_webapps" class="row">
+            {% for page in pages if (page.meta.type == 'WebApp') %}
+            {% include 'appsindexcard.html' with {'colour': 'success'}  %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
+            {% endfor %}
         </div>
-        <h2 class="text-info">mobile apps - library account</h2>
-        <p>apps from library supplier (and others) to interact with your library account.</p>
-        <div id="mobileappscatalogue">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'MobileAccountApp') %}
-                {% include 'appsindexcard.html' with {'colour': 'info'}  %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <h2>mobile apps.  library account</h2>
+        <p>apps from library suppliers (and others) to interact with your library account.</p> >
+        <div id="div_mobileappscatalogue" class="row">
+            {% for page in pages if (page.meta.type == 'MobileAccountApp') %}
+            {% include 'appsindexcard.html' with {'colour': 'info'}  %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
-        <h2 class="text-warning">mobile apps - collections</h2>
+        <h2>mobile apps.  collections</h2>
         <p>mobile apps that allow you to view and browse collection data.</p>
-        <div id="mobileappscollections">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'MobileCollectionsApp') %}
-                {% include 'appsindexcard.html' with {'colour': 'warning'}  %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_mobileappscollections" class="row">
+            {% for page in pages if (page.meta.type == 'MobileCollectionsApp') %}
+            {% include 'appsindexcard.html' with {'colour': 'warning'}  %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
         {% include 'footer.html' %}
     </div>

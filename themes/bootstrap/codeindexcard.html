@@ -1,12 +1,16 @@
-<div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="lhcard">
-        <h3 class="text-{{ colour }}">{{ page.title }}</h3>
-        <p>{{ page.description }}</p>
-        {% if page.meta.sourcetype == 'BitBucket' %}
-        <a href="{{ page.meta.sourceurl }}" class="btn btn-success btn-sm" title="{{ page.title }} repository on BitBucket" target="_blank"><i class="fa fa-bitbucket"></i>&nbsp;BitBucket</a>
-        {% endif %}
-        {% if page.meta.sourcetype == 'GitHub' %}
-        <a href="{{ page.meta.sourceurl }}" class="btn btn-success btn-sm" title="{{ page.title }} repository on GitHub" target="_blank"><i class="fa fa-github"></i>&nbsp;GitHub</a>
-        {% endif %}
+<div class="col-3">
+    <div class="card">
+        <div class="card-block">
+            <h5 class="card-title">{{ page.title }}</h5>
+        </div>
+        <div class="card-block">
+            <p>{{ page.description }}</p>
+            {% if page.meta.sourcetype == 'BitBucket' %}
+            <a href="{{ page.meta.sourceurl }}" class="card-link" title="{{ page.title }} repository on BitBucket" target="_blank"><i class="fa fa-bitbucket"></i>&nbsp;BitBucket</a>
+            {% endif %}
+            {% if page.meta.sourcetype == 'GitHub' %}
+            <a href="{{ page.meta.sourceurl }}" class="card-link" title="{{ page.title }} repository on GitHub" target="_blank"><i class="fa fa-github"></i>&nbsp;GitHub</a>
+            {% endif %}
+        </div>
     </div>
 </div>

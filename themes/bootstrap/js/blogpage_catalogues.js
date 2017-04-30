@@ -1,83 +1,16 @@
 var catalogues = new Array();
-var proxyUrl = '/proxy.php?url=';
-var cataloguesUrl = 'http://gb.mobilearena.axiell.com:8080/arena.ps.pacs/utility';
-var cataloguesSOAP = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><util:GetMobileAgencies xmlns:util="http://utility.pacs.services.arena.axiell.com/"/></soap:Body></soap:Envelope>';
-var catalogueSearchSOAP = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:Search xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:sear="http://axiell.com/arena/services/palma/search/searchrequest" xmlns:util="http://axiell.com/arena/services/palma/util"><sear:searchRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><util:language>en</util:language><sear:pageSize>[[PAGE_SIZE]]</sear:pageSize><sear:page>[[PAGE]]</sear:page><sear:sortOrder><field>relevance</field><direction>descending</direction></sear:sortOrder><sear:query>[[SEARCH_QUERY]]</sear:query><sear:covers util:enable="no" /><sear:facets util:enable="yes"><sear:facet count="5">mediaclass_facet</sear:facet></sear:facets><sear:queryFacets>[[SEARCHFACETS]]</sear:queryFacets><sear:queryFilter>[[QUERYFILTER1]]</sear:queryFilter></sear:searchRequest></ser:Search></soap:Body></soap:Envelope>';
-var catalogueCheckSOAP = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:Search xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:sear="http://axiell.com/arena/services/palma/search/searchrequest" xmlns:util="http://axiell.com/arena/services/palma/util"><sear:searchRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><util:language>en</util:language><sear:pageSize>0</sear:pageSize><sear:page>1</sear:page><sear:sortOrder><field>relevance</field><direction>descending</direction></sear:sortOrder><sear:query></sear:query><sear:covers util:enable="no" /><sear:facets util:enable="yes"><sear:facet count="5">mediaclass_facet</sear:facet><sear:facet count="5">language_facet</sear:facet></sear:facets></sear:searchRequest></ser:Search></soap:Body></soap:Envelope>';
-var catalogueDetailSOAP = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:GetCatalogueRecordDetail xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:cat="http://axiell.com/arena/services/palma/search/catalogueRecordDetailrequest" xmlns:util="http://axiell.com/arena/services/palma/util" xmlns:crd="http://axiell.com/arena/services/palma/util/crd"><cat:catalogueRecordDetailRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><crd:id>[[CATALOGUE_RECORD_ID]]</crd:id><util:language>en</util:language><cat:cover util:enable="yes" /><cat:holdings enable="yes"/></cat:catalogueRecordDetailRequest></ser:GetCatalogueRecordDetail></soap:Body></soap:Envelope>';
-var currentMember = '';
+var proxy_url = '/proxy.php?url=';
+var catalogues_url = 'http://gb.mobilearena.axiell.com:8080/arena.ps.pacs/utility';
+var catalogues_soap = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><util:GetMobileAgencies xmlns:util="http://utility.pacs.services.arena.axiell.com/"/></soap:Body></soap:Envelope>';
+var catalogue_search_soap = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:Search xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:sear="http://axiell.com/arena/services/palma/search/searchrequest" xmlns:util="http://axiell.com/arena/services/palma/util"><sear:searchRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><util:language>en</util:language><sear:pageSize>[[PAGE_SIZE]]</sear:pageSize><sear:page>[[PAGE]]</sear:page><sear:sortOrder><field>relevance</field><direction>descending</direction></sear:sortOrder><sear:query>[[SEARCH_QUERY]]</sear:query><sear:covers util:enable="no" /><sear:facets util:enable="yes"><sear:facet count="5">mediaclass_facet</sear:facet></sear:facets><sear:queryFacets>[[SEARCHFACETS]]</sear:queryFacets><sear:queryFilter>[[QUERYFILTER1]]</sear:queryFilter></sear:searchRequest></ser:Search></soap:Body></soap:Envelope>';
+var catalogue_check_soap = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:Search xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:sear="http://axiell.com/arena/services/palma/search/searchrequest" xmlns:util="http://axiell.com/arena/services/palma/util"><sear:searchRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><util:language>en</util:language><sear:pageSize>0</sear:pageSize><sear:page>1</sear:page><sear:sortOrder><field>relevance</field><direction>descending</direction></sear:sortOrder><sear:query></sear:query><sear:covers util:enable="no" /><sear:facets util:enable="yes"><sear:facet count="5">mediaclass_facet</sear:facet><sear:facet count="5">language_facet</sear:facet></sear:facets></sear:searchRequest></ser:Search></soap:Body></soap:Envelope>';
+var catalogue_detail_soap = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ser:GetCatalogueRecordDetail xmlns:ser="http://service.search.palma.services.arena.axiell.com/" xmlns:cat="http://axiell.com/arena/services/palma/search/catalogueRecordDetailrequest" xmlns:util="http://axiell.com/arena/services/palma/util" xmlns:crd="http://axiell.com/arena/services/palma/util/crd"><cat:catalogueRecordDetailRequest><util:arenaMember>[[ARENA_MEMBER_ID]]</util:arenaMember><crd:id>[[CATALOGUE_RECORD_ID]]</crd:id><util:language>en</util:language><cat:cover util:enable="yes" /><cat:holdings enable="yes"/></cat:catalogueRecordDetailRequest></ser:GetCatalogueRecordDetail></soap:Body></soap:Envelope>';
+var current_member = '';
 var count = 0;
 
-$(function () {
-
-    $('#divSearch').hide();
-    $('#divResults').hide();
-    $('#btnNavigation').hide();
-    $('#divItemDetails').hide();
-
-    $.ajax({
-        url: proxyUrl + encodeURIComponent(cataloguesUrl),
-        type: 'POST',
-        data: { data: cataloguesSOAP },
-        dataType: 'json',
-        success: function (data) {
-            var items = $($.parseXML(data.contents)).find("installation");
-            $.each(items, function () {
-                var serviceUrl = $('palmaBaseUrl', this).text();
-                var members = $(this).find('agency arenaMember');
-                $.each(members, function () {
-                    var memberId = $('id', this).text();
-                    var name = $('name', this).text();
-                    $.ajax({
-                        url: proxyUrl + encodeURIComponent(serviceUrl + '/catalogue'),
-                        type: 'POST',
-                        data: { data: catalogueCheckSOAP.replace('[[ARENA_MEMBER_ID]]', memberId) },
-                        dataType: 'json',
-                        success: function (data) {
-                            if (data.contents && data.contents.indexOf('soap') != -1) {
-
-                                var languages = [];
-                                var mediatypes = [];
-                                var xmlDoc = $.parseXML(data.contents);
-                                var totalItems = $('nofRecordsTotal', xmlDoc).text();
-                                var languageItems = $(xmlDoc).find('language_facet');
-                                var mediaItems = $(xmlDoc).find('mediaclass_facet');
-
-                                $.each(mediaItems, function () {
-                                    mediatypes.push({ type: $('name', this).text(), count: $('count', this).text(), value: $('code', this).text() });
-                                });
-
-                                $.each(languageItems, function () {
-                                    languages.push({ type: $('name', this).text(), count: $('count', this).text(), value: $('code', this).text() });
-                                });
-
-                                var html = '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 catlink">';
-                                html += '<a href="#" class="thumbnail" onclick="selectCatalogue(' + memberId + '); return false;">';
-                                html += '<h4>' + name + '</h4>';
-                                html += '<small>' + totalItems + ' items</small>';
-                                html += '</a></div>';
-
-                                $('#divCatalogues .row').append(html);
-                                count++;
-
-                                if ((count % 2) == 0) $('#divCatalogues .row').append('<div class="clearfix visible-xs"></div>');
-                                if ((count % 3) == 0) $('#divCatalogues .row').append('<div class="clearfix visible-sm"></div>');
-                                if ((count % 4) == 0) $('#divCatalogues .row').append('<div class="clearfix visible-md"></div>');
-                                if ((count % 6) == 0) $('#divCatalogues .row').append('<div class="clearfix visible-lg"></div>');
-
-                                catalogues[memberId] = { url: serviceUrl, languages: languages, mediatypes: mediatypes, totalitems: totalItems, name: name };
-                            }
-                        },
-                        error: function () {
-                            $('#lgdCatalogueName').text('unable to retrieve catalogues');
-                        }
-                    });
-                });
-            });
-        }
-    });
-});
-
+//////////////////////////////////////////////////////////////////////////////////
+// Function: selectCatalogue
+//////////////////////////////////////////////////////////////////////////////////
 function selectCatalogue(id) {
 
     $('#btnNavigation').show();
@@ -104,6 +37,9 @@ function selectCatalogue(id) {
     });
 }
 
+//////////////////////////////////////////////////////////////////////////////////
+// Function: search
+//////////////////////////////////////////////////////////////////////////////////
 function search() {
 
     $('#btnNavigation').text('search again');
@@ -304,3 +240,76 @@ function randomStyle() {
     var list = ['success', 'success', 'warning', 'danger', 'info'];
     return list[Math.floor(Math.random() * list.length)];
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// On Load
+//////////////////////////////////////////////////////////////////////////////////////////
+$(function () {
+
+    $('#divSearch').hide();
+    $('#divResults').hide();
+    $('#btnNavigation').hide();
+    $('#divItemDetails').hide();
+
+    $.ajax({
+        url: proxy_url + encodeURIComponent(catalogues_url),
+        type: 'POST',
+        data: { data: catalogues_soap },
+        dataType: 'json',
+        success: function (data) {
+            var items = $($.parseXML(data.contents)).find("installation");
+            $.each(items, function () {
+                var service_url = $('palmaBaseUrl', this).text();
+                var members = $(this).find('agency arenaMember');
+                $.each(members, function () {
+                    var memberid = $('id', this).text();
+                    var name = $('name', this).text();
+                    $.ajax({
+                        url: proxy_url + encodeURIComponent(service_url + '/catalogue'),
+                        type: 'POST',
+                        data: { data: catalogue_check_soap.replace('[[ARENA_MEMBER_ID]]', memberId) },
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data.contents && data.contents.indexOf('soap') != -1) {
+
+                                var languages = [];
+                                var mediatypes = [];
+                                var xmlDoc = $.parseXML(data.contents);
+                                var totalItems = $('nofRecordsTotal', xmlDoc).text();
+                                var languageItems = $(xmlDoc).find('language_facet');
+                                var mediaItems = $(xmlDoc).find('mediaclass_facet');
+
+                                $.each(mediaItems, function () {
+                                    mediatypes.push({ type: $('name', this).text(), count: $('count', this).text(), value: $('code', this).text() });
+                                });
+
+                                $.each(languageItems, function () {
+                                    languages.push({ type: $('name', this).text(), count: $('count', this).text(), value: $('code', this).text() });
+                                });
+
+                                var html = '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 catlink">';
+                                html += '<a href="#" class="thumbnail" onclick="selectCatalogue(' + memberId + '); return false;">';
+                                html += '<h4>' + name + '</h4>';
+                                html += '<small>' + totalItems + ' items</small>';
+                                html += '</a></div>';
+
+                                $('#divCatalogues .row').append(html);
+                                count++;
+
+                                if ((count % 2) == 0) $('#divCatalogues .row').append('<div class="clearfix visible-xs"></div>');
+                                if ((count % 3) == 0) $('#divCatalogues .row').append('<div class="clearfix visible-sm"></div>');
+                                if ((count % 4) == 0) $('#divCatalogues .row').append('<div class="clearfix visible-md"></div>');
+                                if ((count % 6) == 0) $('#divCatalogues .row').append('<div class="clearfix visible-lg"></div>');
+
+                                catalogues[memberId] = { url: serviceUrl, languages: languages, mediatypes: mediatypes, totalitems: totalItems, name: name };
+                            }
+                        },
+                        error: function () {
+                            $('#lgdCatalogueName').text('unable to retrieve catalogues');
+                        }
+                    });
+                });
+            });
+        }
+    });
+});

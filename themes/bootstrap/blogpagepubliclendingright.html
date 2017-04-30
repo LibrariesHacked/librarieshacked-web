@@ -3,8 +3,8 @@
 <head>
     {% include 'head.html' %}
     <link href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-    <link href="../../bower_components/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet" />
-    <link href="../../bower_components/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bower_components/datatables.net-buttons-bs4/css/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     {% include 'navigation.html' %}
@@ -12,32 +12,32 @@
         {% include 'breadcrumbarticles.html' %}
         {% include 'pageheaderwithtags.html' %}
         {{ content }}
-        <table id="uk"></table>
-        <table id="east"></table>
-        <table id="eastmidlands"></table>
-        <table id="london"></table>
-        <table id="northeast"></table>
-        <table id="northernireland"></table>
-        <table id="northwestmerseyside"></table>
-        <table id="scotland"></table>
-        <table id="southeast"></table>
-        <table id="southwest"></table>
-        <table id="wales"></table>
-        <table id="westmidlands"></table>
-        <table id="yorkshirehumber"></table>
+        <table id="tbl_uk"></table>
+        <table id="tbl_east"></table>
+        <table id="tbl_eastmidlands"></table>
+        <table id="tbl_london"></table>
+        <table id="tbl_northeast"></table>
+        <table id="tbl_northernireland"></table>
+        <table id="tbl_northwestmerseyside"></table>
+        <table id="tbl_scotland"></table>
+        <table id="tbl_southeast"></table>
+        <table id="tbl_southwest"></table>
+        <table id="tbl_wales"></table>
+        <table id="tbl_westmidlands"></table>
+        <table id="tbl_yorkshirehumber"></table>
         {% include 'disqus.html' %}
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
     <script src="../../bower_components/papaparse/papaparse.min.js"></script>
     <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../../bower_components/datatables.net-bs4/js/dataTables.bootstrap.min.js"></script>
     <script src="../../bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../../bower_components/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../../bower_components/datatables.net-buttons-bs4/js/buttons.bootstrap.min.js"></script>
     <script src="../../bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
     <script src="../../bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
     <script src="../../bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../../bower_components/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../../bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap.js"></script>
     <script src="{{ theme_url }}/js/blogpage_publiclendingright.js"></script>
 </body>
-</html> 
+</html>

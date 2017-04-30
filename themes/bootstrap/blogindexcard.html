@@ -1,12 +1,15 @@
-<div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="lhcard">
-        <h3 class="text-warning">{{ page.title }}</h3>
-        <p class="lead">{{ page.description }}</p>
-        <p>
+<div class="col-3">
+    <div class="card">
+        <div class="card-block">
+            <h5 class="card-title">{{ page.title }}</h5>
+            {{ page.description }}
+        </div>
+        <div class="card-block">
             {% for tag in page.meta.tags|split(',') %}
             <span class="label label-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
             {% endfor %}
-        </p>
-        <a href="{{ page.url }}" class="btn btn-success btn-sm" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
+            <p class="card-text">{{ page.description }}</p>
+            <a class="card-link" href="{{ page.url }}" class="btn btn-success btn-sm" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a>
+        </div>
     </div>
 </div>

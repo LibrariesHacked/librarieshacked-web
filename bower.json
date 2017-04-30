@@ -4,7 +4,7 @@
   "authors": [
     "Libraries Hacked <info@librarieshacked.org>"
   ],
-  "description": "",
+  "description": "website for libraries hacked.  based on pico cms.",
   "main": "",
   "license": "MIT",
   "ignore": [
@@ -15,28 +15,24 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "fontawesome#^4.6.3",
-    "bootstrap": "^3.3.6",
-    "bootswatch": "^3.3.6+2",
-    "leaflet": "^0.7.7",
-    "datatables.net": "^1.10.12",
-    "datatables.net-bs": "^1.10.12",
-    "datatables.net-buttons": "^1.2.1",
-    "datatables.net-buttons-bs": "^1.2.1",
-    "datatables.net-responsive": "^2.1.0",
-    "datatables.net-responsive-bs": "^2.1.0",
-    "papaparse": "^4.1.2",
-    "drmonty-leaflet-awesome-markers": "^2.0.2",
-    "dcjs": "^1.7.5",
-    "leaflet.markercluster": "^0.5.0",
-    "moment": "^2.14.1",
-    "code-prettify": "*",
-    "proj4": "^2.3.14",
-    "highcharts": "^4.2.5",
+    "bootstrap": "v4.0.0-alpha.6",
+    "bootswatch": "v4",
+    "font-awesome": "^4.7.0",
+    "leaflet": "^1.0.3",
+    "papaparse": "^4.3.1",
     "barcode-jquery": "*",
-    "jquery-ui": "^1.12.0"
-  },
-  "resolutions": {
-    "d3": "^4.1.0"
+    "highcharts": "^5.0.10",
+    "jquery-ui": "^1.12.1",
+    "code-prettify": "*",
+    "moment": "^2.18.1",
+    "proj4": "^2.4.3",
+    "dcjs": "^2.1.4",
+    "leaflet.markercluster": "^1.0.5",
+    "datatables.net": "^1.10.15",
+    "datatables.net-bs4": "^3.2.2",
+    "datatables.net-buttons": "^2.2.0",
+    "datatables.net-buttons-bs4": "^2.2.0",
+    "datatables.net-responsive": "^2.1.1",
+    "datatables.net-responsive-bs4": "^2.1.1"
   }
 }

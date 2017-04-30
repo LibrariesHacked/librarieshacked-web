@@ -8,23 +8,7 @@
     <div class="container">
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="row">
-            <div class="col-lg-8">
-                {{ content }}
-            </div>
-            <div class="col-lg-4">
-                <div class="container">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Link</h3>
-                        </div>
-                        <div class="panel-body">
-                            {{ meta.appurl }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% content %}
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}

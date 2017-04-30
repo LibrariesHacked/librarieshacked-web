@@ -1,33 +1,25 @@
-<div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="lhcard">
-        <h3 class="text-{{ colour }}">{{ page.title }}</h3>
-        <p>{{ page.description }}</p>
-        {% if page.meta.format != '' %}
-        <p>
-            {% for outputformat in page.meta.format|split(',') %}
-            <span class="label label-info">{{ outputformat }}</span> 
-            {% endfor %}
-        </p>
-        {% endif %}
-        {% if page.meta.apiexampleurl != '' %}
-        <small class="text-muted">example usage</small>
-        <p><a href="{{ page.meta.apiexampleurl }}" title="link to {{ page.meta.apiexampletext }}" target="_blank" class="btn btn-sm btn-link">{{ page.meta.apiexampletext }}</a></p>
-        {% endif %}
-        <p>
-            {% if page.meta.apiurl != '' %}
-            <a href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-external-link"></i>&nbsp;website</a>
+<div class="col-3">
+    <div class="card">
+        <div class="card-block">
+            <h5 class="card-title">{{ page.title }}</h5>
+        </div>
+        <div class="card-block">
+            <p class="card-text">{{ page.description }}</p>
+            {% if page.meta.format != '' %}
+            <p>{% for outputformat in page.meta.format|split(',') %}<span class="label label-info">{{ outputformat }}</span> {% endfor %}</p>
             {% endif %}
             {% if page.meta.apitwitter != '' %}
-            <a href="https://twitter.com/{{ page.meta.apitwitter }}" class="btn btn-info btn-sm" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+            <a class="card-link" href="https://twitter.com/{{ page.meta.apitwitter }}" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
             {% endif %}
-            {% if page.meta.apidisplaypage %}
-            <a href="{{ page.meta.apidisplaypage }}" class="btn btn-success btn-sm" title="more info on {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;{{ page.title }}</a>
+            {% if page.meta.apiurl != '' %}
+            <a class="card-link" href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
             {% endif %}
-            {% if page.meta.apikey != '' %}
-            <button class="btn btn-link btn-sm" type="button" data-toggle="popover" data-content="{{ page.meta.apikey }}" data-placement="top" data-container="body"><i class="fa fa-lock text-danger"></i></button>
             {% else %}
             <button class="btn btn-link btn-sm" type="button" data-toggle="popover" data-content="no registration required" data-placement="top" data-container="body"><i class="fa fa-unlock text-success"></i></button>
             {% endif %}
-        </p>
+            {% if page.meta.apiexampleurl != '' %}
+            <a class="card-link" target="_blank" title="link to {{ page.meta.apiexampletext }}" href="{{ page.meta.apiexampleurl }}">{{ page.meta.apiexampletext }}</a>
+            {% endif %}
+        </div>
     </div>
 </div>

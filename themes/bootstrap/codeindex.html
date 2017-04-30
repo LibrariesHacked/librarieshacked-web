@@ -9,35 +9,29 @@
         {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
         <div class="container">{{ content }}</div>
-        <h2 class="text-success">tutorials and learning</h2>
+        <h2>tutorials and learning</h2>
         <p>code to learn from.</p>
-        <div id="codetutorials">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'SourceLearning') %}
-                {% include 'codeindexcard.html' with {'colour': 'success'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_codetutorials" class="row">
+            {% for page in pages if (page.meta.type == 'SourceLearning') %}
+            {% include 'codeindexcard.html' with {'colour': 'success'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
-        <h2 class="text-info">applications and hacks</h2>
+        <h2>applications and hacks</h2>
         <p>code repositories for applications and hacks made from library data or from library hack events.</p>
-        <div id="codeapps">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'SourceApp') %}
-                {% include 'codeindexcard.html' with {'colour': 'info'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_codeapps" class="row">
+            {% for page in pages if (page.meta.type == 'SourceApp') %}
+            {% include 'codeindexcard.html' with {'colour': 'info'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
-        <h2 class="text-warning">libraries hacked code</h2>
+        <h2>libraries hacked code</h2>
         <p>code from libraries hacked projects and tutorials.</p>
-        <div id="mobileapps">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'SourceLibrariesHacked') %}
-                {% include 'codeindexcard.html' with {'colour': 'warning'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_mobileapps" class="row">
+            {% for page in pages if (page.meta.type == 'SourceLibrariesHacked') %}
+            {% include 'codeindexcard.html' with {'colour': 'warning'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
         {% include 'footer.html' %}
     </div>
