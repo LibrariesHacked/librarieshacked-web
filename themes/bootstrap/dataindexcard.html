@@ -1,16 +1,16 @@
-<div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="lhcard">
-        <h3 class="text-{{ colour }}">{{ page.title }}</h3>
-        <p>{{ page.description }}</p>
-        {% if page.meta.format != '' %}
-        <p>
-            {% for outputformat in page.meta.format|split(',') %}
-            <span class="label label-warning">{{ outputformat }}</span>&nbsp;
-            {% endfor %}
-        </p>
-        {% endif %}
-        {% if page.meta.dataurl != '' %}
-        <a href="{{ page.meta.dataurl }}" class="btn btn-success btn-sm" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;get data</a>
-        {% endif %}
+<div class="col-3">
+    <div class="card">
+        <div class="card-block">
+            <h5 class="card-title">{{ page.title }}</h5>
+        </div>
+        <div class="card-block">
+            <p>{{ page.description }}</p>
+            {% if page.meta.format != '' %}
+            <p>
+                {% for outputformat in page.meta.format|split(',') %}<span class="badge badge-warning">{{ outputformat }}</span>&nbsp;{% endfor %}
+            </p>
+            {% endif %}
+            {% if page.meta.dataurl != '' %}<p><a href="{{ page.meta.dataurl }}" class="card-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;get data</a></p>{% endif %}
+        </div>
     </div>
 </div>

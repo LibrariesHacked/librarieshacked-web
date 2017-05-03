@@ -1,25 +1,16 @@
-<div class="col-3">
-    <div class="card">
-        <div class="card-block">
-            <h5 class="card-title">{{ page.title }}</h5>
-        </div>
-        <div class="card-block">
-            <p class="card-text">{{ page.description }}</p>
-            {% if page.meta.format != '' %}
-            <p>{% for outputformat in page.meta.format|split(',') %}<span class="label label-info">{{ outputformat }}</span> {% endfor %}</p>
-            {% endif %}
-            {% if page.meta.apitwitter != '' %}
-            <a class="card-link" href="https://twitter.com/{{ page.meta.apitwitter }}" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
-            {% endif %}
-            {% if page.meta.apiurl != '' %}
-            <a class="card-link" href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
-            {% endif %}
-            {% else %}
-            <button class="btn btn-link btn-sm" type="button" data-toggle="popover" data-content="no registration required" data-placement="top" data-container="body"><i class="fa fa-unlock text-success"></i></button>
-            {% endif %}
-            {% if page.meta.apiexampleurl != '' %}
-            <a class="card-link" target="_blank" title="link to {{ page.meta.apiexampletext }}" href="{{ page.meta.apiexampleurl }}">{{ page.meta.apiexampletext }}</a>
-            {% endif %}
-        </div>
-    </div>
+<div class="col-lg-3">
+    <p class="lead">{{ page.title }}</h2>
+    <p>{{ page.description }}</p>
+    {% if page.meta.format != '' %}
+    <p>{% for outputformat in page.meta.format|split(',') %}<span class="badge badge-info">{{ outputformat }}</span> {% endfor %}</p>
+    {% endif %}
+    {% if page.meta.apitwitter != '' %}
+    <a class="btn btn-outline-primary" href="https://twitter.com/{{ page.meta.apitwitter }}" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+    {% endif %}
+    {% if page.meta.apiurl != '' %}
+    <a class="btn btn-outline-primary" href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
+    {% endif %}
+    {% if page.meta.apiexampleurl != '' %}
+    <a class="btn btn-outline-primary" target="_blank" title="link to {{ page.meta.apiexampletext }}" href="{{ page.meta.apiexampleurl }}">{{ page.meta.apiexampletext }}</a>
+    {% endif %}
 </div>

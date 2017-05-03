@@ -11,44 +11,38 @@
         <div class="container">{{ content }}</div>
         <h2>computer formats</h2>
         <p>data available to download and use in computer based formats such as XML,JSON and CSV.</p>
-        <div id="computerformats">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'ComputerFormat') %}
-                {% include 'dataindexcard.html' with {'colour': 'danger'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_computerformats" class="row">
+            {% for page in pages if (page.meta.type == 'ComputerFormat') %}
+            {% include 'dataindexcard.html' with {'colour': 'danger'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
         <h2>spreadsheets</h2>
         <p>non-CSV spreadsheet formats such as excel/google sheets</p>
-        <div id="spreadsheets">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'Spreadsheet') %}
-                {% include 'dataindexcard.html' with {'colour': 'success'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div >
+        <div id="div_spreadsheets" class="row">
+            {% for page in pages if (page.meta.type == 'Spreadsheet') %}
+            {% include 'dataindexcard.html' with {'colour': 'success'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
+        </div>
         </div>
         <h2>report downloads</h2>
         <p>reports that include data embedded e.g. PDF documents.</p>
         <p>to read PDF documents, you will need a PDF reader such as adobe acrobat. this is freely available, you can get the latest version (which has a number of accessibility features) from the <a href="http://get.adobe.com/uk/reader/" title="Get Adobe Acrobat Reader">adobe acrobat website (external link)</a>.  alternatively there is also foxit PDF reader, also available to <a href="https://www.foxitsoftware.com/products/pdf-reader/" title="Foxit PDF Reader" target="_blank">download for free</a>.</p>
-        <div id="reports">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'Download') %}
-                {% include 'dataindexcard.html' with {'colour': 'warning'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_reports" class="row">
+            {% for page in pages if (page.meta.type == 'Download') %}
+            {% include 'dataindexcard.html' with {'colour': 'warning'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
         <h2>web pages</h2>
         <p>web pages that include useful data within the page.</p>
-        <div id="webpages">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'Webpage') %}
-                {% include 'dataindexcard.html' with {'colour': 'info'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_webpages" class="row">
+            {% for page in pages if (page.meta.type == 'Webpage') %}
+            {% include 'dataindexcard.html' with {'colour': 'info'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
         {% include 'footer.html' %}
     </div>

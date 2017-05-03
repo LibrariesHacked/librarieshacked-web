@@ -1,41 +1,8 @@
 /* Custom page CSS
 -------------------------------------------------- */
-body {
-    padding-top: 70px;
-}
 
 p.center {
     text-align: center;
-}
-
-.hdrHome {
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.lhcard {
-    border: 1px solid #dfd7ca;
-    border-radius: 4px;
-    padding-top: 0px;
-    padding-bottom: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-    margin-bottom: 10px;
-    background: #f8f5f0;
-}
-    .lhcard h4 {
-        text-align: right;
-        text-transform: uppercase;
-        font-weight: 500;
-    }
-
-.size-64 i {
-    font-size: 64px;
-}
-
-.size-32 i {
-    font-size: 32px;
 }
 
 .tutorialpage-sidebar {
@@ -56,7 +23,7 @@ p.center {
 
 .social {
     text-align: center;
-    margin-bottom: 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 700 !important;
 }

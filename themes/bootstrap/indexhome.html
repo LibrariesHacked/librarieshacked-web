@@ -8,59 +8,45 @@
     <div class="container">
         {% include 'pageheader.html' %}
         <div id="divResults">
-            <h2 class="text-warning">search results</h2>
+            <h2>search results</h2>
             <div class="row"></div>
         </div>
     </div>
     <div class="container">
+        <hr/>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h3 class="text-danger">data services</h3>
-                <p class="lead">systems providing library data web services to integrate into your hacks and projects.</p>
-                <a class="btn btn-danger" href="/apis"><i class="fa fa-cubes"></i>&nbsp;data</a>
+                <h3>data services</h3>
+                <p class="lead">library data and web services to integrate into your hacks and projects.</p>
+                <hr/>
+                <p><a class="btn btn-link" href="/apis"><i class="fa fa-cubes"></i>&nbsp;APIs</a>&nbsp;
+                <a class="btn btn-link" href="/otherdata"><i class="fa fa-file-excel-o"></i>&nbsp;data</a></p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h3 class="text-info">hack events</h3>
+                <h3>events</h3>
                 <p class="lead">a listing of past and future events to get involved in and get inspiration from.</p>
-                <a class="btn btn-info" href="/events"><i class="fa fa-calendar-o"></i>&nbsp;events</a>
+                <hr/>
+                <a class="btn btn-link" href="/events"><i class="fa fa-calendar-o"></i>&nbsp;events</a>
             </div>
             <div class="clearfix visible-md visible-sm"></div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h3 class="text-primary">downloads</h3>
-                <p class="lead">links to download reports and stats in various static formats (pdf, excel, access).</p>
-                <a class="btn btn-primary" href="/otherdata"><i class="fa fa-file-excel-o"></i>&nbsp;downloads</a>
+                <h3>projects</h3>
+                <p class="lead">current and past projects to explore and get involved in..</p>
+                <hr/>
+                <a class="btn btn-link" href="/projects"><i class="fa fa-bar-chart"></i>&nbsp;projects</a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h3 class="text-success">tutorials</h3>
-                <p class="lead">examples of using the available APIs and various other code based hacks.</p>
-                <a class="btn btn-success" href="/tutorials"><i class="fa fa-graduation-cap"></i>&nbsp;tutorials</a>
+                <h3>articles</h3>
+                <p class="lead">posts and tutorials about library technology and open library data.</p>
+                <hr/>
+                <a class="btn btn-link" href="/articles"><i class="fa fa-newspaper-o"></i>&nbsp;articles</a>&nbsp;
+                <a class="btn btn-link" href="/tutorials"><i class="fa fa-graduation-cap"></i>&nbsp;tutorials</a>
             </div>
             <div class="clearfix visible-md visible-sm"></div>
             <div class="clearfix visible-lg"></div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <h3 class="text-warning">resources</h3>
-                <p class="lead">external resources for hosting hacks, including encouraging diversity, helping beginners, and providing food!</p>
-                <a class="btn btn-warning" href="/resources"><i class="fa fa-external-link"></i>&nbsp;resources</a>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <h3 class="text-info">articles</h3>
-                <p class="lead">general posts about library technology and open library data.</p>
-                <a class="btn btn-info" href="/articles"><i class="fa fa-newspaper-o"></i>&nbsp;articles</a>
-            </div>
-            <div class="clearfix visible-md visible-sm"></div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <h3 class="text-danger">tools</h3>
-                <p class="lead">tools for use in data analysis/crunching, data portals, and visualisations.</p>
-                <a class="btn btn-danger" href="/tools"><i class="fa fa-bar-chart"></i>&nbsp;tools</a>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <h3 class="text-primary">contribute</h3>
-                <p class="lead">any content, links, or code that you may like to share?</p>
-                <a class="btn btn-primary" href="/contribute"><i class="fa fa-pencil-square-o"></i>&nbsp;submit</a>
-            </div>
         </div>
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
 </body>
-</html> 
+</html>

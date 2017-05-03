@@ -14,13 +14,11 @@
         <h2 class="text-success">future events, makerspaces, fablabs</h2>
         <p>upcoming events for the diary.  some are ongoing series of events and FabLabs that it is worth keeping an eye on.</p>
         <script>var hackEvents = [];</script>
-        <div id="fablabs">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'FabLab' or page.meta.type == 'Event') %}
-                {% include 'eventindexcard.html' with {'colour': 'success'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_fablabs" class="row">
+            {% for page in pages if (page.meta.type == 'FabLab' or page.meta.type == 'Event') %}
+            {% include 'eventindexcard.html' with {'colour': 'success'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
     </div>
     <div class="container">
@@ -29,13 +27,11 @@
     <div class="container">
         <h2 class="text-muted">archive</h2>
         <p>events that have been and gone - still often useful for finding out what happened and how it was done.</p>
-        <div id="pastevents">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'PastEvent') %}
-                {% include 'eventindexcardmini.html' with {'colour': 'muted'} %}
-                {% include 'clearfix6.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="div_pastevents" class="row">
+            {% for page in pages if (page.meta.type == 'PastEvent') %}
+            {% include 'eventindexcardmini.html' with {'colour': 'muted'} %}
+            {% include 'clearfix6.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
         {% include 'footer.html' %}
     </div>
