@@ -21,18 +21,32 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/projects">projects</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">hacks</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/events">events</a>
+                        <a class="dropdown-item" href="/events">resources</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">articles</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/posts">posts</a>
+                        <a class="dropdown-item" href="/tutorials">tutorials</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container social">
-    <a href="http://www.facebook.com/sharer.php?u={{ current_page.url }}&amp;t={{ meta.title|escape('url') }}" class="btn btn-outline-primary" target="_blank" title="Share on Facebook">
+    <a href="http://www.facebook.com/sharer.php?u={{ current_page.url }}&amp;t={{ meta.title|escape('url') }}" class="btn btn-outline-primary btn-sm" target="_blank" title="Share on Facebook">
         <span class="fa fa-facebook"></span>&nbsp;&nbsp;<span id="facebookCount"> share</span>
     </a>&nbsp;
-    <a href="https://twitter.com/intent/tweet?original_referer={{ current_page.url }}&amp;text={{ meta.title|escape('url') }}%20{{ current_page.url }}%20via%20@librarieshacked" class="btn btn-outline-success" target="_blank" title="Tweet This!">
+    <a href="https://twitter.com/intent/tweet?original_referer={{ current_page.url }}&amp;text={{ meta.title|escape('url') }}%20{{ current_page.url }}%20via%20@librarieshacked" class="btn btn-outline-success btn-sm" target="_blank" title="Tweet This!">
         <span class="fa fa-twitter"></span>&nbsp;&nbsp;<span id="twitterCount"> tweet</span>
     </a>&nbsp;
-    <a href="https://plus.google.com/share?url={{ current_page.url }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-outline-danger" title="Post it on Google+">
+    <a href="https://plus.google.com/share?url={{ current_page.url }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-outline-danger btn-sm" title="Post it on Google+">
         <span class="fa fa-google-plus"></span>&nbsp;&nbsp;<span id="googleCount"> post</span>
     </a>
 </div>

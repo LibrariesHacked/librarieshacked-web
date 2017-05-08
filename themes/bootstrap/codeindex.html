@@ -6,9 +6,8 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="container">{{ content }}</div>
+        {{ content }}
         <h2>tutorials and learning</h2>
         <p>code to learn from.</p>
         <div id="div_codetutorials" class="row">
@@ -17,6 +16,7 @@
             {% include 'clearfix4.html' with { 'i': loop.index } %}
             {% endfor %}
         </div>
+        <hr>
         <h2>applications and hacks</h2>
         <p>code repositories for applications and hacks made from library data or from library hack events.</p>
         <div id="div_codeapps" class="row">
@@ -25,6 +25,7 @@
             {% include 'clearfix4.html' with { 'i': loop.index } %}
             {% endfor %}
         </div>
+        <hr>
         <h2>libraries hacked code</h2>
         <p>code from libraries hacked projects and tutorials.</p>
         <div id="div_mobileapps" class="row">

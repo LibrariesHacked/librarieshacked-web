@@ -6,19 +6,18 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="container">{{ content }}</div>
-        <h2 class="text-warning">completed</h2>
-        <p>projects that have been completed (or that are ready to show!)</p>
+        {{ content }}
+        <h2>completed</h2>
+        <p>projects that have been completed, or are ready to show.</p>
         <div class="row">
             {% for page in pages if (page.meta.type == 'ProjectCompleted') %}
             {% include 'projectsindexcard.html' with {'colour': 'warning'} %}
             {% include 'clearfix4.html' with { 'i': loop.index }  %}
             {% endfor %}
         </div>
-        <h2 class="text-muted">in progress</h2>
-        <p>projects in progress - feel free to get involved!</p>
+        <h2>in progress</h2>
+        <p>projects in progress.  feel free to get involved!</p>
         <div class="row">
             {% for page in pages if (page.meta.type == 'ProjectInProgress') %}
             {% include 'projectsindexcard.html' with {'colour': 'warning'} %}

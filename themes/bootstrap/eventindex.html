@@ -8,10 +8,9 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="container">{{ content }}</div>
-        <h2 class="text-success">future events, makerspaces, fablabs</h2>
+        {{ content }}
+        <h2>future events, makerspaces, fablabs</h2>
         <p>upcoming events for the diary.  some are ongoing series of events and FabLabs that it is worth keeping an eye on.</p>
         <script>var hackEvents = [];</script>
         <div id="div_fablabs" class="row">
@@ -25,7 +24,7 @@
         <div class="custom-popup" id="map"></div>
     </div>
     <div class="container">
-        <h2 class="text-muted">archive</h2>
+        <h2>archive</h2>
         <p>events that have been and gone - still often useful for finding out what happened and how it was done.</p>
         <div id="div_pastevents" class="row">
             {% for page in pages if (page.meta.type == 'PastEvent') %}

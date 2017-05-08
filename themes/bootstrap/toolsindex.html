@@ -6,38 +6,31 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="container">{{ content }}</div>
-        <h2 class="text-primary">data portals</h2>
-        <div id="dataportals">
-            <p>software and cloud-based platforms for publishing datasets.</p>
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'DataPortal') %}
-                {% include 'toolsindexcard.html' with {'colour': 'primary'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index }  %}
-                {% endfor %}
-            </div>
+        {{ content }}
+        <h2>data portals</h2>
+        <p>software and cloud-based platforms for publishing datasets.</p>
+        <div id="div_dataportals" class="row">
+            {% for page in pages if (page.meta.type == 'DataPortal') %}
+            {% include 'toolsindexcard.html' with {'colour': 'primary'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
+            {% endfor %}
         </div>
-        <h2 class="text-danger">visualisation tools</h2>
+        <h2>visualisation</h2>
         <p>tools for visualising data, typically on webpages using JavaScript technologies.</p>
-        <div id="visualisations">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'Visualisation') %}
-                {% include 'toolsindexcard.html' with {'colour': 'danger'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index }  %}
-                {% endfor %}
-            </div>
+        <div id="div_visualisations" class="row">
+            {% for page in pages if (page.meta.type == 'Visualisation') %}
+            {% include 'toolsindexcard.html' with {'colour': 'danger'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
+            {% endfor %}
         </div>
-        <h2 class="text-warning">data querying tools</h2>
+        <h2>data querying</h2>
         <p>tools for querying and manipulating data into the format you require.</p>
-        <div id="querytools">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'DataQuery') %}
-                {% include 'toolsindexcard.html' with {'colour': 'warning'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index }  %}
-                {% endfor %}
-            </div>
+        <div id="div_querytools" class="row">
+            {% for page in pages if (page.meta.type == 'DataQuery') %}
+            {% include 'toolsindexcard.html' with {'colour': 'warning'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index }  %}
+            {% endfor %}
         </div>
         {% include 'footer.html' %}
     </div>

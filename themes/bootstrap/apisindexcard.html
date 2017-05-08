@@ -1,16 +1,17 @@
-<div class="col-lg-3">
-    <p class="lead">{{ page.title }}</h2>
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <h3>{{ page.title }}</h3>
     <p>{{ page.description }}</p>
     {% if page.meta.format != '' %}
     <p>{% for outputformat in page.meta.format|split(',') %}<span class="badge badge-info">{{ outputformat }}</span> {% endfor %}</p>
     {% endif %}
+    <hr>
     {% if page.meta.apitwitter != '' %}
-    <a class="btn btn-outline-primary" href="https://twitter.com/{{ page.meta.apitwitter }}" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+    <a class="btn btn-link" href="https://twitter.com/{{ page.meta.apitwitter }}" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twitter</a>
     {% endif %}
     {% if page.meta.apiurl != '' %}
-    <a class="btn btn-outline-primary" href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a>
+    <a class="btn btn-link" href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;web</a>
     {% endif %}
     {% if page.meta.apiexampleurl != '' %}
-    <a class="btn btn-outline-primary" target="_blank" title="link to {{ page.meta.apiexampletext }}" href="{{ page.meta.apiexampleurl }}">{{ page.meta.apiexampletext }}</a>
+    <a class="btn btn-link" target="_blank" title="link to {{ page.meta.apiexampletext }}" href="{{ page.meta.apiexampleurl }}">{{ page.meta.apiexampletext }}</a>
     {% endif %}
 </div>

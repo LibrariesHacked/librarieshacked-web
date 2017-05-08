@@ -6,41 +6,44 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
         {{ content }}
         <h2>bibliographic data</h2>
-        <p>services providing data about books.</p>
+        <p>books books books.</p>
         <div id="div_biblioapis" class="row">
             {% for page in pages if (page.meta.type == 'BibliographicApi') %}
             {% include 'apisindexcard.html' with {'colour': 'success'} %}
             {% include 'clearfix4.html' with { 'i': loop.index } %}
             {% endfor %}
         </div>
+        <hr/>
         <h2>collections</h2>
-        <p>APIs exposing data about collections.</p>
+        <p>data about collections.</p>
         <div id="div_collectionapis" class="row">
             {% for page in pages if (page.meta.type == 'CollectionApi') %}
             {% include 'apisindexcard.html' with {'colour': 'danger'} %}
             {% include 'clearfix4.html' with { 'i': loop.index } %}
             {% endfor %}
         </div>
+        <hr/>
         <h2>library data</h2>
-        <p>APIs dealing with data about libraries.</p>
+        <p>data about libraries.</p>
         <div id="div_libraryapis" class="row">
             {% for page in pages if (page.meta.type == 'LibraryApi') %}
             {% include 'apisindexcard.html' with {'colour': 'primary'} %}
             {% include 'clearfix4.html' with { 'i': loop.index } %}
             {% endfor %}
         </div>
+        <hr/>
         <h2>national</h2>
-        <p>services that provide national-specific collection data.</p>
+        <p>national-specific collection data.</p>
         <div id="div_nationalapis" class="row">
             {% for page in pages if (page.meta.type == 'NationalApi') %}
             {% include 'apisindexcard.html' with {'colour': 'info'} %}
             {% include 'clearfix4.html' with { 'i': loop.index } %}
             {% endfor %}
         </div>
+        <hr/>
         <h2>addresses and mapping</h2>
         <p>not library related but useful in many projects, address data can be hard to find that isn't restricted.</p>
         <div id="div_addressapis" class="row">

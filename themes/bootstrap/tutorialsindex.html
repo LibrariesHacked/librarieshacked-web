@@ -6,9 +6,8 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="container">{{ content }}</div>
+        {{ content }}
         <div class="row">
             {% for page in pages if (page.meta.type == 'Tutorial') %}{% if loop.index < 5 %}
             {% include 'tutorialsindexcard.html' %}

@@ -6,9 +6,8 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="container">{{ content }}</div>
+        {{ content }}
         <ul class="nav nav-tabs">
             {% set count = 0 %}{% for page in pages %}{% if page.meta.type == 'International' %}{% if count == 0 %}
             <li class="active"><a href="#{{ page.title }}content" data-toggle="tab"><strong>{{ page.title }}</strong></a></li>
@@ -39,4 +38,4 @@
     </div>
     {% include 'scripts.html' %}
 </body>
-</html> 
+</html>

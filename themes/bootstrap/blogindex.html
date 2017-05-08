@@ -6,9 +6,8 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="container">{{ content }}</div>
+        {{ content }}
         <div class="row">
             {% for page in pages if (page.meta.type == 'Article') %}
             {% if loop.index < 5 %}
@@ -17,6 +16,7 @@
             {% endif %}
             {% endfor %}
         </div>
+        <hr>
         <h2>archive</h2>
         <div id="div_posts" class="row">
             {% for page in pages if (page.meta.type == 'Article') %}

@@ -1,11 +1,6 @@
-<div class="col-3">
-    <div class="card">
-        <div class="card-block">
-            <h5 class="card-title">{{ page.title }}</h5>
-        </div>
-        <div class="card-block">
-            <p class="card-text">{{ page.description }}</p>
-            <p><a href="{{ page.meta.appurl }}" class="card-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a></p>
-        </div>
-    </div>
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <h3>{{ page.title }}</h3>
+    <p>{{ page.description }}</p>
+    <hr>
+    <p><a href="{{ page.meta.appurl }}" class="btn btn-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;app</a></p>
 </div>

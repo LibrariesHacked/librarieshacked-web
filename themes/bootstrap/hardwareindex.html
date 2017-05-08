@@ -6,49 +6,37 @@
 <body>
     {% include 'navigation.html' %}
     <div class="container">
-        {% include 'breadcrumb.html' %}
         {% include 'pageheader.html' %}
-        <div class="container">{{ content }}</div>
-        <h2 class="text-danger">computer boards and electronics</h2>
+        {{ content }}
+        <h2>computer boards and electronics</h2>
         <p>small prototyping boards for code and electronic hardware projects.</p>
-        <div id="computerhardware">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'HardwareComputer') %}
-                {% include 'hardwareindexcard.html' with {'colour': 'danger'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="computerhardware" class="row">
+            {% for page in pages if (page.meta.type == 'HardwareComputer') %}
+            {% include 'hardwareindexcard.html' with {'colour': 'danger'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
-        <h2 class="text-primary">mobile</h2>
-        <p>mobile-technology prototyping</p>
-        <div id="mobilehardware">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'HardwareMobile') %}
-                {% include 'hardwareindexcard.html' with {'colour': 'primary'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <hr>
+        <h2>mobile hardware</h2>
+        <div id="mobilehardware" class="row">
+            {% for page in pages if (page.meta.type == 'HardwareMobile') %}
+            {% include 'hardwareindexcard.html' with {'colour': 'primary'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
-        <h2 class="text-warning">printing</h2>
+        <hr>
+        <h2>printing</h2>
         <p>creating physical objects.</p>
-        <div id="printinghardware">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'HardwarePrinting') %}
-                {% include 'hardwareindexcard.html' with {'colour': 'warning'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
+        <div id="printinghardware" class="row">
+            {% for page in pages if (page.meta.type == 'HardwarePrinting') %}
+            {% include 'hardwareindexcard.html' with {'colour': 'warning'} %}
+            {% include 'clearfix4.html' with { 'i': loop.index } %}
+            {% endfor %}
         </div>
-        <h2 class="text-info">presenting</h2>
+        <hr>
+        <h2>presenting</h2>
         <p>tools for presenting and displaying visuals.</p>
-        <div id="presentinghardware">
-            <div class="row">
-                {% for page in pages if (page.meta.type == 'HardwarePresenting') %}
-                {% include 'hardwareindexcard.html' with {'colour': 'info'} %}
-                {% include 'clearfix4.html' with { 'i': loop.index } %}
-                {% endfor %}
-            </div>
-        </div>
+        <hr>
         {% include 'footer.html' %}
     </div>
     {% include 'scripts.html' %}
