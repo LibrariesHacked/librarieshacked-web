@@ -1,15 +1,10 @@
 var tries = 0;
 
-$(document).ready(function () {
-    GetLibraryNews();
-});
-
-function GetLibraryNews() {
+var getLibraryNews = function() {
     tries = tries + 1;
     var latlng = L.latLng(53.5, -2.6);
-    var map = L.map('map', { zoomControl: false, center: latlng, zoom: 7 });
-
-    new L.Control.Zoom({ position: 'bottomleft' }).addTo(map);
+    var map = L.map('map', { center: latlng, zoom: 7 });
+    
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/librarieshacked.jefmk67b/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
@@ -73,10 +68,14 @@ function GetLibraryNews() {
             });
         }
         else {
-            if (tries < 4) GetLibraryNews();
+            if (tries < 4) getLibraryNews();
         }
     },
     function () {
-        if (tries < 4) GetLibraryNews();
+        if (tries < 4) getLibraryNews();
     });
-}
+};
+
+$(function(){
+    getLibraryNews();
+});

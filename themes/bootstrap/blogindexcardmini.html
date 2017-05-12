@@ -1,10 +1,9 @@
 <div class="col-lg-2 col-md-3 col-sm-6">
-    <h3>{{ page.title }}</h3>
+    <p class="lead">{{ page.title }}</p>
     <p>
         {% for tag in page.meta.tags|split(',') %}
         <span class="badge badge-default"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
         {% endfor %}
     </p>
-    <hr>
-    <p><a href="{{ page.url }}" class="btn btn-link" title="link to {{ page.title }}"><i class="fa fa-ellipsis-h"></i>&nbsp;full post</a></p>
+    <p><a href="{{ page.url }}" class="btn btn-link" title="link to {{ page.title }}"><i class="fa fa-level-down"></i>&nbsp;full post</a></p>
 </div>

@@ -4,4 +4,5 @@
     {% if page.meta.format != '' %}
     <p>{% for outputformat in page.meta.format|split(',') %}<span class="badge badge-warning">{{ outputformat }}</span>&nbsp;{% endfor %}</p>
     {% endif %}
+    <p><a href="{{ page.meta.dataurl }}" class="btn btn-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-table"></i>&nbsp;data</a></p>
 </div>

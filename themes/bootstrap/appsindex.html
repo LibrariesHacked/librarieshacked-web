@@ -18,7 +18,7 @@
         </div>
         <hr>
         <h2>mobile apps.  library account</h2>
-        <p>apps from library suppliers (and others) to interact with your library account.</p> >
+        <p>apps from library suppliers (and others) to interact with your library account.</p>
         <div id="div_mobileappscatalogue" class="row">
             {% for page in pages if (page.meta.type == 'MobileAccountApp') %}
             {% include 'appsindexcard.html' with {'colour': 'info'}  %}

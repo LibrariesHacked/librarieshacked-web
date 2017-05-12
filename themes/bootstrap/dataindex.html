@@ -18,7 +18,7 @@
         </div>
         <hr>
         <h2>spreadsheets</h2>
-        <p>non-CSV spreadsheet formats such as excel/google sheets</p>
+        <p>spreadsheet formats such as excel and google sheets</p>
         <div id="div_spreadsheets" class="row">
             {% for page in pages if (page.meta.type == 'Spreadsheet') %}
             {% include 'dataindexcard.html' with {'colour': 'success'} %}
@@ -27,7 +27,7 @@
         </div>
         <hr>
         <h2>report downloads</h2>
-        <p>reports that include data embedded e.g. PDF documents.</p>
+        <p>reports that include data within the report e.g. PDF documents.</p>
         <p>to read PDF documents, you will need a PDF reader such as adobe acrobat. this is freely available, you can get the latest version (which has a number of accessibility features) from the <a href="http://get.adobe.com/uk/reader/" title="Get Adobe Acrobat Reader">adobe acrobat website (external link)</a>.  alternatively there is also foxit PDF reader, also available to <a href="https://www.foxitsoftware.com/products/pdf-reader/" title="Foxit PDF Reader" target="_blank">download for free</a>.</p>
         <div id="div_reports" class="row">
             {% for page in pages if (page.meta.type == 'Download') %}

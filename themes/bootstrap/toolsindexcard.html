@@ -1,9 +1,8 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
     <h3>{{ page.title }}</h3>
     <p>{{ page.description }}</p>
-    <hr>
-    <a href="{{ page.meta.toolurl }}" class="btn btn-link" title="link to {{ page.title }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;website</a> 
+    <a href="{{ page.meta.toolurl }}" class="btn btn-link" title="link to {{ page.title }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;web</a> 
     {% if page.meta.toolvisualisation != '' %}
-    <a href="{{ site_url }}/examples/{{ page.meta.toolvisualisation }}" class="btn btn-link" title="visualisation example" target="_blank"><i class="fa fa-external-link"></i>&nbsp;visualisation</a>
+    <a href="{{ site_url }}/examples/{{ page.meta.toolvisualisation }}" class="btn btn-link" title="visualisation example" target="_blank"><i class="fa fa-bar-chart"></i>&nbsp;example</a>
     {% endif %}
 </div>

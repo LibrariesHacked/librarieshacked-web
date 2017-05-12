@@ -27,7 +27,7 @@
         </div>
         <hr>
         <h2>diversity</h2>
-        <p>posts around diversity in hack events and hackathons.  how to ensure that hacks appeal to all.</p>
+        <p>posts around diversity in hack events and hackathons.  how to ensure hacks appeal to all.</p>
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesDiversity') %}
             {% include 'resourcesindexcard.html' with {'colour': 'success'} %}
@@ -36,7 +36,7 @@
         </div>
         <hr>
         <h2>experiences</h2>
-        <p>first hand experiences of library hack days.  if you have a post you want to share here please send it in.  or if you'd like to write one, it can be hosted here.</p>
+        <p>first-hand experiences of library hack days.  if you have a post you want to be featured here please send it in.  or if you'd like to write one, it can be hosted here.</p>
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesExperiences') %}
             {% include 'resourcesindexcard.html' with {'colour': 'danger'} %}
@@ -45,7 +45,7 @@
         </div>
         <hr>
         <h2>learning guides</h2>
-        <p>when hack events encourage beginners they can be a great environment for learning.  but it can also be useful to point people towards online learning resources to use before and after the hacks.</p>
+        <p>when hack events encourage beginners they can be a great environment for learning.  but there are lots of online learning resources to use before and after hacks.</p>
         <div class="row">
             {% for page in pages if (page.meta.type == 'ResourcesLearning') %}
             {% include 'resourcesindexcard.html' with {'colour': 'info'} %}

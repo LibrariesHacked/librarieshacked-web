@@ -18,7 +18,7 @@
         </div>
         <hr>
         <h2>applications and hacks</h2>
-        <p>code repositories for applications and hacks made from library data or from library hack events.</p>
+        <p>code repositories for applications made from library data or from library hack events.</p>
         <div id="div_codeapps" class="row">
             {% for page in pages if (page.meta.type == 'SourceApp') %}
             {% include 'codeindexcard.html' with {'colour': 'info'} %}
@@ -27,7 +27,7 @@
         </div>
         <hr>
         <h2>libraries hacked code</h2>
-        <p>code from libraries hacked projects and tutorials.</p>
+        <p>code from { libraries: hacked } projects and tutorials.</p>
         <div id="div_mobileapps" class="row">
             {% for page in pages if (page.meta.type == 'SourceLibrariesHacked') %}
             {% include 'codeindexcard.html' with {'colour': 'warning'} %}
