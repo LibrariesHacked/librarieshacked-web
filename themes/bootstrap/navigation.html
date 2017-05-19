@@ -1,44 +1,43 @@
-<ul class="nav nav-pills">
-    <li class="nav-item">
-        <a class="nav-link" href="/">home</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">data</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="/apis">APIs</a>
-            <a class="dropdown-item" href="/otherdata">other</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/tools">tools</a>
-        </div>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/hardware">hardware</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/projects">projects</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">hacks</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="/events">events</a>
-            <a class="dropdown-item" href="/resources">resources</a>
-        </div>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">apps</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="/apps">web and mobile</a>
-            <a class="dropdown-item" href="/source">code</a>
-        </div>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">articles</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="/articles">posts</a>
-            <a class="dropdown-item" href="/tutorials">tutorials</a>
-        </div>
-    </li>
-</ul>
+<div class="container nav">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/"><span class="fa fa-home"></span></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">data</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/apis">APIs</a>
+                <a class="dropdown-item" href="/otherdata">other</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/tools">tools</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">hacks</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/projects">projects</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/events">events</a>
+                <a class="dropdown-item" href="/resources">resources</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">apps</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/apps">web and mobile</a>
+                <a class="dropdown-item" href="/source">code</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">articles</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/articles">posts</a>
+                <a class="dropdown-item" href="/tutorials">tutorials</a>
+            </div>
+        </li>
+    </ul>
+    <hr>
+</div>
 <div class="container social">
     <a href="http://www.facebook.com/sharer.php?u={{ current_page.url }}&amp;t={{ meta.title|escape('url') }}" class="btn btn-link" target="_blank" title="Share on Facebook">
         <span class="fa fa-facebook"></span>&nbsp;&nbsp;<span id="facebookCount"> share</span>

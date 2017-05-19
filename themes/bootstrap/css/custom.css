@@ -1,5 +1,8 @@
 /* Custom page CSS
 -------------------------------------------------- */
+div.nav {
+    margin-top: 20px;
+}
 
 p.center {
     text-align: center;

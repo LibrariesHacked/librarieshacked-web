@@ -6,9 +6,11 @@ var mobile_library_circles, library_circles, mobiles_displayed = false, librarie
 var toggleMobileLibraries = function() {
     if (mobiles_displayed) {
         map.removeLayer(mobile_library_circles);
+        $('#sp-toggle').attr('class', 'fa fa-toggle-off');
         mobiles_displayed = false;
     } else {
         map.addLayer(mobile_library_circles);
+        $('#sp-toggle').attr('class', 'fa fa-toggle-on');
         mobiles_displayed = true;
     }
 };

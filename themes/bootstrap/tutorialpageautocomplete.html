@@ -7,43 +7,35 @@
     {% include 'navigation.html' %}
     <div class="container">
         {% include 'pageheader.html' %}
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                book search
-            </div>
-            <div class="panel-body">
+        <form>
+            <fieldset>
+                <legend>Example</legend>
                 <div class="form-group">
-                    <label class="control-label">keywords</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input class="form-control" type="text" id="txtBookSearch">
-                        <span class="input-group-btn">
-                        </span>
-                    </div>
-                    <br />
-                    <div id="divBookDetails" style="display: none;">
-                        <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                            <li class="active"><a href="#divBook" data-toggle="tab">Book</a></li>
-                            <li><a href="#profile" data-toggle="tab">Description</a></li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                                    Book actions <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#dropdown1" class="disabled" id="aWorldCat" target="_blank">find on worldcat</a></li>
-                                    <li><a href="#dropdown2" class="disabled" id="aOpenLibrary" target="_blank">view on open library</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade active in" id="divBook">
-                            </div>
-                            <div class="tab-pane fade" id="profile">
-                                <p id="pDescription"></p>
-                            </div>
-                        </div>
-                    </div>
+                    <label for="txt-search">Book search</label>
+                    <input class="form-control" id="txt-search" aria-describedby="hlp-search" type="email" placeholder="Enter search terms">
+                    <small class="form-text text-muted" id="hlp-search">Provide some help text telling the user something..</small>
                 </div>
+            </fieldset>
+        </form>
+        <div id="div-book-details" style="display: none;">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#book" data-toggle="tab">Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#description" data-toggle="tab">Description</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">Book actions</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#worldcat">Find on WorldCat</a>
+                        <a class="dropdown-item" href="#worldcat">View on OpenLibrary</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="tab-content" id="tab-content">
+                <div class="tab-pane fade active in" id="book"></div>
+                <div class="tab-pane fade active in" id="description"></div>
             </div>
         </div>
         <div class="clear"></div>

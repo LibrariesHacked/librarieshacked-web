@@ -5,7 +5,7 @@
     <p>{% for outputformat in page.meta.format|split(',') %}<span class="badge badge-info">{{ outputformat }}</span> {% endfor %}</p>
     {% endif %}
     {% if page.meta.apiurl != '' %}
-    <a class="btn btn-link" href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank"><span class="fa fa-external-link"></span>&nbsp;web</a>
+    <a class="btn btn-link" href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank"><span class="fa fa-code-fork"></span>&nbsp;API</a>
     {% endif %}
     {% if page.meta.apiexampleurl != '' %}
     <a class="btn btn-link" target="_blank" title="link to {{ page.meta.apiexampletext }}" href="{{ page.meta.apiexampleurl }}"><span class="fa fa-user-o"></span>&nbsp;{{ page.meta.apiexampletext }}</a>
