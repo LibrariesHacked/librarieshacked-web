@@ -7,6 +7,9 @@
     {% if page.meta.apiurl != '' %}
     <a class="btn btn-link" href="{{ page.meta.apiurl }}" title="link to {{ page.title }} website" target="_blank"><span class="fa fa-code-fork"></span>&nbsp;API</a>
     {% endif %}
+    {% if page.meta.tutorial != '' %}
+    <a class="btn btn-link" href="/tutorials/{{ page.meta.tutorial }}" title="link to tutorial" target="_blank"><span class="fa fa-question"></span>&nbsp;tutorial</a>
+    {% endif %}
     {% if page.meta.apiexampleurl != '' %}
     <a class="btn btn-link" target="_blank" title="link to {{ page.meta.apiexampletext }}" href="{{ page.meta.apiexampleurl }}"><span class="fa fa-user-o"></span>&nbsp;{{ page.meta.apiexampletext }}</a>
     {% endif %}

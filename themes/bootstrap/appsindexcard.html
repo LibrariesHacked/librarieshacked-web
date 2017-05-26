@@ -1,5 +1,9 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
     <h3>{{ page.title }}</h3>
     <p>{{ page.description }}</p>
-    <p><a href="{{ page.meta.appurl }}" class="btn btn-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;app</a></p>
+    <p>
+        {% if 'iOS' in page.meta.appmobileos %}<span class="fa fa-apple"></span>&nbsp;{% endif %}
+        {% if 'Android' in page.meta.appmobileos %}<span class="fa fa-android"></span>&nbsp;{% endif %}
+        <a href="{{ page.meta.appurl }}" class="btn btn-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;app</a>
+    </p>
 </div>
