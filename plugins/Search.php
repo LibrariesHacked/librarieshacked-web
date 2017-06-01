@@ -1,29 +1,22 @@
 <?php
 
 /**
- * Search plugin for Pico
+ * Search plugin
  * Description: Provides a simple JSON search interface with search term to the site content.
- * Author: Dave @librarieshacked
+ * Author: Dave
  */
 
-class PicoSearch {
-
-	private $is_search;
-	private $plugin_path;
+class Search {
 	
-	public function __construct()
-	{
-		$this->is_search = false;
-		$this->plugin_path = dirname(__FILE__);
-	}
+	protected $is_search = false;
 	
-	public function request_url(&$url)
+	public function onRequestUrl(&$url)
 	{
-		// Are we looking for /search?
+		// Are we looking for /search
 		if($url == 'search' and $_POST['search']) $this->is_search = true;
 	}
-
-	public function get_pages(&$pages, &$current_page, &$prev_page, &$next_page)
+	
+	public function onPagesLoaded(array &$pages, array &$currentPage = null, array &$previousPage = null, array &$nextPage = null)
 	{
 		if($this->is_search and $_POST['search'])
 		{
@@ -51,4 +44,5 @@ class PicoSearch {
 		}
 	}
 }
+
 ?>
