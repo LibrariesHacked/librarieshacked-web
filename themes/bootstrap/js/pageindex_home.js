@@ -5,8 +5,12 @@ $(function () {
 	$.get('/pages', function(pages) {
 		
 		var data = [0, 0, 0, 0];
-		var events = [];
-		var projects = [];
+		var events_data = [];
+		var events_labels = [];
+		var events_backgroundcolors = [];
+		var events_bordercolors = [];
+		var projects_data = [0,0,0,0];
+		var projects_labels = ['in progress', 'completed', 'learning code', 'app code'];
 		var articles = {};
 		$.each(pages, function(i, p) {
 			if (p.type == 'NationalApi') data[0]++;
@@ -20,29 +24,46 @@ $(function () {
 			if (p.type == 'Spreadsheet') data[2]++;
 			if (p.type == 'ComputerFormat') data[3]++;
 			if (p.type == 'Webpage') data[4]++;
-			if (p.type == 'events') events[0]++;
 
-			if (p.type == 'Tutorial' || p.type == 'Article') {
+			if (p.type == 'ProjectInProgress') projects_data[0]++;
+			if (p.type == 'ProjectCompleted') projects_data[1]++;
+			if (p.type == 'SourceLearning') projects_data[2]++;
+			if (p.type == 'SourceApp') projects_data[3]++;
+
+			if ((p.type == 'Tutorial' || p.type == 'Article') && p.date != '')  {
 				var year = moment(p.date).format('YYYY');
 				if (!articles[year]) articles[year] = { posts: 0, tutorials: 0 };
 				if (p.type == 'Article') articles[year].posts++;
 				if (p.type == 'Tutorial') articles[year].tutorials++;
 			}
+
+			if ((p.type == 'PastEvent' || p.type == 'Event') && p.date != '') {
+				var year = moment(p.date).format('YYYY');
+				var i = events_labels.indexOf(year)
+				if (i == -1) { 
+					events_labels.push(year);
+					events_data.push(1);
+				} else {
+					events_data[i]++; 
+				}
+			}
+
+
 		});
 
 		var article_labels = [];
-		var posts = { data: [], borderWidth: 1, borderColor: 'rgba(255,99,132,1)' };
-		var tutorials = { data: [], borderWidth: 1, borderColor: 'rgba(54, 162, 235, 1)' };
+		var posts = { label: 'posts', data: [], borderWidth: 1, borderColor: 'rgba(255,99,132,1)' };
+		var tutorials = { label: 'tutorials', data: [], borderWidth: 1, borderColor: 'rgba(54, 162, 235, 1)' };
 		$.each(Object.keys(articles), function(i, k) {
 			article_labels.push(k);
 			posts.data.push(articles[k].posts);
 			tutorials.data.push(articles[k].tutorials);
 		});
 
-		var bar = new Chart('cht-data', {
+		var databar = new Chart('cht-data', {
 			type: 'bar',
 			data: {
-				labels: ['APIs', 'Reports', 'Sheets', 'Data', 'Web'],
+				labels: ['APIs', 'reports', 'sheets', 'data', 'web'],
 				datasets: [{
 					data: [12, 19, 3, 5, 2, 3],
 					backgroundColor: [
@@ -75,8 +96,41 @@ $(function () {
 				}
 			}
 		});
+		
+		var eventsbar = new Chart('cht-events', {
+			type: 'horizontalBar',
+			data: {
+				labels: events_labels,
+				datasets: [{
+					data: events_data,
+					backgroundColor: events_backgroundcolors,
+					borderColor: events_bordercolors,
+					borderWidth: 1
+				}]
+			},
+			options: {
+				legend: {
+					display: false
+				}
+			}
+		});
 
-		var myLineChart = new Chart('cht-articles', {
+		var projectspolar = new Chart('cht-projects', {
+			data: {
+				datasets: [{
+					data: projects_data
+				}],
+				labels: projects_labels
+			},
+			type: 'polarArea',
+			options: {
+				legend: { 
+					display: false
+				}
+			}
+		});
+
+		var articlesline = new Chart('cht-articles', {
 			type: 'line',
 			data: {
 				labels: article_labels,

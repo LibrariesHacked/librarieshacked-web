@@ -8,6 +8,10 @@ p.center {
     text-align: center;
 }
 
+.strong {
+    font-weight: 700;
+}
+
 .tutorialpage-sidebar {
     text-align: center;
 }
