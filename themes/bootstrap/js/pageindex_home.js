@@ -3,7 +3,7 @@ $(function () {
 	//
 	//////////////////////////////////////////////////////
 	$.get('/pages', function(pages) {
-		
+
 		var data = [0, 0, 0, 0];
 		var events_data = [];
 		var events_labels = [];
@@ -13,6 +13,7 @@ $(function () {
 		var projects_labels = ['in progress', 'completed', 'learning code', 'app code'];
 		var articles = {};
 		$.each(pages, function(i, p) {
+
 			if (p.type == 'NationalApi') data[0]++;
 			if (p.type == 'CollectionApi') data[0]++;
 			if (p.type == 'BibliographicApi') data[0]++;
@@ -40,24 +41,16 @@ $(function () {
 			if ((p.type == 'PastEvent' || p.type == 'Event') && p.date != '') {
 				var year = moment(p.date).format('YYYY');
 				var i = events_labels.indexOf(year)
-				if (i == -1) { 
+				if (i == -1) {
 					events_labels.push(year);
+					var colour = sitecolours[Object.keys(sitecolours)[events_backgroundcolors.length]];
+					events_backgroundcolors.push('rgba(' + hexToRGB(colour).r + ',' + hexToRGB(colour).g + ',' + hexToRGB(colour).b + ',0.2)');
+					events_bordercolors.push('rgba(' + hexToRGB(colour).r + ',' + hexToRGB(colour).g + ',' + hexToRGB(colour).b + ',0.6)');
 					events_data.push(1);
 				} else {
 					events_data[i]++; 
 				}
 			}
-
-
-		});
-
-		var article_labels = [];
-		var posts = { label: 'posts', data: [], borderWidth: 1, borderColor: 'rgba(255,99,132,1)' };
-		var tutorials = { label: 'tutorials', data: [], borderWidth: 1, borderColor: 'rgba(54, 162, 235, 1)' };
-		$.each(Object.keys(articles), function(i, k) {
-			article_labels.push(k);
-			posts.data.push(articles[k].posts);
-			tutorials.data.push(articles[k].tutorials);
 		});
 
 		var databar = new Chart('cht-data', {
@@ -67,18 +60,18 @@ $(function () {
 				datasets: [{
 					data: [12, 19, 3, 5, 2, 3],
 					backgroundColor: [
-						'rgba(255, 99, 132, 0.2)',
-						'rgba(54, 162, 235, 0.2)',
-						'rgba(255, 206, 86, 0.2)',
-						'rgba(75, 192, 192, 0.2)',
-						'rgba(153, 102, 255, 0.2)'
+						'rgba(' + hexToRGB(sitecolours.primary).r + ',' + hexToRGB(sitecolours.primary).g + ',' + hexToRGB(sitecolours.primary).b + ',0.2)',
+						'rgba(' + hexToRGB(sitecolours.secondary).r + ',' + hexToRGB(sitecolours.secondary).g + ',' + hexToRGB(sitecolours.secondary).b + ',0.2)',
+						'rgba(' + hexToRGB(sitecolours.success).r + ',' + hexToRGB(sitecolours.success).g + ',' + hexToRGB(sitecolours.success).b + ',0.2)',
+						'rgba(' + hexToRGB(sitecolours.warning).r + ',' + hexToRGB(sitecolours.warning).g + ',' + hexToRGB(sitecolours.warning).b + ',0.2)',
+						'rgba(' + hexToRGB(sitecolours.danger).r + ',' + hexToRGB(sitecolours.danger).g + ',' + hexToRGB(sitecolours.danger).b + ',0.2)'
 					],
 					borderColor: [
-						'rgba(255,99,132,1)',
-						'rgba(54, 162, 235, 1)',
-						'rgba(255, 206, 86, 1)',
-						'rgba(75, 192, 192, 1)',
-						'rgba(153, 102, 255, 1)'
+						'rgba(' + hexToRGB(sitecolours.primary).r + ',' + hexToRGB(sitecolours.primary).g + ',' + hexToRGB(sitecolours.primary).b + ',0.6)',
+						'rgba(' + hexToRGB(sitecolours.secondary).r + ',' + hexToRGB(sitecolours.secondary).g + ',' + hexToRGB(sitecolours.secondary).b + ',0.6)',
+						'rgba(' + hexToRGB(sitecolours.success).r + ',' + hexToRGB(sitecolours.success).g + ',' + hexToRGB(sitecolours.success).b + ',0.6)',
+						'rgba(' + hexToRGB(sitecolours.warning).r + ',' + hexToRGB(sitecolours.warning).g + ',' + hexToRGB(sitecolours.warning).b + ',0.6)',
+						'rgba(' + hexToRGB(sitecolours.danger).r + ',' + hexToRGB(sitecolours.danger).g + ',' + hexToRGB(sitecolours.danger).b + ',0.6)'
 					],
 					borderWidth: 1
 				}]
@@ -96,7 +89,7 @@ $(function () {
 				}
 			}
 		});
-		
+
 		var eventsbar = new Chart('cht-events', {
 			type: 'horizontalBar',
 			data: {
@@ -118,7 +111,20 @@ $(function () {
 		var projectspolar = new Chart('cht-projects', {
 			data: {
 				datasets: [{
-					data: projects_data
+					data: projects_data,
+					backgroundColor: [
+						'rgba(' + hexToRGB(sitecolours.primary).r + ',' + hexToRGB(sitecolours.primary).g + ',' + hexToRGB(sitecolours.primary).b + ',0.2)',
+						'rgba(' + hexToRGB(sitecolours.secondary).r + ',' + hexToRGB(sitecolours.secondary).g + ',' + hexToRGB(sitecolours.secondary).b + ',0.2)',
+						'rgba(' + hexToRGB(sitecolours.success).r + ',' + hexToRGB(sitecolours.success).g + ',' + hexToRGB(sitecolours.success).b + ',0.2)',
+						'rgba(' + hexToRGB(sitecolours.warning).r + ',' + hexToRGB(sitecolours.warning).g + ',' + hexToRGB(sitecolours.warning).b + ',0.2)'
+					],
+					borderColor: [
+						'rgba(' + hexToRGB(sitecolours.primary).r + ',' + hexToRGB(sitecolours.primary).g + ',' + hexToRGB(sitecolours.primary).b + ',0.6)',
+						'rgba(' + hexToRGB(sitecolours.secondary).r + ',' + hexToRGB(sitecolours.secondary).g + ',' + hexToRGB(sitecolours.secondary).b + ',0.6)',
+						'rgba(' + hexToRGB(sitecolours.success).r + ',' + hexToRGB(sitecolours.success).g + ',' + hexToRGB(sitecolours.success).b + ',0.6)',
+						'rgba(' + hexToRGB(sitecolours.warning).r + ',' + hexToRGB(sitecolours.warning).g + ',' + hexToRGB(sitecolours.warning).b + ',0.6)'
+					],
+					borderWidth: 1,
 				}],
 				labels: projects_labels
 			},
@@ -128,6 +134,27 @@ $(function () {
 					display: false
 				}
 			}
+		});
+		
+		var article_labels = [];
+		var posts = { 
+			label: 'posts', 
+			data: [], 
+			borderWidth: 1, 
+			borderColor: 'rgba(' + hexToRGB(sitecolours.primary).r + ',' + hexToRGB(sitecolours.primary).g + ',' + hexToRGB(sitecolours.primary).b + ',1)', 
+			backgroundColor: 'rgba(' + hexToRGB(sitecolours.primary).r + ',' + hexToRGB(sitecolours.primary).g + ',' + hexToRGB(sitecolours.primary).b + ',0.1)' 
+		};
+		var tutorials = { 
+			label: 'tutorials', 
+			data: [], 
+			borderWidth: 1, 
+			borderColor: 'rgba(' + hexToRGB(sitecolours.success).r + ',' + hexToRGB(sitecolours.success).g + ',' + hexToRGB(sitecolours.success).b + ',1)',
+			backgroundColor: 'rgba(' + hexToRGB(sitecolours.success).r + ',' + hexToRGB(sitecolours.success).g + ',' + hexToRGB(sitecolours.success).b + ',0.1)'
+		};
+		$.each(Object.keys(articles), function(i, k) {
+			article_labels.push(k);
+			posts.data.push(articles[k].posts);
+			tutorials.data.push(articles[k].tutorials);
 		});
 
 		var articlesline = new Chart('cht-articles', {
