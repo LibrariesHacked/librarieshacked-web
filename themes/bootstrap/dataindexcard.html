@@ -1,8 +1,8 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
-    <h3>{{ page.title }}</h3>
-    <p>{{ page.description }}</p>
+    <h5>{{ page.title }}</h5>
+    {{ page.description }}<br/>
     {% if page.meta.format != '' %}
-    <p>{% for outputformat in page.meta.format|split(',') %}<span class="badge badge-info">{{ outputformat }}</span>&nbsp;{% endfor %}</p>
+    {% for outputformat in page.meta.format|split(',') %}<span class="badge badge-info">{{ outputformat }}</span>&nbsp;{% endfor %}<br/>
     {% endif %}
-    <p><a href="{{ page.meta.dataurl }}" class="btn btn-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-table"></i>&nbsp;data</a></p>
+    <a href="{{ page.meta.dataurl }}" class="btn btn-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-table"></i>&nbsp;data</a>
 </div>
