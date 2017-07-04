@@ -1,5 +1,5 @@
 $(function () { // only begin once page has loaded
-    $("#txtBookSearch").autocomplete({ // attach auto-complete functionality to textbox
+    $("#txt-search").autocomplete({ // attach auto-complete functionality to textbox
         // define source of the data
         source: function (request, response) {
             // url link to google books, including text entered by user (request.term)
@@ -29,15 +29,12 @@ $(function () { // only begin once page has loaded
             });
         },
         select: function (event, ui) {
-
             // clear down from previous book.
             $('#divBook').empty();
             $('#divDescription').empty();
             $('#aWorldCat').addClass('disabled');
-
             $('#divBookDetails').show();
             if (ui.item.image != '') $('#divBook').append('<img src="' + ui.item.image + '" style="float: left; padding: 10px;">');
-
             // and title, author, and year
             $('#divBook').append('<h4> ' + ui.item.title + '</h4>');
             $('#divBook').append(ui.item.author + '<br>');

@@ -1,8 +1,8 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
-    <h5>{{ page.title }}</h5>
-    {{ page.description }}<br/>
+    <h5 class="strong">{{ page.title }}</h5>
     {% if page.meta.format != '' %}
     {% for outputformat in page.meta.format|split(',') %}<span class="badge badge-info">{{ outputformat }}</span>&nbsp;{% endfor %}<br/>
     {% endif %}
+    <p>{{ page.description }}</p>
     <a href="{{ page.meta.dataurl }}" class="btn btn-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-table"></i>&nbsp;data</a>
 </div>

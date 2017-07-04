@@ -1,10 +1,8 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
-    <h3>{{ page.title }}</h3>
+    <h5 class="strong">{{ page.title }}</h3>
+    {% for skill in page.meta.tutorialskillsrequired|split(',') %}
+    <span class="badge badge-info"><i class="fa fa-tag"></i>&nbsp;{{ skill }}</span> 
+    {% endfor %}
     <p>{{ page.description }}</p>
-    <p>
-        {% for skill in page.meta.tutorialskillsrequired|split(',') %}
-        <span class="badge badge-info"><i class="fa fa-tag"></i>&nbsp;{{ skill }}</span> 
-        {% endfor %}
-    </p>
     <a href="{{ page.url }}" class="btn btn-link" title="link to {{ page.title }}"><i class="fa fa-level-down"></i>&nbsp;full post</a>
 </div>

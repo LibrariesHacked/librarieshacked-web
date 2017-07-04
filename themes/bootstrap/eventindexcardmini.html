@@ -1,10 +1,3 @@
 <div class="col-lg-2 col-md-3 col-sm-6">
-    <p class="lead">{{ page.title }}</p>
-    <a href="{{ page.meta.eventurl }}" class="btn btn-link" title="link to {{ page.title }} website" target="_blank"><i class="fa fa-external-link"></i>&nbsp;web</a>
-    {% if page.meta.eventtwitter != '' %}
-    <a href="https://twitter.com/{{ page.meta.eventtwitter }}" class="btn btn-link" target="_blank"><i class="fa fa-twitter"></i>&nbsp;twt</a>
-    {% endif %}
-    {% if page.meta.eventhashtag != '' %}
-    <a href="https://twitter.com/hashtag/{{ page.meta.eventhashtag }}" class="btn btn-link" target="_blank"><i class="fa fa-twitter"></i>&nbsp;#tag</a>
-    {% endif %}
+    <p class="lead"><a href="{{ page.meta.eventurl }}" title="link to {{ page.title }} website" target="_blank">{{ page.title }}</a></p>
 </div>

@@ -6,8 +6,7 @@
     });
 
     // OnLoad:  Get the libraries data and loop through it.
-    $.get('/data/Libraries_All.json', function(result){
-        var libraries = JSON.parse(result);result
+    $.get('/data/Libraries_All.json', function(libraries){
         var latlng = L.latLng(53.5, -2.6);
         var map = L.map('map', { center: latlng, zoom: 6, layers: [tiles] });
         var markers = L.markerClusterGroup();
