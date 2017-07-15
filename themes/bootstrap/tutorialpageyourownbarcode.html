@@ -7,30 +7,24 @@
     {% include 'navigation.html' %}
     <div class="container">
         {% include 'pageheader.html' %}
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                barcodes
-            </div>
-            <div class="panel-body">
-                <form class="form-horizontal">
-                    <fieldset>
-                        <legend>create from number</legend>
-                        <div class="form-group">
-                            <label class="col-lg-2 control-label" for="txtAccountNumber">membership number</label>
-                            <div class="col-lg-10">
-                                <input class="form-control" id="txtAccountNumber" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-lg-10 col-lg-offset-2">
-                                <button class="btn btn-success" type="button" onclick="GetBarcode($('#txtAccountNumber').val())">create</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-                <div id="demo"></div>
-            </div>
-        </div>
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Create Barcode</legend>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="txtaccountnumber">Membership ID</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" id="txtaccountnumber" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button id="btncreatebarcode" class="btn btn-link" type="button">Create</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div id="demo"></div>
+        <hr/>
         {{ content }}
         {% include 'disqus.html' %}
         {% include 'footer.html' %}

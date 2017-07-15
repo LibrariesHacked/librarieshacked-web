@@ -1,6 +1,6 @@
 <div class="col-lg-2 col-md-3 col-sm-6">
     <p class="lead"><a href="{{ page.url }}" title="link to {{ page.title }}">{{ page.title }}</a></p>
     <p><small class="text-muted">{% for tag in page.meta.tags|split(',') %}
-    <i class="fa fa-tag"></i>&nbsp;{{ tag }}  
+    | {{ tag }}  
     {% endfor %}</small></p>
 </div>
