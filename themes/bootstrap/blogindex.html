@@ -9,7 +9,7 @@
         {% include 'pageheader.html' %}
         {{ content }}
         <div class="row">
-            {% for page in pages if (page.meta.type == 'Article') %}
+            {% for page in pages if (page.meta.type == 'Article' and page.meta.date != '') %}
             {% if loop.index < 5 %}
             {% include 'blogindexcard.html' %}
             {% include 'clearfix4.html' with { 'i': loop.index } %}
@@ -19,7 +19,7 @@
         <h2>archive</h2>
         <hr>
         <div id="div_posts" class="row">
-            {% for page in pages if (page.meta.type == 'Article') %}
+            {% for page in pages if (page.meta.type == 'Article' and page.meta.date != '') %}
             {% if loop.index > 4 %}
             {% include 'blogindexcardmini.html' %}
             {% include 'clearfix6.html' with { 'i': loop.index - 4 } %}
