@@ -1,7 +1,7 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
     <h5>{{ page.title }}</h5>
-    {% if page.meta.format != '' %}
-    {% for outputformat in page.meta.format|split(',') %}<span class="badge badge-info">{{ outputformat }}</span> {% endfor %}
+    {% if page.meta.format != '' %} <small class="text-muted">formats: 
+    {% for outputformat in page.meta.format|split(',') %}{{ outputformat }} | {% endfor %}</small>
     {% endif %}
     <p>{{ page.description }}</p>
     {% if page.meta.apiurl != '' %}

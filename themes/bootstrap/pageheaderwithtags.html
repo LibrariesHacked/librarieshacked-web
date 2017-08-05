@@ -2,8 +2,8 @@
     <h1>{{ meta.title }}</h1>
     <p class="lead">{{ meta.description }}</p>
     <div class="tags">
-        <p>{% for tag in meta.tags|split(',') %}
-        <span class="badge badge-info"><i class="fa fa-tag"></i>&nbsp;{{ tag }}</span> 
+        <p class="text-muted">| {% for tag in meta.tags|split(',') %}
+        {{ tag }} |  
         {% endfor %}</p>
     </div>
 </div>

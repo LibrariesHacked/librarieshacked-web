@@ -11,8 +11,7 @@ $(function () {
                     { title: "Issues?", data: 3 },
                     { title: "Web domain", data: 1 }
                 ],
-                responsive: true,
-                bAutoWidth: false
+                responsive: true
             });
         }
     });

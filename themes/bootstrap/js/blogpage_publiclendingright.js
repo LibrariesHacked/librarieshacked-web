@@ -26,7 +26,8 @@ $(function () {
     // On Load
     ///////////////////////////////////////////////////////
     buildDataTable('#tbl_uk', '/data/PLR_2015_East_Top100Titles.csv');
-    buildDataTable('#tbl_east', '/data/PLR_2015_EastMidlands_Top100Titles.csv');
+    buildDataTable('#tbl_east', '/data/PLR_2015_East_Top100Titles.csv');
+    buildDataTable('#tbl_eastmidlands', '/data/PLR_2015_EastMidlands_Top100Titles.csv');
     buildDataTable('#tbl_london', '/data/PLR_2015_London_Top100Titles.csv');
     buildDataTable('#tbl_northeast', '/data/PLR_2015_NorthEast_Top100Titles.csv');
     buildDataTable('#tbl_northernireland', '/data/PLR_2015_NorthernIreland_Top100Titles.csv');

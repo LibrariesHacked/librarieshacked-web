@@ -1,6 +1,6 @@
 <div class="col-lg-2 col-md-3 col-sm-6">
     <p class="lead"><a href="{{ page.url }}" title="link to {{ page.title }}">{{ page.title }}</a></p>
-    <p><small class="text-muted">{% for skill in page.meta.tutorialskillsrequired|split(',') %}
-    | {{ skill }}
+    <p><small class="text-muted">| {% for skill in page.meta.tutorialskillsrequired|split(',') %}
+    {{ skill }} | 
     {% endfor %}</small></p>
 </div>
