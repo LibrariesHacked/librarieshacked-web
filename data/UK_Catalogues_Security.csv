@@ -53,7 +53,7 @@ Dumfries and Galloway,library.dumgal.gov.uk,No,Only HTTP
 Dundee City,opac.dundeecity.gov.uk,No,Only HTTP
 Durham,libraryonline.durham.gov.uk,Yes,OK
 Ealing,arena.yourlondonlibrary.net,Yes,Mixed Content
-East Ayrshire,libcatalogue.east-ayrshire.gov.uk,No,Only HTTP
+East Ayrshire,ealt.sirsidynix.net.uk,Yes,OK
 East Dunbartonshire,vufind-ed.sedar.org.uk,Yes,Allows HTTP
 East Lothian,capitadiscovery.co.uk,Yes,Allows HTTP
 East Renfrewshire,capitadiscovery.co.uk,Yes,Allows HTTP
@@ -83,9 +83,9 @@ Herefordshire,capitadiscovery.co.uk,Yes,Allows HTTP
 Hertfordshire,herts.spydus.co.uk,Yes,Mixed Content
 Highland,hlh.spydus.co.uk,Yes,Mixed Content
 Hillingdon,hldn.ent.sirsidynix.net.uk,No,Only HTTP
-Hounslow,www.hounslowlibraries.org,No,Only HTTP
+Hounslow,www.hounslowlibraries.org,Yes,OK
 Hull,prismcollect.hullcc.gov.uk,No,Only HTTP
-Inverclyde,ipac.inverclyde-libraries.org,No,Only HTTP
+Inverclyde,inverclyde.spydus.co.uk,Yes,OK
 Isle of Wight,iow.spydus.co.uk,Yes,Allows HTTP
 Isle of Man,www.douglas.gov.im,No,Only HTTP
 Islington,capitadiscovery.co.uk,Yes,Allows HTTP
@@ -94,7 +94,7 @@ Kensington and Chelsea,trib.ent.sirsidynix.net.uk,Yes,OK
 Kent,kent.spydus.co.uk,Yes,Mixed Content
 Kingston,arena.yourlondonlibrary.net,Yes,OK
 Kirklees,kir.ent.sirsidynix.net.uk,No,Only HTTP
-Knowsley,kmbc.sdp.sirsidynix.net.uk,No,Only HTTP
+Knowsley,catalogue.knowsley.gov.uk,Yes,Mixed Content
 Lambeth,capitadiscovery.co.uk,Yes,Allows HTTP
 Lancashire,capitadiscovery.co.uk,Yes,Allows HTTP
 Leeds,capitadiscovery.co.uk,Yes,Allows HTTP
@@ -126,7 +126,7 @@ North Somerset,www.librarieswest.org.uk,Yes,OK
 North Tyneside,capitadiscovery.co.uk,Yes,Allows HTTP
 North Yorkshire,capitadiscovery.co.uk,Yes,Allows HTTP
 Northamptonshire,www.librarycatalogue.northamptonshire.gov.uk,Yes,Vulnerable
-Northumberland,library.northumberland.gov.uk,No,Only HTTP
+Northumberland,library.northumberland.gov.uk,Yes,Allows HTTP
 Nottingham City,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
 Nottinghamshire,emlib.ent.sirsidynix.net.uk,Yes,Mixed Content
 Northern Ireland,lni.ent.sirsidynix.net.uk,Yes,Vulnerable
@@ -140,7 +140,7 @@ Plymouth,www.webopac.plymouth.gov.uk,Yes,OK
 Poole,www.librarieswest.org.uk,Yes,OK
 Portsmouth,librarycat.portsmouth.gov.uk,Yes,OK
 Powys,powys.sirsidynix.net.uk,No,Only HTTP
-Reading,reading-hip.epixtech.co.uk,No,Only HTTP
+Reading,library.reading.gov.uk,Yes,OK
 Redbridge,arena.yourlondonlibrary.net,Yes,OK
 Redcar & Cleveland,libraries.redcar-cleveland.gov.uk,Yes,OK
 Renfrewshire,libcat.renfrewshire.gov.uk,Yes,OK
@@ -185,7 +185,7 @@ Torbay,libraries.torbay.gov.uk,Yes,Vulnerable
 Torfaen,capitadiscovery.co.uk,Yes,Allows HTTP
 Tower Hamlets,arena.yourlondonlibrary.net,Yes,OK
 Trafford,trafford.spydus.co.uk,Yes,Mixed Content
-Vale of Glamorgan,libhip.valeofglamorgan.gov.uk,No,Only HTTP
+Vale of Glamorgan,wales.ent.sirsidynix.net.uk,Yes,OK
 Wakefield,libraries.wakefield.gov.uk,Yes,OK
 Walsall,libcat.walsall.gov.uk,Yes,OK
 Waltham Forest,arena.yourlondonlibrary.net,Yes,OK
@@ -194,7 +194,7 @@ Warrington,libonline.livewirewarrington.co.uk,Yes,Mixed Content
 Warwickshire,library.warwickshire.gov.uk,Yes,Allows HTTP
 West Berkshire,westberks.spydus.co.uk,Yes,Mixed Content
 West Dunbartonshire,wd.ent.sirsidynix.net.uk,No,Only HTTP
-West Lothian,webpac.westlothian.gov.uk,No,Only HTTP
+West Lothian,wlcls.ent.sirsidynix.net.uk,Yes,OK
 West Sussex,arena.westsussex.gov.uk,Yes,OK
 Western Isles,vufind-wi.sedar.org.uk,Yes,Allows HTTP
 Westminster,elibrary.westminster.gov.uk,Yes,Mixed Content
