@@ -1,12 +1,12 @@
-{ libraries: hacked } website
+Libraries hacked website
 =============================
 
-The main public website for { libraries: hacked }, built using Pico CMS.
+The main public website for libraries hacked, built using Pico CMS.
 
 What it is
 -----------
 
-{ libraries: hacked } is a website aimed at promoting open data and technology hacks in libraries.  It is currently deployed to [https://www.librarieshacked.org](https://www.librarieshacked.org).  The website is built using [Pico CMS](http://picocms.org), an easy to use flat file content management system.
+Libraries hacked is a website aimed at promoting open data and technology hacks in libraries.  It is currently deployed to [https://www.librarieshacked.org](https://www.librarieshacked.org).  The website is built using [Pico CMS](http://picocms.org), an easy to use flat file content management system.
 
 This repository contains all the custom configuration and code required to set up the website - additional Pico code is required to run the website.  This is decribed in the directory structure.
 
@@ -62,4 +62,4 @@ Third-party licences
 Licence
 -------
 
-Original code available under [MIT Licence](/LICENCE).
+Original code available under [MIT Licence](/LICENCE.md).
