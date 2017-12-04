@@ -1,6 +1,47 @@
 {
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-bower": "0.0.13"
-  }
+	"devDependencies": {
+		"gulp": "^3.9.1",
+		"gulp-bower": "0.0.13"
+	},
+	"name": "librarieshacked-web",
+	"description": "Libraries hacked website\r =============================",
+	"version": "1.0.0",
+	"main": "gulpfile.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LibrariesHacked/librarieshacked-web.git"
+	},
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/LibrariesHacked/librarieshacked-web/issues"
+	},
+	"homepage": "https://github.com/LibrariesHacked/librarieshacked-web#readme",
+	"dependencies": {
+		"bootstrap": "^4.0.0-beta.2",
+		"bootswatch": "^4.0.0-beta.2",
+		"chart.js": "^2.7.1",
+		"code-prettify": "^0.1.0",
+		"datatables.net": "^1.10.16",
+		"datatables.net-bs4": "^1.10.16",
+		"datatables.net-buttons": "^1.4.2",
+		"datatables.net-buttons-bs4": "^1.4.2",
+		"datatables.net-responsive": "^2.2.0",
+		"datatables.net-responsive-bs4": "^2.2.0",
+		"dc": "^2.1.9",
+		"highcharts": "^6.0.3",
+		"jquery": "^3.2.1",
+		"jquery-ui": "^1.12.1",
+		"jsbarcode": "^3.8.0",
+		"leaflet": "^1.2.0",
+		"leaflet.awesome-markers": "^2.0.4",
+		"leaflet.markercluster": "^1.2.0",
+		"moment": "^2.19.3",
+		"papaparse": "^4.3.6",
+		"popper.js": "^1.12.9",
+		"proj4": "^2.4.4"
+	}
 }
