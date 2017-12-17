@@ -1,14 +1,14 @@
-Libraries hacked website
+Libraries Hacked website
 =============================
 
-The main public website for libraries hacked, built using Pico CMS.
+The main public website for Libraries Hacked, built using Pico CMS.
 
 What it is
 -----------
 
-Libraries hacked is a website aimed at promoting open data and technology hacks in libraries.  It is currently deployed to [https://www.librarieshacked.org](https://www.librarieshacked.org).  The website is built using [Pico CMS](http://picocms.org), an easy to use flat file content management system.
+Libraries hacked is aimed at promoting open data and technology hacks in libraries. It is currently deployed to [https://www.librarieshacked.org](https://www.librarieshacked.org). The website is built using [Pico CMS](http://picocms.org), an easy to use flat file content management system.
 
-This repository contains all the custom configuration and code required to set up the website - additional Pico code is required to run the website.  This is decribed in the directory structure.
+This repository contains all the custom configuration and code required to set up the website - additional Pico code is required to run the website. This is decribed in the directory structure.
 
 Supporting technology
 ---------------------
@@ -25,13 +25,13 @@ Directory and files structure
 
 | Directory/File | Description |
 | -------------- | ----------- |
-| /bin | Populated with bin directory from Pico build |
-| /config | Contains custom config file for website |
-| /data | Contains data files used in the examples and tutorials. |
+| /bin | Populated with the bin directory from Pico build |
+| /config | Contains custom config file for site |
+| /data | Contains data files used in the examples and tutorials |
 | /icons | Icons used in semantic HTML for the site |
-| /images | Any images display on the site.  Images must be freely licensed |
+| /images | Any images display on the site. Images must be freely licensed |
 | /plugins | Plugins for the site to deliver specific functionality |
-| /themes | Site themes.  Includes single bootstrap directory which is the site theme |
+| /themes | Site themes. Includes single bootstrap directory which is the custom site theme |
 | /vendor | Populated with vendor directory from Pico build |
 | robots.txt | file to ward off or instruct robots |
 | browserconfig.xml |  |
@@ -42,15 +42,15 @@ Directory and files structure
 Build instructions
 ------------------
 
-1. Download the latest Pico release.  Copy the content of the **lib** and **vendor** directory into the corresponding directories in this repository
+1. Download the latest Pico release. Copy the content of the **lib** and **vendor** directory into the corresponding directories in this repository
 2. Copy the complete content of [librarieshacked-web-content](https://github.com/LibrariesHacked/librarieshacked-web-content) into the **content** directory.
-3. Run bower to download the themes library dependencies.  'bower install'
-4. Run gulp to move the required files into the theme directory.  'gulp'
+3. Run bower to download the themes library dependencies. 'bower install'
+4. Run gulp to move the required files into the theme directory. 'gulp'
 
 Deploy
 ------
 
-The built website is designed to deploy easily onto a webserver.  Copy the entire site and deploy to your web host.
+The built website is designed to deploy easily onto a webserver. Copy the entire site and deploy to your web host.
 
 Third-party licences
 --------------------
