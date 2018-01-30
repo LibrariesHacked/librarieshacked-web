@@ -31,7 +31,7 @@ $(function () {
 					var grade = grades[grade_index - 1];
 					var classification = classifications[class_key];
 					$('#h-result-grade').text(grade);
-					$('#p-result-details').text(postcode + '. This postcode has been graded on distance to nearest library, relative to other similar areas of classification: ' + classification);
+					$('#p-result-details').text(postcode + '. This postcode has been graded on distance to nearest library, relative to other areas of the same classification: ' + classification + '.');
 				} else {
 					$('#h-result-grade').text('');
 					$('#p-result-details').text('Could not find that postcode');
