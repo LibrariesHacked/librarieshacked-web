@@ -1,5 +1,5 @@
 $(function () {
-    var url = "https://datasette-xqaoswtsdv.now.sh/csv-data-c8a727f.json?sql=select+urban_code%2C+grade+from+lottery+where+replace%28postcode%2C+%27+%27%2C+%27%27%29+%3D+replace%28%27[POSTCODE]%27%2C+%27+%27%2C+%27%27%29+";
+    var url = "https://datasette-yzbjpnaxvz.now.sh/csv-data-3e504e8.json?sql=select+urban_code%2C+grade+from+lottery+where+replace+%3D+%27[POSTCODE]%27";
 
 	var classifications = {
 		"A1": "Urban major conurbation",
@@ -18,7 +18,7 @@ $(function () {
 	
 	$('#btn-go').on('click', function(event){
 		event.preventDefault();
-		var postcode = $('#txt-postcode').val().toUpperCase();
+		var postcode = $('#txt-postcode').val().replace(/ /g,'').toUpperCase();
 		var postcode_search = url.replace('[POSTCODE]', postcode)
 		$.ajax({
 			url: postcode_search,
