@@ -1,39 +1,7 @@
 <div class="container nav">
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a class="nav-link" href="/"><span class="text-success fa fa-cube"></span></a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">data</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="/apis">APIs</a>
-                <a class="dropdown-item" href="/otherdata">other</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/tools">tools</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">hacks</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="/projects">projects</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/events">events</a>
-                <a class="dropdown-item" href="/resources">resources</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">apps</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="/apps">web and mobile</a>
-                <a class="dropdown-item" href="/source">code</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">articles</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="/articles">posts</a>
-                <a class="dropdown-item" href="/tutorials">tutorials</a>
-            </div>
+            <a class="nav-link" href="/">Home</a>
         </li>
     </ul>
     <hr>
@@ -44,8 +12,5 @@
     </a>&nbsp;
     <a href="https://twitter.com/intent/tweet?original_referer={{ current_page.url }}&amp;text={{ meta.title|escape('url') }}%20{{ current_page.url }}%20via%20@librarieshacked" class="btn btn-link" target="_blank" title="Tweet This!">
         <span class="fa fa-twitter"></span>&nbsp;&nbsp;<span id="twitterCount"> tweet</span>
-    </a>&nbsp;
-    <a href="https://plus.google.com/share?url={{ current_page.url }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-link" title="Post it on Google+">
-        <span class="fa fa-google-plus"></span>&nbsp;&nbsp;<span id="googleCount"> post</span>
     </a>
 </div>

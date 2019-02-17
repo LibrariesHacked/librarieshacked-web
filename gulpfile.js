@@ -1,16 +1,10 @@
-﻿var gulp = require('gulp'),
-    bower = require('gulp-bower');
+﻿var gulp = require('gulp');
 
 var config = {
-    bowerDir: './bower_components',
-    bowerPublic: './themes/bootstrap/bower'
+    nodeDir: './node_modules',
+    nodePub: './themes/bootstrap/node'
 };
 
-// Bower Install
-gulp.task('bower', function () {
-    return bower().pipe(gulp.dest(config.bowerDir))
-});
-
-gulp.task('bowerJs', function () {
-    return gulp.src(config.bowerDir + '/fontawesome/fonts/*.*').pipe(gulp.dest(bowerPublic + '/fonts'));
+gulp.task('nodeJs', function () {
+    return gulp.src(config.nodeDir + '/fontawesome/fonts/*.*').pipe(gulp.dest(nodePub + '/fonts'));
 });
