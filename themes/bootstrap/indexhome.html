@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% include 'head.html' %}
 </head>
+
 <body>
     {% include 'navigation.html' %}
     <div class="container">
         {% include 'pageheader.html' %}
-        <div id="divResults">
-            <h2>search results</h2>
-            <div class="row"></div>
-        </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <canvas id="cht-data" height="200"></canvas>
-                <p class="lead"><span class="strong">data.</span>  library data and web services to integrate into your hacks and projects.</p>
-                <a class="btn btn-link" href="/apis"><i class="fa fa-code-fork"></i>&nbsp;APIs</a>&nbsp;
-                <a class="btn btn-link" href="/otherdata"><i class="fa fa-table"></i>&nbsp;data</a>
+                <p class="lead"><span class="strong">data.</span> library data and web services to integrate into your
+                    hacks and projects.</p>
+                <a class="btn btn-success" href="https://www.librarydata.uk" target="_blank">
+                    <i class="fas fa-cube"></i>&nbsp; data portal</a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <canvas id="cht-projects" height="200"></canvas>
-                <p class="lead"><span class="strong">projects.</span>  current and past projects to investigate, explore and get involved in.</p>
-                <a class="btn btn-link" href="/projects"><i class="fa fa-users"></i>&nbsp;projects</a>&nbsp;
-                <a class="btn btn-link" href="/source"><i class="fa fa-code"></i>&nbsp;code</a>
+                <p class="lead"><span class="strong">projects.</span> current and past projects to investigate, explore
+                    and get involved in.</p>
+                <a class="btn btn-success" href="https://projects.librarydata.uk" target="_blank"><i
+                        class="fas fa-users"></i>&nbsp;data projects</a>&nbsp;
             </div>
             <div class="clearfix visible-md visible-sm"></div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <canvas id="cht-events" height="200"></canvas>
-                <p class="lead"><span class="strong">events.</span>  a listing of past and future events to get involved in and get inspiration from.</p>
-                <a class="btn btn-link" href="/events"><i class="fa fa-calendar-o"></i>&nbsp;events</a>&nbsp;
-                <a class="btn btn-link" href="/resources"><i class="fa fa-info"></i>&nbsp;resources</a>
+                <p class="lead"><span class="strong">blog.</span> posts and tutorials about library technology and open
+                    library data.</p>
+                <a class="btn btn-success" href="https://blog.librarydata.uk" target="_blank"><i
+                        class="fas fa-rss"></i>&nbsp;articles</a>&nbsp;
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <canvas id="cht-articles" height="200"></canvas>
-                <p class="lead"><span class="strong">articles.</span>  posts and tutorials about library technology and open library data.</p>
-                <a class="btn btn-link" href="/articles"><i class="fa fa-rss"></i>&nbsp;articles</a>&nbsp;
-                <a class="btn btn-link" href="/tutorials"><i class="fa fa-question"></i>&nbsp;tutorials</a>
+                <p class="lead"><span class="strong">contact.</span> want to collaborate on library data projects? get
+                    in touch.</p>
+                <a class="btn btn-success" href="/contact"><i class="fas fa-mail"></i>&nbsp;contact</a>&nbsp;
             </div>
             <div class="clearfix visible-md visible-sm"></div>
             <div class="clearfix visible-lg"></div>
@@ -47,4 +44,5 @@
     {% include 'scripts.html' %}
     <script src="{{ theme_url }}/js/pageindex_home.js"></script>
 </body>
+
 </html>

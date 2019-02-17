@@ -1,7 +1,4 @@
 {
-	"devDependencies": {
-		"gulp": "^3.9.1"
-	},
 	"name": "librarieshacked-web",
 	"description": "Libraries hacked website\r =============================",
 	"version": "1.0.0",
