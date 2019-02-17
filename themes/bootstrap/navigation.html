@@ -3,14 +3,25 @@
         <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/privacypolicy">Privacy</a>
+        </li>
     </ul>
     <hr>
 </div>
 <div class="container social">
-    <a href="http://www.facebook.com/sharer.php?u={{ current_page.url }}&amp;t={{ meta.title|escape('url') }}" class="btn btn-link" target="_blank" title="Share on Facebook">
-        <span class="fas fa-facebook"></span>&nbsp;&nbsp;<span id="facebookCount"> share</span>
+    <a href="http://www.facebook.com/sharer.php?u={{ current_page.url }}&amp;t={{ meta.title|escape('url') }}"
+        class="btn btn-link" target="_blank" title="Share on Facebook">
+        <span class="fab fa-facebook-square"></span>&nbsp;&nbsp;<span id="facebookCount"> share</span>
     </a>&nbsp;
-    <a href="https://twitter.com/intent/tweet?original_referer={{ current_page.url }}&amp;text={{ meta.title|escape('url') }}%20{{ current_page.url }}%20via%20@librarieshacked" class="btn btn-link" target="_blank" title="Tweet This!">
-        <span class="fas fa-twitter"></span>&nbsp;&nbsp;<span id="twitterCount"> tweet</span>
+    <a href="https://twitter.com/intent/tweet?original_referer={{ current_page.url }}&amp;text={{ meta.title|escape('url') }}%20{{ current_page.url }}%20via%20@librarieshacked"
+        class="btn btn-link" target="_blank" title="Tweet This!">
+        <span class="fab fa-twitter-square"></span>&nbsp;&nbsp;<span id="twitterCount"> tweet</span>
     </a>
 </div>

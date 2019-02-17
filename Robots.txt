@@ -1,11 +1,1 @@
-Sitemap: https://www.librarieshacked.org/sitemap.xml
 User-agent: *
-Disallow: /apis/
-Disallow: /otherdata/
-Disallow: /tools/
-Disallow: /hardware/
-Disallow: /hacks/
-Disallow: /resources/
-Disallow: /apps/
-Disallow: /source/
-Disallow: /events/
