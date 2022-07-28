@@ -1,17 +1,14 @@
-Libraries Hacked website
-=============================
+## Libraries Hacked website
 
-The main public website for Libraries Hacked, built using Pico CMS.
+The main public website for Libraries Hacked, built using Pico CMS. Archived as this is the previous website. Latest website repository available at https://github.com/LibrariesHacked/librarieshacked
 
-What it is
------------
+### What it is
 
 Libraries hacked is aimed at promoting open data and technology hacks in libraries. It is currently deployed to [https://www.librarieshacked.org](https://www.librarieshacked.org). The website is built using [Pico CMS](http://picocms.org), an easy to use flat file content management system.
 
 This repository contains all the custom configuration and code required to set up the website - additional Pico code is required to run the website. This is decribed in the directory structure.
 
-Supporting technology
----------------------
+### Supporting technology
 
 | Technology | Description |
 | ---------- | ----------- |
@@ -20,8 +17,7 @@ Supporting technology
 | Markdown | Content is written in markdown format, which is processed on the server |
 | IIS/Apache | The site can be hosted on a number of different web server platforms including these two |
 
-Directory and files structure
------------------------------
+### Directory and files structure
 
 | Directory/File | Description |
 | -------------- | ----------- |
@@ -39,27 +35,23 @@ Directory and files structure
 | favicon.ico | the favicon file for the site to be displayed in browsers |
 | web.config | For IIS hosting, provides various redirect rules |
 
-Build instructions
-------------------
+### Build instructions
 
 1. Download the latest Pico release. Copy the content of the **lib** and **vendor** directory into the corresponding directories in this repository
 2. Copy the complete content of [librarieshacked-web-content](https://github.com/LibrariesHacked/librarieshacked-web-content) into the **content** directory.
 3. Run bower to download the themes library dependencies. 'bower install'
 4. Run gulp to move the required files into the theme directory. 'gulp'
 
-Deploy
-------
+### Deploy
 
 The built website is designed to deploy easily onto a webserver. Copy the entire site and deploy to your web host.
 
-Third-party licences
---------------------
+### Third-party licences
 
 | Project | Description | Licence |
 | ------- | ----------- | ------- |
 | Pico | The underlying content management system powering the site | [MIT](https://github.com/picocms/Pico/blob/master/LICENSE.md) |
 
-Licence
--------
+### Licence
 
 Original code available under [MIT Licence](/LICENCE.md).
